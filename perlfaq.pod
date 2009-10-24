@@ -32,26 +32,30 @@ und enthält die aktuellste Version der Dokumente und kann sich stark von der
 Version unterscheiden, die mit der aktuellsten Perl-Version mitgeliefert wird.
 Bitte prüfe das Repository bevor Du Deine Korrekturen schickst.
 
-=head2 How to contribute to the perlfaq
+=head2 Wie kann ich etwas zu den perlfaq beitragen
 
-You can mail corrections, additions, and suggestions to
-C<< <perlfaq-workers AT perl DOT org> >>. The perlfaq volunteers use this
-address to coordinate their efforts and track the perlfaq development.
-They appreciate your contributions to the FAQ but do not have time to
-provide individual help, so don't use this address to ask FAQs.
+Du kannst Korrekturen, Erweiterungen und Vorschläge an 
+C<< <perlfaq-workers AT perl DOT org > >> mailen. Die perlfaq-Freiwilligen
+benutzen diese Adresse um ihre Bemühungen zu koordinieren und die Entwicklung
+der perlfaq zu verfolgen.
+Sie schätzen Deine Beiträge, haben aber nicht genug Zeit, um individuelle
+Hilfestellungen zu geben. Benutze diese Adresse also bitte nicht um FAQs zu
+fragen.
 
-The perlfaq server posts extracts of the perlfaq to that newsgroup every
-6 hours (or so), and the community of volunteers reviews and updates the
-answers. If you'd like to help review and update the answers, check out
-comp.lang.perl.misc.
+Der perlfaq Server veröffentlicht Auszüge der perlfaq in der Newsgroup alle
+6 Stunden (so ungefähr), und die Gemeinschaft der Freiwilligen sehen das durch
+und aktualisieren die Antworten. Wenn Du bei der Durchsicht und der Aktualisierung
+der Fragen helfen willst, schau Dir comp.lang.perl.misc an.
 
-You can also fork the git repository for the perlfaq and send a pull
-request so the main repository can pull your changes. The repository
-is at:
+Du kannst auch das git repository der perlfaq forken und eine "pull"-Anfrage
+schicken, so dass das Hauptrepository Deine Änderungen übernehmen kann. Das
+Repository ist hier zu finden:
 
-	https://github.com/briandfoy/perlfaq
+    https://github.com/briandfoy/perlfaq
 
-=head2 What will happen if you mail your Perl programming problems to the authors?
+=head2 Was passiert, wenn Du Deine Perl-Programmierung Probleme an die Autoren mails?
+
+
 
 The perlfaq-workers like to keep all traffic on the perlfaq-workers list
 so that everyone can see the work being done (and the work that needs to
@@ -65,28 +69,28 @@ when others are busy.
 If you have a question that isn't in the FAQ and you would like help with
 it, try the resources in L<perlfaq2>.
 
-=head1 CREDITS
+=head1 VERDIENSTE
 
-Tom Christiansen wrote the original perlfaq then expanded it with the
-help of Nat Torkington. The perlfaq-workers maintain current document
-and the dezinens of comp.lang.perl.misc regularly review and update the
-FAQ. Several people have contributed answers, corrections, and comments,
-and the perlfaq notes those contributions wherever appropriate.
+Tom Christiansen hat die Original-perlfaq geschrieben und dann mit der Hilfe
+von Nat Torkington erweitert. Die perlfaq-workers pflegen die aktuellen
+Dateien und Teilnehmer von comp.lang.perl.misc prüfen und aktualisieren die FAQ.
+Etliche Leute haben Antworten, Berichtigungen und Kommentare beigetragen und
+die perlfaq nennt diese Beiträge wo immer es angebracht ist.
 
-=head1 AUTHOR AND COPYRIGHT
+=head1 AUTOR UND COPYRIGHT
 
-Copyright (c) 1997-2009 Tom Christiansen, Nathan Torkington, and
-other authors as noted. All rights reserved.
+Copyright (c) 1997-2009 Tom Christiansen, Nathan Torkington und andere
+Autoren wie genannt. Alle Rechte vorbehalten.
 
-Tom Christainsen wrote the original version of this document.
-brian d foy C<< <bdfoy@cpan.org> >> wrote this version. See the
-individual perlfaq documents for additional copyright information.
+Tom Christiansen hat die Original-Version dieses Dokuments geschrieben.
+brian d foy C<< <bdfoy@cpan.org> >> hat diese Version geschrieben. Sie auch
+die einzelnen perlfaq Dokumente für weitere Copyright informationen.
 
-This document is available under the same terms as Perl itself. Code
-examples in all the perlfaq documents are in the public domain. Use
-them as you see fit and at your own risk with no warranty from anyone.
+Dieses Dokument ist unter den gleichen Bedingungen wie Perl selbst verfügbar.
+Code-Beispiele in allen perlfaq Dokumenten sind Gemeingut. Benutze sie wenn
+sie passen, auf eigene Gefahr mit keiner Garantie von irgendjemandem.
 
-=head1 Table of Contents
+=head1 INHALTSVERZEICHNIS
 
 =over 4
 
@@ -1285,164 +1289,166 @@ How do I timeout a slow event?
 
 =item *
 
-How do I set CPU limits?
+Wie kann ich CPU-Begrenzungen setzen?
 
 =item *
 
-How do I avoid zombies on a Unix system?
+Wie kann ich Zombies auf einem Unix-System vermeiden?
 
 =item *
 
-How do I use an SQL database?
+Wie kann ich eine SQL-Datenbank benutzen?
 
 =item *
 
-How do I make a system() exit on control-C?
+Wie kann ich ein system() mit Strg-C beenden?
 
 =item *
 
-How do I open a file without blocking?
+Wie kann ich eine Datei ohne blockierung öffnen?
 
 =item *
 
-How do I tell the difference between errors from the shell and perl?
+Wie kann ich den zwischen Fehlern von der Shell und perl unterscheiden?
 
 =item *
 
-How do I install a module from CPAN?
+Wie kann ich ein Modul von CPAN installieren?
 
 =item *
 
-What's the difference between require and use?
+Was ist der Unterschied zwischen require und use?
 
 =item *
 
-How do I keep my own module/library directory?
+Wie kann ich mein Verzeichnis für eigene Module/Bibliotheken pflegen?
 
 =item *
 
-How do I add the directory my program lives in to the module/library search path?
+Wie kann ich das Verzeichnis, in dem mein Programm liegt, zum Suchpfad für Module/Bibliotheken hinzufügen?
 
 =item *
 
-How do I add a directory to my include path (@INC) at runtime?
+Wie kann ich ein Verzeichnis zu meinem Include-Pfad (@INC) zur Laufzeit hinzufügen?
 
 =item *
 
-What is socket.ph and where do I get it?
+Was ist socket.ph und wo kann ich es bekommen?
 
 =back
 
 
-=head2 L<perlfaq9>: Networking
+=head2 L<perlfaq9>: Netzwerke
 
-Networking, the internet, and a few on the web.
+Netzwerke, das Internet und einiges über das Web.
 
 =over 4
 
 =item *
 
-What is the correct form of response from a CGI script?
+Wie ist die korrekte Form einer Antwort von einem CGI-Skript?
 
 =item *
 
-My CGI script runs from the command line but not the browser.  (500 Server Error)
+Mein CGI-Skript läuft von der Kommandozeile aus, aber nicht im Browser. (500 Server Error)
 
 =item *
 
-How can I get better error messages from a CGI program?
+Wie kann ich bessere Fehlermeldungen von einem CGI-Programm bekommen?
 
 =item *
 
-How do I remove HTML from a string?
+Wie kann ich HTML aus einem String entfernen?
 
 =item *
 
-How do I extract URLs?
+Wie kann ich URLs extrahieren?
 
 =item *
 
-How do I download a file from the user's machine?  How do I open a file on another machine?
+Wie kann ich eine Datei von der Maschine des Benutzers herunterladen? Wie kann ich eine
+Datei auf einer anderen Maschine öffnen?
 
 =item *
 
-How do I make an HTML pop-up menu with Perl?
+Wie mache ich ein HTML Pop-Up-Menü mit Perl?
 
 =item *
 
-How do I fetch an HTML file?
+Wie eine HTML-Datei abrufen?
 
 =item *
 
-How do I automate an HTML form submission?
+Wie kann ich HTML-Formulare automatisiert abschicken?
 
 =item *
 
-How do I decode or create those %-encodings on the web?
+Wie kann ich diese %-Kodierung im Web dekodieren oder erzeugen?
 
 =item *
 
-How do I redirect to another page?
+Wie kann ich auf eine andere Seite weiterleiten?
 
 =item *
 
-How do I put a password on my web pages?
+Wie kann ich ein Passwort auf meiner Webseite einbauen?
 
 =item *
 
-How do I edit my .htpasswd and .htgroup files with Perl?
+Wie kann ich meine .htpasswd und .htgroup Dateien mit Perl bearbeiten?
 
 =item *
 
-How do I make sure users can't enter values into a form that cause my CGI script to do bad things?
+Wie kann ich sicherstellen, dass Benutzer keine Daten eingeben können, die mein CGI-Skript böse Sachen
+machen lassen?
 
 =item *
 
-How do I parse a mail header?
+Wie kann ich einen Mail-Header parsen?
 
 =item *
 
-How do I decode a CGI form?
+Wie kann ich ein CGI-Formular dekodieren?
 
 =item *
 
-How do I check a valid mail address?
+Wie kann ich einen gültige Mail-Adresse prüfen?
 
 =item *
 
-How do I decode a MIME/BASE64 string?
+Wie kann ich einen MIME/BASE64-String dekodieren?
 
 =item *
 
-How do I return the user's mail address?
+Wie kann ich die Mail-Adresse des Users zurückgeben?
 
 =item *
 
-How do I send mail?
+Wie kann ich Mails versenden?
 
 =item *
 
-How do I use MIME to make an attachment to a mail message?
+Wie kann ich MIME für einen Anhang an einer Mail benutzen?
 
 =item *
 
-How do I read mail?
+Wie kann ich Mails lesen?
 
 =item *
 
-How do I find out my hostname, domainname, or IP address?
+Wie kann ich meinen Hostnamen, Domainnamen oder IP-Adresse herausfinden?
 
 =item *
 
-How do I fetch a news article or the active newsgroups?
+Wie kann ich einen News-Artikel oder die aktive Newsgroup holen?
 
 =item *
 
-How do I fetch/put an FTP file?
+Wie kann ich eine Datei per FTP holen/hochladen?
 
 =item *
 
-How can I do RPC in Perl?
+Wie kann ich RPC in Perl machen?
 
 =back
 
