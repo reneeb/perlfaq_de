@@ -1,0 +1,76 @@
+#!/usr/bin/perl
+use strict;
+use warnings;
+
+use Getopt::Std;
+
+my %Opt = ();
+getopts('q', \%Opt);
+
+unless( defined $ARGV[0] )
+	{
+	die "Please specify the destination directory\n";
+	}
+
+my $dir = shift @ARGV;
+unless( -d $dir )
+	{
+	mkdir $dir, 0755 or die "Could not create $dir: $!";
+	}
+
+my $skip = 1;
+my $faq;
+my ($major, $minor, $revision, $subject);
+
+while (<>) {
+	my $old_major = $major || 0;
+	($major) = $ARGV =~ /^perlfaq(\d)/g;
+	
+	next unless defined $major;
+
+	unless( $old_major == $major )
+		{
+		printfaq( $old_major, $minor );
+		$minor = 0;
+		$faq = '';
+		redo;
+		}
+		
+	$minor = 0 unless $old_major == $major;
+
+    if (/^=head1\s+/) {
+		$skip = 1;
+		next;
+		} 
+
+    if (/^=head2\s+/) {
+		$skip = 0;
+		if ($faq) {
+			printfaq( $major, $minor );
+			}
+		$faq = $_;
+		$minor++;
+		for ($subject = $_) {
+			s///;
+			s/\n/ /g;
+			}
+		next;
+    	} 
+
+    unless ($skip) {
+		$faq .= $_;
+		}
+
+}
+
+sub printfaq {
+	my( $major, $minor ) = @_;
+	return unless( defined $major and defined $minor );
+	
+    my $faqname = sprintf("perlfaq.%02d.%02d.txt", $major, $minor);
+    print STDERR "$faqname\n" unless $Opt{q};
+    open (F, "| pod2text > $dir/$faqname")
+		or die "$0: can't open output";
+    print F $faq;
+    close F;
+} 

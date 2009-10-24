@@ -1,0 +1,370 @@
+=head1 NAME
+
+perlfaq3 - Programming Tools
+
+=head1 DESCRIPTION
+
+This section of the FAQ answers questions related to programmer tools
+and programming support.
+
+=head2 How do I do (anything)?
+
+Have you looked at CPAN (see L<perlfaq2>)?  The chances are that
+someone has already written a module that can solve your problem.
+Have you read the appropriate manpages?  Here's a brief index:
+
+	Basics	        perldata, perlvar, perlsyn, perlop, perlsub
+	Execution	perlrun, perldebug
+	Functions	perlfunc
+	Objects		perlref, perlmod, perlobj, perltie
+	Data Structures	perlref, perllol, perldsc
+	Modules		perlmod, perlmodlib, perlsub
+	Regexes		perlre, perlfunc, perlop, perllocale
+	Moving to perl5	perltrap, perl
+	Linking w/C	perlxstut, perlxs, perlcall, perlguts, perlembed
+	Various 	http://www.cpan.org/misc/olddoc/FMTEYEWTK.tgz
+			(not a man-page but still useful, a collection
+			 of various essays on Perl techniques)
+
+A crude table of contents for the Perl manpage set is found in L<perltoc>.
+
+=head2 How can I use Perl interactively?
+
+The typical approach uses the Perl debugger, described in the
+perldebug(1) manpage, on an "empty" program, like this:
+
+    perl -de 42
+
+Now just type in any legal Perl code, and it will be immediately
+evaluated.  You can also examine the symbol table, get stack
+backtraces, check variable values, set breakpoints, and other
+operations typically found in symbolic debuggers.
+
+=head2 Is there a Perl shell?
+
+The psh (Perl sh) is currently at version 1.8. The Perl Shell is a shell
+that combines the interactive nature of a Unix shell with the power of
+Perl. The goal is a full featured shell that behaves as expected for
+normal shell activity and uses Perl syntax and functionality for
+control-flow statements and other things. You can get psh at
+http://sourceforge.net/projects/psh/ .
+
+Zoidberg is a similar project and provides a shell written in perl,
+configured in perl and operated in perl. It is intended as a login shell
+and development environment. It can be found at
+http://pardus-larus.student.utwente.nl/~pardus/projects/zoidberg/
+or your local CPAN mirror.
+
+The Shell.pm module (distributed with Perl) makes Perl try commands
+which aren't part of the Perl language as shell commands.  perlsh from
+the source distribution is simplistic and uninteresting, but may still
+be what you want.
+
+=head2 How do I find which modules are installed on my system?
+
+From the command line, you can use the C<cpan> command's C<-l> switch:
+
+	$ cpan -l
+
+You can also use C<cpan>'s C<-a> switch to create an autobundle file
+that C<CPAN.pm> understands and cna use to re-install every module:
+
+	$ cpan -a
+
+Inside a Perl program, you can use the ExtUtils::Installed module to
+show all installed distributions, although it can take awhile to do
+its magic.  The standard library which comes with Perl just shows up
+as "Perl" (although you can get those with Module::CoreList).
+
+	use ExtUtils::Installed;
+
+	my $inst    = ExtUtils::Installed->new();
+	my @modules = $inst->modules();
+
+If you want a list of all of the Perl module filenames, you
+can use File::Find::Rule.
+
+	use File::Find::Rule;
+
+	my @files = File::Find::Rule->
+		extras({follow => 1})->
+		file()->
+		name( '*.pm' )->
+		in( @INC )
+		;
+
+If you do not have that module, you can do the same thing
+with File::Find which is part of the standard library.
+
+	use File::Find;
+	my @files;
+
+	find(
+	    {
+		wanted => sub {
+		    push @files, $File::Find::fullname
+			if -f $File::Find::fullname && /\.pm$/
+		},
+		follow => 1,
+		follow_skip => 2,
+	    },
+	    @INC
+	);
+
+	print join "\n", @files;
+
+If you simply need to quickly check to see if a module is
+available, you can check for its documentation.  If you can
+read the documentation the module is most likely installed.
+If you cannot read the documentation, the module might not
+have any (in rare cases).
+
+	$ perldoc Module::Name
+
+You can also try to include the module in a one-liner to see if
+perl finds it.
+
+	$ perl -MModule::Name -e1
+
+=head2 How do I debug my Perl programs?
+
+(contributed by brian d foy)
+
+Before you do anything else, you can help yourself by ensuring that
+you let Perl tell you about problem areas in your code. By turning
+on warnings and strictures, you can head off many problems before
+they get too big. You can find out more about these in L<strict>
+and L<warnings>.
+
+	#!/usr/bin/perl
+	use strict;
+	use warnings;
+
+Beyond that, the simplest debugger is the C<print> function. Use it
+to look at values as you run your program:
+
+	print STDERR "The value is [$value]\n";
+
+The C<Data::Dumper> module can pretty-print Perl data structures:
+
+	use Data::Dumper qw( Dumper );
+	print STDERR "The hash is " . Dumper( \%hash ) . "\n";
+
+Perl comes with an interactive debugger, which you can start with the
+C<-d> switch. It's fully explained in L<perldebug>.
+
+If you'd like a graphical user interface and you have Tk, you can use
+C<ptkdb>. It's on CPAN and available for free.
+
+If you need something much more sophisticated and controllable, Leon
+Brocard's Devel::ebug (which you can call with the -D switch as -Debug)
+gives you the programmatic hooks into everything you need to write your
+own (without too much pain and suffering).
+
+You can also use a commercial debugger such as Affrus (Mac OS X), Komodo
+from Activestate (Windows and Mac OS X), or EPIC (most platforms).
+
+=head2 How do I profile my Perl programs?
+
+(contributed by brian d foy, updated Fri Jul 25 12:22:26 PDT 2008)
+
+The C<Devel> namespace has several modules which you can use to
+profile your Perl programs. The C<Devel::DProf> module comes with Perl
+and you can invoke it with the C<-d> switch:
+
+	perl -d:DProf program.pl
+
+After running your program under C<DProf>, you'll get a F<tmon.out> file
+with the profile data. To look at the data, you can turn it into a
+human-readable report with the C<dprofpp> program that comes with
+C<Devel::DProf>.
+
+	dprofpp
+
+You can also do the profiling and reporting in one step with the C<-p>
+switch to <dprofpp>:
+
+	dprofpp -p program.pl
+
+The C<Devel::NYTProf> (New York Times Profiler) does both statement
+and subroutine profiling. It's available from CPAN and you also invoke
+it with the C<-d> switch:
+
+	perl -d:NYTProf some_perl.pl
+
+Like C<DProf>, it creates a database of the profile information that you
+can turn into reports. The C<nytprofhtml> command turns the data into
+an HTML report similar to the C<Devel::Cover> report:
+
+	nytprofhtml
+
+CPAN has several other profilers that you can invoke in the same
+fashion. You might also be interested in using the C<Benchmark> to
+measure and compare code snippets.
+
+You can read more about profiling in I<Programming Perl>, chapter 20,
+or I<Mastering Perl>, chapter 5.
+
+L<perldebguts> documents creating a custom debugger if you need to
+create a special sort of profiler. brian d foy describes the process
+in I<The Perl Journal>, "Creating a Perl Debugger",
+http://www.ddj.com/184404522 , and "Profiling in Perl"
+http://www.ddj.com/184404580 .
+
+Perl.com has two interesting articles on profiling: "Profiling Perl",
+by Simon Cozens, http://www.perl.com/lpt/a/850 and "Debugging and
+Profiling mod_perl Applications", by Frank Wiles,
+http://www.perl.com/pub/a/2006/02/09/debug_mod_perl.html .
+
+Randal L. Schwartz writes about profiling in "Speeding up Your Perl
+Programs" for I<Unix Review>,
+http://www.stonehenge.com/merlyn/UnixReview/col49.html , and "Profiling
+in Template Toolkit via Overriding" for I<Linux Magazine>,
+http://www.stonehenge.com/merlyn/LinuxMag/col75.html .
+
+=head2 How do I cross-reference my Perl programs?
+
+The B::Xref module can be used to generate cross-reference reports
+for Perl programs.
+
+    perl -MO=Xref[,OPTIONS] scriptname.plx
+
+=head2 Is there a pretty-printer (formatter) for Perl?
+
+Perltidy is a Perl script which indents and reformats Perl scripts
+to make them easier to read by trying to follow the rules of the
+L<perlstyle>. If you write Perl scripts, or spend much time reading
+them, you will probably find it useful.  It is available at
+http://perltidy.sourceforge.net
+
+Of course, if you simply follow the guidelines in L<perlstyle>,
+you shouldn't need to reformat.  The habit of formatting your code
+as you write it will help prevent bugs.  Your editor can and should
+help you with this.  The perl-mode or newer cperl-mode for emacs
+can provide remarkable amounts of help with most (but not all)
+code, and even less programmable editors can provide significant
+assistance.  Tom Christiansen and many other VI users  swear by
+the following settings in vi and its clones:
+
+    set ai sw=4
+    map! ^O {^M}^[O^T
+
+Put that in your F<.exrc> file (replacing the caret characters
+with control characters) and away you go.  In insert mode, ^T is
+for indenting, ^D is for undenting, and ^O is for blockdenting--as
+it were.  A more complete example, with comments, can be found at
+http://www.cpan.org/authors/id/TOMC/scripts/toms.exrc.gz
+
+The a2ps http://www-inf.enst.fr/%7Edemaille/a2ps/black+white.ps.gz does
+lots of things related to generating nicely printed output of
+documents.
+
+=head2 Is there a ctags for Perl?
+
+(contributed by brian d foy)
+
+Ctags uses an index to quickly find things in source code, and many
+popular editors support ctags for several different languages,
+including Perl.
+
+Exuberent ctags supports Perl: http://ctags.sourceforge.net/
+
+You might also try pltags: http://www.mscha.com/pltags.zip
+
+=head2 Is there an IDE or Windows Perl Editor?
+
+Perl programs are just plain text, so any editor will do.
+
+If you're on Unix, you already have an IDE--Unix itself.  The UNIX
+philosophy is the philosophy of several small tools that each do one
+thing and do it well.  It's like a carpenter's toolbox.
+
+If you want an IDE, check the following (in alphabetical order, not
+order of preference):
+
+=over 4
+
+=item Eclipse
+
+http://e-p-i-c.sf.net/
+
+The Eclipse Perl Integration Project integrates Perl
+editing/debugging with Eclipse.
+
+=item Enginsite
+
+http://www.enginsite.com/
+
+Perl Editor by EngInSite is a complete integrated development
+environment (IDE) for creating, testing, and  debugging  Perl scripts;
+the tool runs on Windows 9x/NT/2000/XP or later.
+
+=item Komodo
+
+http://www.ActiveState.com/Products/Komodo/
+
+ActiveState's cross-platform (as of October 2004, that's Windows, Linux,
+and Solaris), multi-language IDE has Perl support, including a regular expression
+debugger and remote debugging.
+
+=item Open Perl IDE
+
+http://open-perl-ide.sourceforge.net/
+
+Open Perl IDE is an integrated development environment for writing
+and debugging Perl scripts with ActiveState's ActivePerl distribution
+under Windows 95/98/NT/2000.
+
+=item OptiPerl
+
+http://www.optiperl.com/
+
+OptiPerl is a Windows IDE with simulated CGI environment, including
+debugger and syntax highlighting editor.
+
+=item Padre
+
+http://padre.perlide.org/
+
+Padre is cross-platform IDE for Perl written in Perl using the the wxWidgets
+to provide a native look and feel. It's open source under the Artistic
+License.
+
+=item PerlBuilder
+
+http://www.solutionsoft.com/perl.htm
+
+PerlBuilder is an integrated development environment for Windows that
+supports Perl development.
+
+=item visiPerl+
+
+http://helpconsulting.net/visiperl/
+
+From Help Consulting, for Windows.
+
+=item Visual Perl
+
+http://www.activestate.com/Products/Visual_Perl/
+
+Visual Perl is a Visual Studio.NET plug-in from ActiveState.
+
+=item Zeus
+
+http://www.zeusedit.com/lookmain.html
+
+Zeus for Window is another Win32 multi-language editor/IDE
+that comes with support for Perl:
+
+=back
+
+For editors: if you're on Unix you probably have vi or a vi clone
+already, and possibly an emacs too, so you may not need to download
+anything. In any emacs the cperl-mode (M-x cperl-mode) gives you
+perhaps the best available Perl editing mode in any editor.
+
+If you are using Windows, you can use any editor that lets you work
+with plain text, such as NotePad or WordPad.  Word processors, such as
+Microsoft Word or WordPerfect, typically do not work since they insert
+all sorts of behind-the-scenes information, although some allow you to
+save files as "Text Only". You can also download te

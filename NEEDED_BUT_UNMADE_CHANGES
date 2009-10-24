@@ -1,0 +1,68 @@
+#!/usr/bin/perl
+
+=pod
+
+This document sits aside the perlfaq files as a scratchpad for things
+that should change, but for some reason haven't. Please use this 
+syntax (and leave the committer annotation to subversion):
+
+	<severity>perlfaq<number> - <comment>
+
+	Severity
+
+		! - important change needed soon 
+		? - something that might need work, but not sure
+		. - change this at some point, but no big deal
+
+		& - needs a code change
+		" - needs a prose change
+
+		\ - backwards compatibility change (e.g. for 5.6)
+		/ - forwards compatibility change (e.g. for 5.10)
+
+		# - resolved, but keep in list anyway just in case
+
+		- - candidate for deletion
+		+ - candidate for addition
+
+For example:
+
+
+Important change to text:
+
+	!"perlfaq5 - The question says foo, but should say bar
+
+Is that code right:
+
+	?&perlfaq4 - Does that really calculate foo?
+		
+Delete this question:
+
+	-perlfaq3 - Question "How do I foo?" no longer needed with Perl5
+
+Add this question
+
+	+perlfaq1 - Add "Why Doens't anyone ever listen to me?"
+
+=cut
+
+# put some parsing, reporting code here
+
+__END__
+
+?perlfaq3 -  Where can I get perl-mode for emacs?
+	Everyone seems to disagree on what cperl is the right one
+	
+?perlfaq5 - How can I translate tildes (~) in a filename?
+
+?perlfaq7 - remove Switch.pm mention
+
+?perlfaq8 - FAQ 8.43 How do I open a file without blocking?
+	see http://groups.google.com/group/comp.lang.perl.misc/browse_frm/thread/54a2b857dbbb23b1/4d96198cfd1214b0?lnk=st&q=FAQ+8.43+How+do+I+open+a+file+without+blocking%3F&rnum=1#4d96198cfd1214b0
+	
+-perlfaq7 - What is variable suicide and how can I prevent it?
+
+!perlfaq9 - How do I remove HTML from a string?
+	This answer is 15 years old and just plain wrong
+
++perlfaq4 - How do I traverse nested hashes?
