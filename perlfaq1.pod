@@ -1,124 +1,121 @@
 =head1 NAME
 
-perlfaq1 - General Questions About Perl
+perlfaq1 - Allgemeine Fragen zu Perl
 
-=head1 DESCRIPTION
+=head1 Beschreibung
 
-This section of the FAQ answers very general, high-level questions
-about Perl.
+Dieser Abschnitt der FAQ beantwortet sehr allgemeine, high-level Fragen
+über Perl.
 
-=head2 What is Perl?
+=head2 Was ist Perl?
 
-Perl is a high-level programming language with an eclectic heritage
-written by Larry Wall and a cast of thousands.  It derives from the
-ubiquitous C programming language and to a lesser extent from sed,
-awk, the Unix shell, and at least a dozen other tools and languages.
-Perl's process, file, and text manipulation facilities make it
-particularly well-suited for tasks involving quick prototyping, system
-utilities, software tools, system management tasks, database access,
-graphical programming, networking, and world wide web programming.
-These strengths make it especially popular with system administrators
-and CGI script authors, but mathematicians, geneticists, journalists,
-and even managers also use Perl.  Maybe you should, too.
+Perl ist eine Hochsprache der Programmierung mit einer aus verschiedenen Quellen 
+schöpfenden Herkunft, die von Larry Wall und einem Ensemble von tausenden anderen 
+geschrieben wurde.
+Sie wurde der allgegenwärtigen C-Programmiersprache hergeleitet und
+in einem geringeren Außmaß auch von sed, awk, der Unix shell und mindestens
+einem Dutzend andere Tools und Sprachen. Perls Prozess-, Datei-, und 
+Textmanipulationsfähigkeiten machen es besonders gut geeignet für Aufgaben mit 
+schnellem Prototypen, Systemtools, Softwaretools, Systembetreuungsaufgaben, 
+Datatenbankzugriff, graphischem Programmieren, Netzwerk, und World-Wide-Web-Programmierung. 
+Diese Stärken haben es besonders bei Systembetreuern, CGI-Skript-Autoren beliebt gemacht, 
+doch auch Mathematiker, Genforscher, Journalisten und sogar Manager verwenden Perl. 
+Vielleicht solltest auch du es tun. 
 
-=head2 Who supports Perl?  Who develops it?  Why is it free?
+=head2 Wer unterstützt Perl?  Wer entwickelt es?  Warum ist es kostenlos?
 
-The original culture of the pre-populist Internet and the deeply-held
-beliefs of Perl's author, Larry Wall, gave rise to the free and open
-distribution policy of perl.  Perl is supported by its users.  The
-core, the standard Perl library, the optional modules, and the
-documentation you're reading now were all written by volunteers.  See
-the personal note at the end of the README file in the perl source
-distribution for more details.  See L<perlhist> (new as of 5.005)
-for Perl's milestone releases.
+Die ursprüngliche Kultur des Internets, bevor es populär wurde, und die tiefe 
+Gläubigkeit des Perl-Autors, Larry Wall, haben zur freien und offenen Verteilungsmethode 
+von Perl geführt. Perl wird von seinen Anwendern unterstützt. Der Core (Kern), die 
+Standard-Perl-Bibliothek, die optionalen Module und die Dokumentation, die Du gerade liest 
+wurden alle von Freiwilligen geschrieben. Siehe die persönliche Mitteilung am Ende der Datei 
+"README" in der Perl Source Distribution zu weiteren Einzelheiten. Siehe auch L<perlhist>
+(neu ab 5.005) zu Perls Meilenstein-Versionen. 
 
-In particular, the core development team (known as the Perl Porters)
-are a rag-tag band of highly altruistic individuals committed to
-producing better software for free than you could hope to purchase for
-money.  You may snoop on pending developments via the archives at
-http://www.xray.mpe.mpg.de/mailing-lists/perl5-porters/
-and http://archive.develooper.com/perl5-porters@perl.org/
-or the news gateway nntp://nntp.perl.org/perl.perl5.porters or
-its web interface at http://nntp.perl.org/group/perl.perl5.porters ,
-or read the faq at http://dev.perl.org/perl5/docs/p5p-faq.html ,
-or you can subscribe to the mailing list by sending
-perl5-porters-request@perl.org a subscription request
-(an empty message with no subject is fine).
+Speziell das Entwickler-Team des Cores (auch bekannt als Perl Porters) ist eine buntgemischte
+Gruppe von selbstlosen Individuen, die sich dafür einsetzen, eine bessere, kostenlose Software
+zu schreiben, als Du es hoffen kannst, für Geld zu kaufen. Vielleicht möchtest Du die laufende
+Entwicklung über die Archive unter http://www.xray.mpe.mpg.de/mailing-lists/perl5-porters/
+und http://archive.develooper.com/perl5-porters@perl.org/ oder über das Newsgateway
+nntp://nntp.perl.org/perl.perl5.porters oder dessen Webinterface unter http://nntp.perl.org/group/perl.perl5.porters 
+verfolgen, oder die FAQ unter http://dev.perl.org/perl5/docs/p5p-faq.html lesen. Du kannst Dich
+auch auf der Mailinliste einschreiben, indem Du eine Anfrage an perl5-porters-request@perl.org 
+schickst (eine leere Nachricht ohne Betreff ist ausreichend).
 
-While the GNU project includes Perl in its distributions, there's no
-such thing as "GNU Perl".  Perl is not produced nor maintained by the
-Free Software Foundation.  Perl's licensing terms are also more open
-than GNU software's tend to be.
+Obwohl das GNU Projekt Perl beinhaltet, gibt es nicht so etwas wie "GNU Perl". Perl wird
+von der Free Software Foundation weder geschrieben noch gepflegt. Perls Lizenzbedingungen
+sind auch freier als es GNU Software normalerweise ist.
 
-You can get commercial support of Perl if you wish, although for most
-users the informal support will more than suffice.  See the answer to
-"Where can I buy a commercial version of perl?" for more information.
+Auf Wunsch kannst Du kommerzielle Unterstützung für Perl bekommen, aber für die meisten
+Anwender wird der informelle Support mehr als ausreichend sein. Für weitere Informationen
+siehe auch die Antwort auf die Frage "Wo kann ich eine kommerzielle Version von Perl kaufen?".
 
-=head2 Which version of Perl should I use?
+=head2 Welche Version von Perl soll ich benutzen?
 
-(contributed by brian d foy)
+(beigetragen von brian d foy)
 
-There is often a matter of opinion and taste, and there isn't any one
-answer that fits everyone. In general, you want to use either the current
-stable release, or the stable release immediately prior to that one.
-Currently, those are perl5.10.x and perl5.8.x, respectively.
+Oft ist es eine Sache der eigenen Meinung und des Geschmacks und es gibt keine
+Anwort, die für jeden passt. Im Allgemeinen solltest Du entweder die akutelle
+stabile Version verwenden oder die stabile Version, die es unmittelbar vor der
+aktuellen Version gab. Aktuell sind dies perl5.10.x und perl5.8.x.
 
-Beyond that, you have to consider several things and decide which is best
-for you.
+Weiterhin musst Du weitere Dinge beachten und entscheiden, was für Dich das
+Beste ist.
 
 =over 4
 
 =item *
 
-If things aren't broken, upgrading perl may break them (or at least issue
-new warnings).
+Wenn die Dinge nicht kaputt sind, kann ein Perl-Upgrade sie kaputt machen (oder zumindest
+neue Warnungen erzeugen).
 
 =item *
 
-The latest versions of perl have more bug fixes.
+Die aktuellsten Versionen von perl haben mehr Bugfixes.
 
 =item *
 
-The Perl community is geared toward supporting the most recent releases,
-so you'll have an easier time finding help for those.
+Die Perl Community ist darauf eingestellt, die letzten Versionen zu unterstützen,
+also wirst Du es leichter haben, Hilfe für diese zu bekommen.
 
 =item *
 
-Versions prior to perl5.004 had serious security problems with buffer
-overflows, and in some cases have CERT advisories (for instance,
+Versionen vor perl5.004 haben schwerwiegende Sicherheitsprobleme mit
+"buffer overflows" und einige Fälle haben CERT Hinweise (z.B. 
 http://www.cert.org/advisories/CA-1997-17.html ).
 
 =item *
 
-The latest versions are probably the least deployed and widely tested, so
-you may want to wait a few months after their release and see what
-problems others have if you are risk averse.
+Die aktuellsten Versionen sind wahrscheinlich die am wenigsten eingesetzten
+und getestetn, so dass Du vielleicht ein paar Monate nach ihrer Veröffentlichung
+abwarten willst wenn Du Risikoscheu bist und sehen willst, welche Probleme andere haben.
 
 =item *
 
-The immediate, previous releases (i.e. perl5.8.x ) are usually maintained
-for a while, although not at the same level as the current releases.
+Die unmittelbar vorhergehenden Versionen (z.B. perl5.8.x) sind für gewöhnlich seit
+einer ganzen Weile gepflegt, auch wenn nicht auf dem gleichen Level wie die aktuelle
+Version.
 
 =item *
 
-No one is actively supporting Perl 4.  Five years ago it was a dead
-camel carcass (according to this document).  Now it's barely a skeleton
-as its whitewashed bones have fractured or eroded.
+Niemand unterstützt aktiv Perl 4. Vor fünf Jahren war es ein toter Kamelkadaver
+(diesem Dokument zufolge). Jetzt es kaum noch ein Skelett, weil seine getünchten
+Knochen gebrochen und angefressen sind.
 
 =item *
 
-There is no Perl 6 release scheduled, but it will be available when
-it's ready.  Stay tuned, but don't worry that you'll have to change
-major versions of Perl; no one is going to take Perl 5 away from you.
+Es steht kein Perl 6 Release an, aber es wird da sein, wenn es fertig ist. Bleib dran,
+aber kümmere Dich nicht darum, dass Du einen Versionsprung von Perl machen musst. Keiner
+wird Dir Perl 5 wegnehmen.
 
 =item *
 
-There are really two tracks of perl development: a maintenance version
-and an experimental version.  The maintenance versions are stable, and
-have an even number as the minor release (i.e. perl5.10.x, where 10 is the
-minor release).  The experimental versions may include features that
-don't make it into the stable versions, and have an odd number as the
-minor release (i.e. perl5.9.x, where 9 is the minor release).
+Es gibt wirklich zwei Gleise bei der perl Entwicklung: Eine gepflegte Version und eine
+experimentelle Version. Die gepflegte Version ist stabil und hat eine gerade  
+Neben-Versionsnummer (z.B. perl5.10.x, bei der die 10 die Neben-Versionsnummer ist).
+Die experimentelle Version kann Features enthalten, die es nicht bis in die stabile
+Version schaffen. Sie haben eine ungerade Neben-Versionsnummer (z.B. perl5.9.x, wobei
+die 9 die Neben-Versionsnummer ist).
 
 =back
 
@@ -385,7 +382,7 @@ grounded in reality. Dogmatically advocating anything tends to make
 people discount your message. Be honest about possible disadvantages
 to your choice of Perl since any choice has trade-offs.
 
-You might find these links useful:
+Vielleicht findest Du diese Links hilfreich:
 
 =over 4
 
@@ -399,20 +396,21 @@ You might find these links useful:
 
 Revision: $Revision$
 
-Date: $Date$
+Datum: $Date$
 
-See L<perlfaq> for source control details and availability.
+Für Details über Versionskontrolle und Verfügbarkeit siehe L<perlfaq>.
 
 =head1 AUTHOR AND COPYRIGHT
 
-Copyright (c) 1997-2009 Tom Christiansen, Nathan Torkington, and
-other authors as noted. All rights reserved.
+Copyright (c) 1997-2009 Tom Christiansen, Nathan Torkington und andere
+Autoren wie genannt. Alle Rechte vorbehalten.
 
-This documentation is free; you can redistribute it and/or modify it
-under the same terms as Perl itself.
+Diese Dokument ist frei; Du kannst es unter den gleichen Bedingungen wie
+Perl selbst weiterverteilen und/oder verändern.
 
-Irrespective of its distribution, all code examples here are in the public
-domain.  You are permitted and encouraged to use this code and any
+Unabhängig von der Verteilung, sind alle Code-Beispiele Gemeingut.
+
+You are permitted and encouraged to use this code and any
 derivatives thereof in your own programs for fun or for profit as you
 see fit.  A simple comment in the code giving credit to the FAQ would
 be courteous but is not required.
