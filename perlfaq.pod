@@ -1,34 +1,36 @@
+=encoding utf-8
+
 =head1 NAME
 
-perlfaq - frequently asked questions about Perl
+perlfaq - Häufig gestellte Fragen zu Perl
 
-=head1 DESCRIPTION
+=head1 BESCHREIBUNG
 
-The perlfaq comprises several documents that answer the most commonly
-asked questions about Perl and Perl programming. It's divided by topic
-into nine major sections outlined in this document.
+Die perlfaq enthält einige Dokumente, die die am häufigsten über Perl und 
+Perl-Programmierung gestellten Fragen beantworten. Sie sind anhand des Themas
+in 9 Hauptabschitte eingeteilt, die in diesem Dokument umrissen werden.
 
-=head2 Where to get the perlfaq
+=head2 Wo findet man die perlfaq?
 
-The perlfaq comes with the standard Perl distribution, so if you have Perl
-you should have the perlfaq. You should also have the C<perldoc> tool
-that let's you read the L<perlfaq>:
+Die (englischsprachigen) perlfaq werden mit der Standard-Perl-Distribution
+mitgeliefert. Also solltest Du die perlfaq haben, wenn Du Perl hast. Du solltest
+auch das C<perldoc> Tool haben, mit dem Du die L<perlfaq> lesen kannst:
 
-	$ perldoc perlfaq
+    $ perldoc perlfaq
 
-Besides your local system, you can find the perlfaq on the web, including
-at http://perldoc.perl.org/ .
+Neben Deinem lokalen System, kannst Du die perlfaq auch im Web finden, unter
+anderem bei http://perldoc.perl.org/ .
 
-The perlfaq is an evolving document and you can read the latest version
-at http://faq.perl.org/ . The perlfaq-workers periodically post extracts
-of the latest perlfaq to comp.lang.perl.misc.
+Die perlfaq ist ein sich ständig änderndes Dokument und Du kannst die aktuellste
+Version unter http://faq.perl.org/ lesen. Die perlfaq-workers posten Auszüge aus
+der aktuellsten perlfaq unter comp.lang.perl.misc.
 
-You can view the source tree at
-https://github.com/briandfoy/perlfaq (which is outside of the
-main Perl source tree).  The git repository notes all changes to the FAQ
-and holds the latest version of the working documents and may vary
-significantly from the version distributed with the latest version of
-Perl. Check the repository before sending your corrections.
+Du kannst die Quellen (der englischsprachigen perlfaq) unter 
+https://github.com/briandfoy/perlfaq ansehen (das außerhalb der eigentlichen
+Perl Sourcen ist). Das git Repository schreibt alle Änderungen an den FAQ mit
+und enthält die aktuellste Version der Dokumente und kann sich stark von der
+Version unterscheiden, die mit der aktuellsten Perl-Version mitgeliefert wird.
+Bitte prüfe das Repository bevor Du Deine Korrekturen schickst.
 
 =head2 How to contribute to the perlfaq
 
@@ -88,209 +90,213 @@ them as you see fit and at your own risk with no warranty from anyone.
 
 =over 4
 
-=item perlfaq  - this document
+=item perlfaq  - Dieses Dokument
 
-=item perlfaq1 - General Questions About Perl
+=item perlfaq1 - Allgemeine Fragen zu Perl
 
-=item perlfaq2 - Obtaining and Learning about Perl
+=item perlfaq2 - Bezugsquellen und Dokumentation
 
-=item perlfaq3 - Programming Tools
+=item perlfaq3 - Programmierwerkzeuge
 
-=item perlfaq4 - Data Manipulation
+=item perlfaq4 - Datenverarbeitung
 
-=item perlfaq5 - Files and Formats
+=item perlfaq5 - Dateien und Formate
 
-=item perlfaq6 - Regular Expressions
+=item perlfaq6 - Reguläre Ausdrücke
 
-=item perlfaq7 - General Perl Language Issues
+=item perlfaq7 - Perl-idiomatischer Sprachgebrauch
 
-=item perlfaq8 - System Interaction
+=item perlfaq8 - Systeminteraktion
 
-=item perlfaq9 - Networking
+=item perlfaq9 - Netzwerke
 
 =back
 
-=head1 The Questions
+=head1 Die Fragen
 
-=head2 L<perlfaq1>: General Questions About Perl
+=head2 L<perlfaq1>: Allgemeine Fragen zu Perl
 
-Very general, high-level questions about Perl.
+Sehr allgemeine, high-level Fragen zu Perl.
 
 =over 4
 
 =item *
 
-What is Perl?
+Was ist Perl?
 
 =item *
 
-Who supports Perl?  Who develops it?  Why is it free?
+Wer unterstützt Perl?  Wer entwickelt es?  Warum ist es frei?
 
 =item *
 
-Which version of Perl should I use?
+Welche Version von Perl sollte ich benutzen?
 
 =item *
 
-What are Perl 4, Perl 5, or Perl 6?
+Was ist Perl 4, Perl 5 oder Perl 6?
 
 =item *
 
-What was Ponie?
+Was war Ponie?
 
 =item *
 
-What is Perl 6?
+Was ist Perl 6?
 
 =item *
 
-How stable is Perl?
+Wie stabil Perl?
 
 =item *
 
-Is Perl difficult to learn?
+Ist Perl schwierig zu (er)lernen?
 
 =item *
 
-How does Perl compare with other languages like Java, Python, REXX, Scheme, or Tcl?
+Wie ist Perl im Vergleich zu anderen Sprachen wie Java, Python, REXX, Scheme oder Tcl?
 
 =item *
 
-Can I do [task] in Perl?
+Kann ich [Aufgabe] in Perl erledigen?
 
 =item *
 
-When shouldn't I program in Perl?
+Wann sollte ich nicht in Perl programmieren?
 
 =item *
 
-What's the difference between "perl" and "Perl"?
+Was ist der Unterschied zwischen "perl" und "Perl"?
 
 =item *
 
-Is it a Perl program or a Perl script?
+Ist es ein Perl-Programm oder ein Perl-Skript?
 
 =item *
 
-What is a JAPH?
+Was ist ein JAPH?
 
 =item *
 
-Where can I get a list of Larry Wall witticisms?
+Wo kann ich eine Liste von Larry Walls Witzeleien finden?
 
 =item *
 
-How can I convince others to use Perl?
+Wie kann ich andere überreden, Perl zu benutzen?
 
 =back
 
 
-=head2 L<perlfaq2>: Obtaining and Learning about Perl
+=head2 L<perlfaq2>: Bezugsquellen und Dokumentation
 
-Where to find source and documentation for Perl, support, and related matters.
+Wo die Sourcen und die Dokumentation von Perl, Support und verwandte Angelegenheiten
+zu finden sind.
 
 =over 4
 
 =item *
 
-What machines support perl?  Where do I get it?
+Welche Maschinen unterstützen Perl? Wo bekomme ich es her?
 
 =item *
 
-How can I get a binary version of perl?
+Wie kann ich eine Binär-Version von Perl bekommen?
 
 =item *
 
-I don't have a C compiler. How can I build my own Perl interpreter?
+Ich habe keinen C-Compiler. Wie kann ich meinen eigenen Perl-Interpreter bauen?
 
 =item *
 
-I copied the perl binary from one machine to another, but scripts don't work.
+Ich habe den Perl-Interpreter von einer Maschine auf eine andere kopiert, aber Skripte
+funktionieren nicht.
 
 =item *
 
-I grabbed the sources and tried to compile but gdbm/dynamic loading/malloc/linking/... failed.  How do I make it work?
+Ich habe die Sourcen geholt und versucht, diese zu kompilieren, 
+aber gdbm/dynamic loading/malloc/linking/... ist fehlgeschlagen.
+Wie kann ich es zum Laufen bringen?
 
 =item *
 
-What modules and extensions are available for Perl?  What is CPAN?  What does CPAN/src/... mean?
+Welche Module und Erweiterungen sind für Perl erhältlich? Was ist CPAN? Was bedeutet CPAN/src/...?
 
 =item *
 
-Is there an ISO or ANSI certified version of Perl?
+Gibt es eine ISO- oder ANSI-zertifizierte Version von Perl?
 
 =item *
 
-Where can I get information on Perl?
+Wo kann ich Informationen über Perl finden?
 
 =item *
 
-What are the Perl newsgroups on Usenet?  Where do I post questions?
+Welche Perl newsgroups gibt es im Usenet? Wo stelle ich Fragen?
 
 =item *
 
-Where should I post source code?
+Wo sollte ich Source Code einstellen?
 
 =item *
 
-Perl Books
+Perl Bücher
 
 =item *
 
-Which magazines have Perl content?
+Welche Magazine haben Perl-Inhalt
 
 =item *
 
-What mailing lists are there for Perl?
+Welche Mailinglisten gibt es über Perl?
 
 =item *
 
-Where are the archives for comp.lang.perl.misc?
+Wo sind die Archive von comp.lang.perl.misc?
 
 =item *
 
-Where can I buy a commercial version of perl?
+Wo kann ich eine Kommerzielle Version von Perl kaufen?
 
 =item *
 
-Where do I send bug reports?
+Wo kann ich Bug-Reports hinschicken?
 
 =item *
 
-What is perl.com? Perl Mongers? pm.org? perl.org? cpan.org?
+Was ist perl.com? Perl-Mongers? pm.org? perl.org? cpan.org?
 
 =back
 
 
-=head2 L<perlfaq3>: Programming Tools
+=head2 L<perlfaq3>: Programmierwerkzeuge
 
-Programmer tools and programming support.
+Programmierwerkzeuge und Unterstützung bei der Programmierung.
 
 =over 4
 
 =item *
 
-How do I do (anything)?
+Wie mache ich (irgendwas)?
 
 =item *
 
-How can I use Perl interactively?
+Wie kann ich Perl interaktiv benutzen?
 
 =item *
 
-Is there a Perl shell?
+Gibt es eine Perl shell?
 
 =item *
 
-How do I find which modules are installed on my system?
+Wie finde ich heraus, welche Module auf meinem System installiert sind?
 
 =item *
 
-How do I debug my Perl programs?
+Wie debugge ich meine Perl-Programme?
 
 =item *
 
-How do I profile my Perl programs?
+Wie profile ich meine Perl-Programme?
 
 =item *
 
