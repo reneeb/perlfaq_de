@@ -278,10 +278,10 @@ will sleep easier, too--Wall Street programs not withstanding. :-)
 
 =head2 Was ist der Unterschied zwischen "perl" und "Perl"?
 
-One bit.  Oh, you weren't talking ASCII? :-) Larry now uses "Perl" to
-signify the language proper and "perl" the implementation of it, i.e.
-the current interpreter.  Hence Tom's quip that "Nothing but perl can
-parse Perl."
+Ein Bit. Oha, es ging gar nicht um ASCII? :-) Larry verwendet nun "Perl" 
+um damit die Sprache selbst zu bezeichen und "perl" für ihre Implementation, 
+also den aktuellen Interpreter. Daher kommt Tom's Ausspruch "Nur perl kann 
+Perl parsen." 
 
 Before the first edition of I<Programming perl>, people commonly
 referred to the language as "perl", and its name appeared that way in
@@ -291,11 +291,11 @@ when typeset. This convention was adopted by the community, and the
 second edition became I<Programming Perl>, using the capitalized
 version of the name to refer to the language.
 
-You may or may not choose to follow this usage.  For example,
-parallelism means "awk and perl" and "Python and Perl" look good, while
-"awk and Perl" and "Python and perl" do not.  But never write "PERL",
-because perl is not an acronym, apocryphal folklore and post-facto
-expansions notwithstanding.
+Du kannst es genau so halten oder anders. Zum Beispiel sieht 
+sowohl "awk und perl" als auch "Python and Perl" ganz ok aus, während "awk 
+und Perl" und "Python und perl" nicht so gut aussieht. Schreibe jedoch niemals 
+"PERL", denn Perl ist kein Akronym, egal was apokryphe Folklore und 
+spätere Erklärungen dazu sagen.
 
 =head2 Ist es ein Perl-Programm oder ein Perl-Skript?
 
