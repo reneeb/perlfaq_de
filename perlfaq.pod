@@ -247,7 +247,7 @@ Perl Bücher
 
 =item *
 
-Welche Magazine haben Perl-Inhalt
+Welche Magazine haben Perl-Inhalte
 
 =item *
 

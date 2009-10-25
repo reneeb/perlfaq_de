@@ -1,6 +1,6 @@
 =head1 NAME
 
-perlfaq2 - Obtaining and Learning about Perl
+perlfaq2 - Bezugsquellen und Dokumentation
 
 =head1 DESCRIPTION
 
@@ -8,7 +8,7 @@ This section of the FAQ answers questions about where to find
 source and documentation for Perl, support, and
 related matters.
 
-=head2 What machines support perl?  Where do I get it?
+=head2 Welche Maschinen unterstützen Perl? Wo bekomme ich es her?
 
 The standard release of perl (the one maintained by the perl
 development team) is distributed only in source code form.  You
@@ -29,9 +29,9 @@ of the particular platform that are not supported in the source
 release of perl) or negative (e.g. might be based upon a less current
 source release of perl).
 
-=head2 How can I get a binary version of perl?
+=head2 Wie kann ich eine Binär-Version von Perl bekommen?
 
-(contributed by brian d foy)
+(beigetragen von brian d foy)
 
 ActiveState: Windows, Linux, Mac OS X, Solaris, AIX and HP-UX
 
@@ -49,7 +49,7 @@ IndigoPerl: Windows
 
 	http://indigostar.com/
 
-=head2 I don't have a C compiler. How can I build my own Perl interpreter?
+=head2 Ich habe keinen C-Compiler. Wie kann ich meinen eigenen Perl-Interpreter bauen?
 
 Since you don't have a C compiler, you're doomed and your vendor
 should be sacrificed to the Sun gods.  But that doesn't help you.
@@ -69,7 +69,7 @@ ready-to-use.
 For Sun systems, SunFreeware.com provides binaries of most popular
 applications, including compilers and Perl.
 
-=head2 I copied the perl binary from one machine to another, but scripts don't work.
+=head2 Ich habe den Perl-Interpreter von einer Maschine auf eine andere kopiert, aber Skripte funktionieren nicht.
 
 That's probably because you forgot libraries, or library paths differ.
 You really should build the whole distribution on the machine it will
@@ -91,14 +91,14 @@ part of the output of
 You might also want to check out
 L<perlfaq8/"How do I keep my own module/library directory?">.
 
-=head2 I grabbed the sources and tried to compile but gdbm/dynamic loading/malloc/linking/... failed.  How do I make it work?
+=head2 Ich habe die Sourcen geholt und versucht, diese zu kompilieren, aber gdbm/dynamic loading/malloc/linking/... ist fehlgeschlagen. Wie kann ich es zum Laufen bringen?
 
 Read the F<INSTALL> file, which is part of the source distribution.
 It describes in detail how to cope with most idiosyncrasies that the
 Configure script can't work around for any given system or
 architecture.
 
-=head2 What modules and extensions are available for Perl?  What is CPAN?  What does CPAN/src/... mean?
+=head2 Welche Module und Erweiterungen sind für Perl erhältlich? Was ist CPAN? Was bedeutet CPAN/src/...?
 
 CPAN stands for Comprehensive Perl Archive Network, a multi-gigabyte
 archive replicated on hundreds of machines all over the world. CPAN
@@ -141,11 +141,11 @@ category.
 
 CPAN is a free service and is not affiliated with O'Reilly Media.
 
-=head2 Is there an ISO or ANSI certified version of Perl?
+=head2 Gibt es eine ISO- oder ANSI-zertifizierte Version von Perl?
 
 Certainly not.  Larry expects that he'll be certified before Perl is.
 
-=head2 Where can I get information on Perl?
+=head2 Wo kann ich Informationen über Perl finden?
 
 The complete Perl documentation is available with the Perl distribution.
 If you have Perl installed locally, you probably have the documentation
@@ -176,7 +176,7 @@ by the time you read this.  These URLs might also be useful:
     http://perldoc.perl.org/
     http://bookmarks.cpan.org/search.cgi?cat=Training%2FTutorials
 
-=head2 What are the Perl newsgroups on Usenet?  Where do I post questions?
+=head2 Welche Perl newsgroups gibt es im Usenet? Wo stelle ich Fragen?
 
 Several groups devoted to the Perl language are on Usenet:
 
@@ -208,7 +208,7 @@ Note that none of the above are supposed to write your code for you:
 asking questions about particular problems or general advice is fine,
 but asking someone to write your code for free is not very cool.
 
-=head2 Where should I post source code?
+=head2 Wo sollte ich Source Code einstellen?
 
 You should post source code to whichever group is most appropriate, but
 feel free to cross-post to comp.lang.perl.misc.  If you want to cross-post
@@ -221,7 +221,7 @@ If you're just looking for software, first use Google
 ( http://groups.google.com ),  and CPAN Search ( http://search.cpan.org ).
 This is faster and more productive than just posting a request.
 
-=head2 Perl Books
+=head2 Perl Bücher
 
 A number of books on Perl and/or CGI programming are available.  A few
 of these are good, some are OK, but many aren't worth your money.
@@ -280,7 +280,7 @@ Recommended books on (or mostly on) Perl follow.
 
 =over 4
 
-=item References
+=item Referenzen
 
 	Programming Perl
 	by Larry Wall, Tom Christiansen, and Jon Orwant
@@ -319,7 +319,7 @@ Recommended books on (or mostly on) Perl follow.
 	ISBN 0-596-52724-1 [1st edition July 2007]
 	http://www.oreilly.com/catalog/9780596527242/
 
-=item Task-Oriented
+=item Aufgaben-bezogen
 
 	Writing Perl Modules for CPAN
 	by Sam Tregar
@@ -342,7 +342,7 @@ Recommended books on (or mostly on) Perl follow.
 	ISBN 1-59059-097-X [1st edition July 2003]
 	http://apress.com/book/bookDisplay.html?bID=171
 
-=item Special Topics
+=item Spezielle Themen
 
 	Perl Best Practices
 	by Damian Conway
@@ -402,7 +402,7 @@ Recommended books on (or mostly on) Perl follow.
 
 =back
 
-=head2 Which magazines have Perl content?
+=head2 Welche Magazine haben Perl-Inhalte
 
 I<The Perl Review> ( http://www.theperlreview.com ) focuses on Perl
 almost completely (although it sometimes sneaks in an article about
@@ -431,7 +431,7 @@ can download issues as PDF documents. In 2006, TPJ merged with Dr.
 Dobbs Journal (online edition). To read old TPJ articles, see
 http://www.ddj.com/ .
 
-=head2 What mailing lists are there for Perl?
+=head2 Welche Mailinglisten gibt es über Perl?
 
 Most of the major modules (Tk, CGI, libwww-perl) have their own
 mailing lists.  Consult the documentation that came with the module for
@@ -441,7 +441,7 @@ A comprehensive list of Perl related mailing lists can be found at:
 
 	http://lists.perl.org/
 
-=head2 Where are the archives for comp.lang.perl.misc?
+=head2 Wo sind die Archive von comp.lang.perl.misc?
 
 The Google search engine now carries archived and searchable newsgroup
 content.
@@ -453,7 +453,7 @@ same question at some point on c.l.p.m. It requires some time and patience
 to sift through all the content but often you will find the answer you
 seek.
 
-=head2 Where can I buy a commercial version of perl?
+=head2 Wo kann ich eine Kommerzielle Version von Perl kaufen?
 
 In a real sense, perl already I<is> commercial software: it has a license
 that you can grab and carefully read to your manager. It is distributed
@@ -474,7 +474,7 @@ as do the O'Reilly Perl Resource Kits (in both the Unix flavor
 and in the proprietary Microsoft flavor); the free Unix distributions
 also all come with perl.
 
-=head2 Where do I send bug reports?
+=head2 Wo kann ich Bug-Reports hinschicken?
 
 (contributed by brian d foy)
 
@@ -502,32 +502,31 @@ Some modules might have special reporting requirements, such as a
 Sourceforge or Google Code tracking system, so you should check the
 module documentation too.
 
-=head2 What is perl.com? Perl Mongers? pm.org? perl.org? cpan.org?
+=head2 Was ist perl.com? Perl-Mongers? pm.org? perl.org? cpan.org?
 
-Perl.com at http://www.perl.com/ is part of the O'Reilly Network, a
-subsidiary of O'Reilly Media.
+Perl.com unter http://www.perl.com/ ist Teil des O'Reilly Netzwerks, ein
+Tochterunternehmen von O'Reilly Media.
 
-The Perl Foundation is an advocacy organization for the Perl language
-which maintains the web site http://www.perl.org/ as a general
-advocacy site for the Perl language. It uses the domain to provide
-general support services to the Perl community, including the hosting
-of mailing lists, web sites, and other services.  There are also many
-other sub-domains for special topics like learning Perl, Perl news, jobs
-in Perl, such as:
+Die Perl Foundation ist eine Interessensorganisation für die Sprache Perl,
+die die Webseite http://www.perl.org/ als eine allgemeine Interessensseite
+für die Sprache Perl pflegt. Sie nutzt die Domain um allgmeine Unterstützungsleistungen
+für die Perl Gemeinschaft anzubieten. Das beinhaltet das Hosting von Mailinglisten,
+Webseiten und anderen Diensten. Zusätzlich gibt es noch viele weitere
+Subdomains für spezielle Themen wie "Perl lernen", Perl News, Jobs in Perl, wie z.B.:
 
 	http://learn.perl.org/
 	http://use.perl.org/
 	http://jobs.perl.org/
 	http://lists.perl.org/
 
-Perl Mongers uses the pm.org domain for services related to Perl user
-groups, including the hosting of mailing lists and web sites.  See the
-Perl user group web site at http://www.pm.org/ for more information about
-joining, starting, or requesting services for a Perl user group.
+Die Perl Mongers benutzen die pm.org Domain für Dienste die mit den Perl-Anwendergruppen
+zusammenhängen. Das beinhaltet das Hosting der Mailinglisten und Webseiten. Für weitere
+Informationen über den Beitritt, das Starten einer Gruppe oder Anfragen für Dienste einer
+Anwendergruppe siehe auch die Webseite unter http://www.pm.org/ .
 
-http://www.cpan.org/ is the Comprehensive Perl Archive Network,
-a replicated worldwide repository of Perl software, see
-the I<What is CPAN?> question earlier in this document.
+http://www.cpan.org/ ist das Comprehensive Perl Archive Network,
+ein repliziertes weltweites Repository für Perl Software. Siehe auch die
+I<Was ist CPAN?> Frage weiter vorne in diesem Dokument.
 
 =head1 REVISION
 
