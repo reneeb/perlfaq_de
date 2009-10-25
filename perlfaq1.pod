@@ -180,7 +180,7 @@ seiner Veröffentlichung unterstützt werden. Warte mit dem, was du zu tun hast ni
 
 "Wir nehmen es sehr ernst mit dem Neuerfinden von all dem, das neuerfunden werden muss." --Larry Wall 
 
-=head2 How stable is Perl?
+=head2 Wie stabil Perl?
 
 Production releases, which incorporate bug fixes and new functionality,
 are widely tested before release.  Since the 5.000 release, we have
@@ -193,7 +193,7 @@ under Perl 5, an update to perl should nearly never invalidate a program
 written for an earlier version of perl (barring accidental bug fixes
 and the rare new keyword).
 
-=head2 Is Perl difficult to learn?
+=head2 Ist Perl schwierig zu (er)lernen?
 
 No, Perl is easy to start learning--and easy to keep learning.  It looks
 like most programming languages you're likely to have experience
@@ -220,7 +220,7 @@ usually available for free.  Don't forget Perl modules, either.
 They're discussed in Part 3 of this FAQ, along with CPAN, which is
 discussed in Part 2.
 
-=head2 How does Perl compare with other languages like Java, Python, REXX, Scheme, or Tcl?
+=head2 Wie ist Perl im Vergleich zu anderen Sprachen wie Java, Python, REXX, Scheme oder Tcl?
 
 Favorably in some areas, unfavorably in others.  Precisely which areas
 are good and bad is often a personal choice, so asking this question
@@ -233,7 +233,7 @@ can learn about (but hopefully not argue about) them.
 Some comparison documents can be found at http://www.perl.com/doc/FMTEYEWTK/versus/
 if you really can't stop yourself.
 
-=head2 Can I do [task] in Perl?
+=head2 Kann ich [Aufgabe] in Perl erledigen?
 
 Perl is flexible and extensible enough for you to use on virtually any
 task, from one-line file-processing tasks to large, elaborate systems.
@@ -256,7 +256,7 @@ convenient for certain kinds of problems.  Perl tries to be all things
 to all people, but nothing special to anyone.  Examples of specialized
 languages that come to mind include prolog and matlab.
 
-=head2 When shouldn't I program in Perl?
+=head2 Wann sollte ich nicht in Perl programmieren?
 
 When your manager forbids it--but do consider replacing them :-).
 
@@ -276,7 +276,7 @@ a statically typed one.  You certainly won't be chastised if you don't
 trust nuclear-plant or brain-surgery monitoring code to it.  And Larry
 will sleep easier, too--Wall Street programs not withstanding. :-)
 
-=head2 What's the difference between "perl" and "Perl"?
+=head2 Was ist der Unterschied zwischen "perl" und "Perl"?
 
 One bit.  Oh, you weren't talking ASCII? :-) Larry now uses "Perl" to
 signify the language proper and "perl" the implementation of it, i.e.
@@ -297,7 +297,7 @@ parallelism means "awk and perl" and "Python and Perl" look good, while
 because perl is not an acronym, apocryphal folklore and post-facto
 expansions notwithstanding.
 
-=head2 Is it a Perl program or a Perl script?
+=head2 Ist es ein Perl-Programm oder ein Perl-Skript?
 
 Larry doesn't really care.  He says (half in jest) that "a script is
 what you give the actors.  A program is what you give the audience."
@@ -322,38 +322,38 @@ they have begun to take on strange and often pejorative meanings,
 like "non serious" or "not real programming".  Consequently, some Perl
 programmers prefer to avoid them altogether.
 
-=head2 What is a JAPH?
+=head2 Was ist ein JAPH?
 
-(contributed by brian d foy)
+(beigetragen von brian d foy)
 
-JAPH stands for "Just another Perl hacker,", which Randal Schwartz used
-to sign email and usenet messages starting in the late 1980s. He
-previously used the phrase with many subjects ("Just another x hacker,"),
-so to distinguish his JAPH, he started to write them as Perl programs:
+JAPH steht für "Just another Perl hacker,", das Randal Schwartz in den späten
+1980er zum Unterschreiben seiner Emails und Usenet-Nachrichten benutzt hat.
+Vorher hat er diesen Ausdruck mit vielen Dingen verwendet ("Just another x hacker,").
+Zur Trennung seiner JAPH, begann er diese als Perl-Programm zu schreiben:
 
 	print "Just another Perl hacker,";
 
-Other people picked up on this and started to write clever or obfuscated
-programs to produce the same output, spinning things quickly out of
-control while still providing hours of amusement for their creators and
-readers.
+Andere Leute haben das aufgenommen und begannen clevere oder verwirrende
+Programme zu schreiben, die das gleiche ausgegeben haben. Die Dinge gerieten
+schnell außer Kontrolle, während sie ihren Schöpfern und Lesern
+noch Stunden der Vergnügung beschehrten.
 
-CPAN has several JAPH programs at http://www.cpan.org/misc/japh .
+Auf CPAN gibt es verschiedene JAPH Programme unter http://www.cpan.org/misc/japh .
 
-=head2 Where can I get a list of Larry Wall witticisms?
+=head2 Wo kann ich eine Liste von Larry Walls Witzeleien finden?
 
-(contributed by brian d foy)
+(beigetragen von brian d foy)
 
-Google "larry wall quotes"! You might even try the "I feel lucky" button.
+Google "larry wall quotes"! Du könntest sogar den "Auf gut Glück!"-Button versuchen.
 :)
 
-Wikiquote has the witticisms from Larry along with their source,
-including his usenet postings and source code comments.
+Wikiquote hat die Witze von Larry Wall mit deren Quellen, einschließlich
+seiner Usenet-Beiträge und Quellcode-Kommentare.
 
-If you want a plain text file, try
+Wenn Du eine einfache Textdatei haben möchtest, versuche es mit
 http://www.cpan.org/misc/lwall-quotes.txt.gz .
 
-=head2 How can I convince others to use Perl?
+=head2 Wie kann ich andere überreden, Perl zu benutzen?
 
 (contributed by brian d foy)
 
