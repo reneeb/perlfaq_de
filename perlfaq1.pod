@@ -399,7 +399,7 @@ Datum: $Date$
 
 Für Details über Versionskontrolle und Verfügbarkeit siehe L<perlfaq>.
 
-=head1 AUTHOR AND COPYRIGHT
+=head1 AUTOR UND COPYRIGHT
 
 Copyright (c) 1997-2009 Tom Christiansen, Nathan Torkington und andere
 Autoren wie genannt. Alle Rechte vorbehalten.
