@@ -120,66 +120,65 @@ die 9 die Neben-Versionsnummer ist).
 =back
 
 
-=head2 What are Perl 4, Perl 5, or Perl 6?
+=head2 Was sind Perl 4, Perl 5 und Perl 6?
 
-(contributed by brian d foy)
+(beigetragen von brian d foy)
 
-In short, Perl 4 is the past, Perl 5 is the present, and Perl 6 is the
-future.
+Kurz, Perl 4 ist die Vergangenheit, Perl 5 die Gegenwart und Perl 6 ist
+die Zukunft.
 
-The number after perl (i.e. the 5 after Perl 5) is the major release
-of the perl interpreter as well as the version of the language.  Each
-major version has significant differences that earlier versions cannot
-support.
+Die Zahl nach perl (z.B. die 5 bei Perl 5) ist sowohl die Hauptversionsnummer
+des Perl interpreters als auch die Version der Sprache. Jede Hauptversion
+hat signifikante Unterschiede durch die frühere Versionen nicht unterstützt
+werden können.
 
-The current major release of Perl is Perl 5, and was released in 1994.
-It can run scripts from the previous major release, Perl 4 (March 1991),
-but has significant differences. It introduced the concept of references,
-complex data structures, and modules.  The Perl 5 interpreter was a
-complete re-write of the previous perl sources.
+Die aktuelle Hauptversion von Perl ist Perl 5 und wurde 1994 veröffentlicht.
+Es kann Skripte von der früheren Version - Perl 4 (März 1991) - laufen lassen,
+aber sie hat starke Unterschiede. Sie hat das Konzept der Referenzen, komplexe
+Datenstrukturen und Module eingeführt. Für den Perl 5 Interpreter wurden die
+früheren Perl-Sourcen komplett neu geschrieben.
 
-Perl 6 is the next major version of Perl, but it's still in development
-in both its syntax and design.  The work started in 2002 and is still
-ongoing.  Many of the most interesting features have shown up in the
-latest versions of Perl 5, and some Perl 5 modules allow you to use some
-Perl 6 syntax in your programs.  You can learn more about Perl 6 at
-http://dev.perl.org/perl6/ .
+Perl 6 ist die nächste Hauptversion von Perl, aber das ist noch in Entwicklung,
+sowohl bei der Syntax als auch im Design. Die Arbeit startete im Jahr 2002 und
+läuft immer noch. Viele der interessantesten Features tauchen auch in der aktuellsten
+Version von Perl 5 auf und einige Perl 5 Module ermöglichen es Dir, einiges der
+Perl 6 Syntax in Deinen Programmen zu verwenden. Du kannst mehr über Perl 6 unter
+http://dev.perl.org/perl6/ lernen.
 
-See L<perlhist> for a history of Perl revisions.
+Für eine Historie der Perl Revisionen, siehe L<perlhist>.
 
-=head2 What was Ponie?
+=head2 Was war Ponie?
 
-(contributed by brian d foy)
+(beigetragen von brian d foy)
 
-Ponie stands for "Perl On the New Internal Engine", started by Arthur
-Bergman from Fotango in 2003, and subsequently run as a project of The
-Perl Foundation. It was abandoned in 2006
+Ponie steht für "Perl On the New Internal Engine" und wurd von Arthur
+Bergmann von Fotango im Jahre 2003 begonnen. Und es lief später als
+ein Projekt der Perl Foundation. Es wurde 2006 abgebrochen
 ( http://www.nntp.perl.org/group/perl.ponie.dev/487 ).
 
-Instead of using the current Perl internals, Ponie aimed to create a
-new one that would provide a translation path from Perl 5 to Perl 6
-(or anything else that targets Parrot, actually). You would have been
-able  to just keep using Perl 5 with Parrot, the virtual machine which
-will compile and run Perl 6 bytecode.
+Anstatt die aktuellen Perl-Interna zu nutzen, zielte Ponie darauf ab,
+neue Interna zu schaffen, die einen Weg für die Übersetzung von Perl 5
+nach Perl 6 (oder irgendetwas anderes, das Parrot unterstützt) bieten.
+Du wärst in der Lage gewesen, Perl 5 einfach mit Parrot, der Virtuellen
+Maschine die Perl 6 Bytecode kompilieren und laufen lassen kann, zu benutzen.
 
-=head2 What is Perl 6?
+=head2 Was ist Perl 6?
 
-At The Second O'Reilly Open Source Software Convention, Larry Wall
-announced Perl 6 development would begin in earnest. Perl 6 was an oft
-used term for Chip Salzenberg's project to rewrite Perl in C++ named
-Topaz. However, Topaz provided valuable insights to the next version
-of Perl and its implementation, but was ultimately abandoned.
+Auf der zweiten O'Reilly Open Source Software Convention hat Larry Wall
+angekündigt, dass die Perl 6 Entwicklung ernsthaft anfangen würde. Perl 6
+war ein oft benutzter Ausdruck für Chip Salzenbergs Projekt, Perl unter dem Namen
+Topaz in C++ neu zu schreiben. Wie auch immer, Topaz bot wertvolle Einblicke in
+die nächste Version von Perl und deren Implementierung. Aber das Projekt wurde
+letztendlich abgebrochen.
 
-If you want to learn more about Perl 6, or have a desire to help in
-the crusade to make Perl a better place then peruse the Perl 6 developers
-page at http://dev.perl.org/perl6/ and get involved.
+Wenn du mehr über Perl6 lernen, oder am Kreuzzug, der Perl verbessern soll, 
+teilnehmen willst, dann lies die Perl6-Entwicklerseiten auf http://dev.perl.org/perl6/ 
+und mach mit.
 
-Perl 6 is not scheduled for release yet, and Perl 5 will still be supported
-for quite awhile after its release. Do not wait for Perl 6 to do whatever
-you need to do.
+Perl6 ist noch nicht zur Veröffentlichung angekündigt und Perl5 wird noch eine Weile nach 
+seiner Veröffentlichung unterstützt werden. Warte mit dem, was du zu tun hast nicht auf Perl6.
 
-"We're really serious about reinventing everything that needs reinventing."
---Larry Wall
+"Wir nehmen es sehr ernst mit dem Neuerfinden von all dem, das neuerfunden werden muss." --Larry Wall 
 
 =head2 How stable is Perl?
 
@@ -408,9 +407,8 @@ Autoren wie genannt. Alle Rechte vorbehalten.
 Diese Dokument ist frei; Du kannst es unter den gleichen Bedingungen wie
 Perl selbst weiterverteilen und/oder verändern.
 
-Unabhängig von der Verteilung, sind alle Code-Beispiele Gemeingut.
-
-You are permitted and encouraged to use this code and any
-derivatives thereof in your own programs for fun or for profit as you
-see fit.  A simple comment in the code giving credit to the FAQ would
-be courteous but is not required.
+Unabhängig von der Verteilung, sind alle Code-Beispiele Gemeingut. Dir wird 
+erlaubt und du wirst ermutigt, sie und beliebige davon abgeleitete in deinen 
+Programmen zum Spaß oder für Profit zu verwenden. 
+Ein einfacher Kommentar im Code, der die FAQ würdigt, wäre nett, ist aber 
+nicht erforderlich. 
