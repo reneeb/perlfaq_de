@@ -195,86 +195,82 @@ and the rare new keyword).
 
 =head2 Ist Perl schwierig zu (er)lernen?
 
-No, Perl is easy to start learning--and easy to keep learning.  It looks
-like most programming languages you're likely to have experience
-with, so if you've ever written a C program, an awk script, a shell
-script, or even a BASIC program, you're already partway there.
+Nein, es ist leicht, mit dem Perl-Lernen anzufangen, und es ist auch leicht, 
+mit dem Perl-Lernen weiterzumachen. Perl sieht aus wie die meisten Programmiersprachen, 
+mit denen Du vermutlich schon Erfahrungen gemacht haben wirst; solltest Du also 
+bereits ein C-Programm, ein awk-Skript, ein Shellskript, oder auch ein BASIC-Programm 
+geschrieben haben, dann bist Du schon auf dem halben Weg dahin.
 
-Most tasks only require a small subset of the Perl language.  One of
-the guiding mottos for Perl development is "there's more than one way
-to do it" (TMTOWTDI, sometimes pronounced "tim toady").  Perl's
-learning curve is therefore shallow (easy to learn) and long (there's
-a whole lot you can do if you really want).
+Die meisten Aufgaben verlangen nur einen kleineren Teil der Sprache Perl. Eines der 
+führenden Mottos für die Perl-Entwicklung ist "there's more than one way to do it" 
+(TMTOWTDI, manchmal "Tim Toady" ausgesprochen: "Es gibt mehr als nur einen Weg, es zu tun"). 
+Die Lernkurve von Perl ist daher sehr flach (leicht erlernbar) und lang (es gibt sehr viel, 
+das Du tun kannst, wenn Du es wirklich willst).
 
-Finally, because Perl is frequently (but not always, and certainly not by
-definition) an interpreted language, you can write your programs and test
-them without an intermediate compilation step, allowing you to experiment
-and test/debug quickly and easily.  This ease of experimentation flattens
-the learning curve even more.
+Schließlich, aus dem Grund, dass Perl meistens (aber nicht immer, und auf jeden Fall 
+nicht per Definition) eine interpretierte Sprache ist, kannst Du Programme schreiben und 
+testen, ohne dazwischen einen Kompilierschritt zu durchlaufen, was sehr schnelles und 
+leichtes Ausprobieren und Testen/Debuggen ermöglicht. Diese Leichtigkeit etwas auszuprobieren 
+verflacht die Lernkurve noch weiter.
 
-Things that make Perl easier to learn: Unix experience, almost any kind
-of programming experience, an understanding of regular expressions, and
-the ability to understand other people's code.  If there's something you
-need to do, then it's probably already been done, and a working example is
-usually available for free.  Don't forget Perl modules, either.
-They're discussed in Part 3 of this FAQ, along with CPAN, which is
-discussed in Part 2.
+Was Perl noch leichter zu lernen macht sind: Unixerfahrung, fast jede Art der 
+Programmiererfahrung, Verständnis von regulären Ausdrücken und die Fähigkeit, anderer Leute Code 
+zu verstehen. Wenn Du etwas tun musst, wurde es vermutlich schon getan, und ein funktionierendes 
+Beispiel ist meistens kostenlos erhältlich. Vergiss auch nicht die Perl Module. Diese werden im 
+Teil 3 dieser FAQ besprochen, zusammen mit CPAN, das im Teil 2 dieser FAQ besprochen wird. 
 
 =head2 Wie ist Perl im Vergleich zu anderen Sprachen wie Java, Python, REXX, Scheme oder Tcl?
 
-Favorably in some areas, unfavorably in others.  Precisely which areas
-are good and bad is often a personal choice, so asking this question
-on Usenet runs a strong risk of starting an unproductive Holy War.
+In manchen Bereichen vorteilhaft, in anderen weniger. In welche Bereichen Perl gut oder schlecht 
+abschneidet ist oft eine persönliche Wahl, diese Frage im Usenet zu stellen bedeutet das Risiko einen 
+unproduktiven heiligen Krieg zu beginnen.
 
-Probably the best thing to do is try to write equivalent code to do a
-set of tasks.  These languages have their own newsgroups in which you
-can learn about (but hopefully not argue about) them.
+Vermutlich ist es das beste, gleichwertigen Code für eine Anzahl an Aufgaben zu schreiben. Diese 
+Sprachen haben ihre eigenen Newsgroups in denen man über sie lernen kann (aber besser keine 
+Meinungen über sie diskutieren sollte).
 
-Some comparison documents can be found at http://www.perl.com/doc/FMTEYEWTK/versus/
-if you really can't stop yourself.
+Einige vergleichende Dokumente sind auf http://www.perl.com/doc/FMTWYEWTK/versus/ zu finden, 
+falls Du es gar nicht lassen kannst. 
 
 =head2 Kann ich [Aufgabe] in Perl erledigen?
 
-Perl is flexible and extensible enough for you to use on virtually any
-task, from one-line file-processing tasks to large, elaborate systems.
-For many people, Perl serves as a great replacement for shell scripting.
-For others, it serves as a convenient, high-level replacement for most of
-what they'd program in low-level languages like C or C++.  It's ultimately
-up to you (and possibly your management) which tasks you'll use Perl
-for and which you won't.
 
-If you have a library that provides an API, you can make any component
-of it available as just another Perl function or variable using a Perl
-extension written in C or C++ and dynamically linked into your main
-perl interpreter.  You can also go the other direction, and write your
-main program in C or C++, and then link in some Perl code on the fly,
-to create a powerful application.  See L<perlembed>.
+Perl ist flexibel und erweiterbar genug, dass Du es für so ziemlich jede Aufgabe verwenden kannst, 
+von einzeiligen Dateibearbeitungsaufgaben hin zu großen ausgefeilten Systemen. Für viele Leute dient 
+Perl als guter Ersatz für Shellskripte. Für Andere ist es ein angenehmer high-level-Ersatz für die 
+meisten Dinge, die sonst in low-level-Sprachen wie C oder C++ geschrieben werden müssten. Es liegt 
+am Ende bei Dir (und möglicherweise Deinem Management), welche Aufgaben in Perl gemacht werden und 
+welche nicht.
 
-That said, there will always be small, focused, special-purpose
-languages dedicated to a specific problem domain that are simply more
-convenient for certain kinds of problems.  Perl tries to be all things
-to all people, but nothing special to anyone.  Examples of specialized
-languages that come to mind include prolog and matlab.
+Sollten Sie eine Bibliothek haben, die eine API anbietet, kannst Du jede Komponente davon als ganz 
+normale Perl-Funktion oder Variable zugänglich machen, indem Du eine Perl-Erweiterung in C oder C++ 
+verwendest, die dynamisch in den Perl-Interpreter gelinkt wird. Du kannst auch den anderen Weg gehen 
+und Dein Hauptprogramm in C oder C++ schreiben und dann auf die Schnelle Perl Code hineinlinken, um 
+so eine mächtige Anwendung zu schaffen. Siehe L<perlembed>.
+
+Nichtsdestoweniger; es wird immer kleine konzentrierte Spezialaufgaben-Sprachen geben, die sich 
+einem abgesteckten Aufgabenbereich widmen, die für ihr Aufgabengebiet auch am besten geeignet sind. 
+Perl versucht, alle diese Dinge für alle Leute anzubieten, aber nicht etwas ganz besonderes für 
+irgendwen. Beispiele für spezialisierte Sprachen, die einem einfallen sind unter anderem prolog 
+und matlab. 
 
 =head2 Wann sollte ich nicht in Perl programmieren?
 
-When your manager forbids it--but do consider replacing them :-).
+Wenn Dein Chef es verbietet -- aber denke darüber nach ihn auszuwechseln :-).
 
-Actually, one good reason is when you already have an existing
-application written in another language that's all done (and done
-well), or you have an application language specifically designed for a
-certain task (e.g. prolog, make).
+Ein wirklich guter Grund ist, wenn man bereits eine existierende Applikation hat, die in einer anderen 
+Sprache geschrieben wurde (und das sehr gut), oder wenn eine für die Aufgabe spezialisierte 
+Anwendungssprache zur Verfügung steht (z.Bsp. prolog, make).
 
-For various reasons, Perl is probably not well-suited for real-time
-embedded systems, low-level operating systems development work like
-device drivers or context-switching code, complex multi-threaded
-shared-memory applications, or extremely large applications.  You'll
-notice that perl is not itself written in Perl.
+Aus verschiedenen Gründen ist Perl für Embedded Real-Time-Systeme, low-level-Betriebssystementwicklung 
+wie Gerätetreiber oder Kontextwechselnden Code, komplexe multithreadende Shared-Memory-Anwendungen 
+oder extrem große Anwendungen vermutlich nicht so gut geeignet. 
+Dir wird aufgefallen sein, dass perl selbst ist nicht in Perl geschrieben worden.
 
-Perl remains fundamentally a dynamically typed language, not
-a statically typed one.  You certainly won't be chastised if you don't
-trust nuclear-plant or brain-surgery monitoring code to it.  And Larry
-will sleep easier, too--Wall Street programs not withstanding. :-)
+Perl bleibt grundsätzlich eine dynamisch typisierte Sprach, und keine statisch typisierte. Man wird Dich nicht
+bestrafen, wenn Du Perl nicht soweit vertrauen möchtest, Software für Kernkraftwerke oder 
+Gehirnchirurgieüberwachung darin zu schreiben. 
+Und Larry wird auch leichter schlafen können -- trotz Wall-Street-Börsenprogrammen in Perl. :-)
 
 =head2 Was ist der Unterschied zwischen "perl" und "Perl"?
 
@@ -412,3 +408,5 @@ erlaubt und du wirst ermutigt, sie und beliebige davon abgeleitete in deinen
 Programmen zum Spaß oder für Profit zu verwenden. 
 Ein einfacher Kommentar im Code, der die FAQ würdigt, wäre nett, ist aber 
 nicht erforderlich. 
+
+Übersetzung von Sörren Sörries und Renée Bäcker
