@@ -182,16 +182,16 @@ seiner Veröffentlichung unterstützt werden. Warte mit dem, was du zu tun hast ni
 
 =head2 Wie stabil Perl?
 
-Production releases, which incorporate bug fixes and new functionality,
-are widely tested before release.  Since the 5.000 release, we have
-averaged only about one production release per year.
+Produktionsversionen, die Bugfixe und neue FunktionalitÃ¤t beinhalten, werden vor ihrer 
+Veröffentlichung ausgiebig getestet. Seit der Version 5.000 haben wir es im Durchschnitt
+nur auf eine neue Produktionsversion im Jahr gebracht.
 
-Larry and the Perl development team occasionally make changes to the
-internal core of the language, but all possible efforts are made toward
-backward compatibility.  While not quite all Perl 4 scripts run flawlessly
-under Perl 5, an update to perl should nearly never invalidate a program
-written for an earlier version of perl (barring accidental bug fixes
-and the rare new keyword).
+Larry und das Perlentwicklerteam ändern gelegentlich etwas am internen Kern der Sprache;
+jedoch werden alle möglichen Anstrengungen unternommen, RückwÃ¤rtskompatibilität zu 
+gewährleisten. Obwohl längst nicht alle Perl 4-Skripte problemlos unter Perl 5 laufen, 
+sollte ein Perl-Update niemals ein Programm unbrauchbar machen, das für eine frühere 
+Perlversion geschrieben wurde (mal von zufälligen Bugfixes und seltenen neuen Schlüsselworten 
+abgesehen). 
 
 =head2 Ist Perl schwierig zu (er)lernen?
 
