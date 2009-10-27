@@ -45,25 +45,26 @@ Die Verwendung von CGI.pm bedeutet exzellente Plattformunabhängigkeit, einschlie
 EBCDIC-Systemen. CGI.pm wählt die passende Zeilenumbruch-Darstellung ($CGI::CRLF)
 und setzt den Binärmodus wo es passt.
 
-=head2 My CGI script runs from the command line but not the browser.  (500 Server Error)
+=head2 Mein CGI-Skript läuft von der Kommandozeile aus, aber nicht im Browser. (500 Server Error)
 
-Several things could be wrong.  You can go through the "Troubleshooting
-Perl CGI scripts" guide at
+Verschiedene Dinge können falsch sein. Du kannst den "Troubleshooting Perl CGI Skript"-Leitfaden
+unter
 
-	http://www.perl.org/troubleshooting_CGI.html
+  http://www.perl.org/troubleshooting_CGI.html
 
-If, after that, you can demonstrate that you've read the FAQs and that
-your problem isn't something simple that can be easily answered, you'll
-probably receive a courteous and useful reply to your question if you
-post it on comp.infosystems.www.authoring.cgi (if it's something to do
-with HTTP or the CGI protocols).  Questions that appear to be Perl
-questions but are really CGI ones that are posted to comp.lang.perl.misc
-are not so well received.
+durcharbeiten.
 
-The useful FAQs, related documents, and troubleshooting guides are
-listed in the CGI Meta FAQ:
+Wenn Du danach zeigen kannst, dass Du die FAQs gelesen hast und dass Dein Problem etwas
+einfaches ist, das leicht beantwortet werden kann, wirst Du wahrscheinlinch eine nette
+und hilfreiche Antwort auf Deine Frage bekommen, wenn Du sie auf comp.infosystems.www.authoring.cgi
+stellst (wenn es etwas mit HTTP oder mit dem CGI-Protokoll zu tun hat). Fragen, die scheinbar Perl-Fragen
+sind aber in Wirklichkeit CGI-Fragen und auf comp.lang.perl.misc gestellt werden, kommen
+nicht so gut an.
 
-	http://www.perl.org/CGI_MetaFAQ.html
+Die hilfreichen FAQs, verwandte Dokumente und Leitfaden für die Fehlersuche
+sind in der CGI Meta-FAQ aufgelistet:
+
+    http://www.perl.org/CGI_MetaFAQ.html
 
 =head2 How can I get better error messages from a CGI program?
 
