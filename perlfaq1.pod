@@ -350,31 +350,31 @@ http://www.cpan.org/misc/lwall-quotes.txt.gz .
 
 =head2 Wie kann ich andere überreden, Perl zu benutzen?
 
-(contributed by brian d foy)
+(beigetragen von brian d foy)
 
-Appeal to their self interest! If Perl is new (and thus scary) to them,
-find something that Perl can do to solve one of their problems. That
-might mean that Perl either saves them something (time, headaches, money)
-or gives them something (flexibility, power, testability).
+Appelliere an ihren Eigennutz. Perl ist für sie neu (und daher gruselig); finde etwas,
+das Perl tun kann um eines ihrer Probleme zu lösen. Das könnte bedeuten, dass Perl ihnen
+etwas spart (Zeit, Kopfschmerzen, Geld) oder ihnen etwas gibt (Flexibilität, Stärke, 
+Testbarkeit).
 
-In general, the benefit of a language is closely related to the skill of
-the people using that language. If you or your team can be more faster,
-better, and stronger through Perl, you'll deliver more value. Remember,
-people often respond better to what they get out of it. If you run
-into resistance, figure out what those people get out of the other
-choice and how Perl might satisfy that requirement.
+Im Allgemeinen ist der Nutzen einer Sprache sehr eng mit den Fähigkeiten der Personen
+verbunden, die die Sprache einsetzen. Wenn Du oder Dein Team durch Perl schneller, besser
+und stärker wird, kannst Du mehr Nutzen bringen. Denk daran, dass Leute häufig besser auf
+das was sie daraus herausziehen reagieren. Wenn Du auf Widerstand triffst, finde heraus,
+was diese Leute aus ihrer anderen Wahl herausziehen und wie Perl diesen Ansprüche 
+erfüllen kann.
 
-You don't have to worry about finding or paying for Perl; it's freely
-available and several popular operating systems come with Perl. Community
-support in places such as Perlmonks ( http://www.perlmonks.com )
-and the various Perl mailing lists ( http://lists.perl.org ) means that
-you can usually get quick answers to your problems.
+Du musst Dich nicht darum kümmern, wo Du Perl herbekommst, oder dass Du dafür bezahlen 
+musst; Es ist frei verfügbar und etliche beliebte Betriebssystem bringen Perl schon mit.
+Unterstützung durch die Gemeinschaft an Plätzen wie Perlmonks ( http://www.perlmonks.com )
+und die verschiedenen Perl-Mailinglisten ( http://lists.perl.org ) bedeuten, dass Du
+üblicherweise schnell Antworten auf Deine Probleme bekommst.
 
-Finally, keep in mind that Perl might not be the right tool for every
-job. You're a much better advocate if your claims are reasonable and
-grounded in reality. Dogmatically advocating anything tends to make
-people discount your message. Be honest about possible disadvantages
-to your choice of Perl since any choice has trade-offs.
+Und schließlich denke daran, dass Perl nicht das richtige Werkzeuge für jeden Job ist.
+Du bist ein viel besserer Fürsprecher wenn Deine Ansprüche begründet sind und auf der
+Realität basieren.  Etwas dogmatisch zu verfechten, bringt die Leute dazu, Deine Botschaft
+zu ignorieren. Sei ehrlich bei möglichen Nachteilen von Perl als Deine Alternative, da jede
+Alternative Kompromisse bedeutet.
 
 Vielleicht findest Du diese Links hilfreich:
 
