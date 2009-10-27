@@ -66,19 +66,19 @@ sind in der CGI Meta-FAQ aufgelistet:
 
     http://www.perl.org/CGI_MetaFAQ.html
 
-=head2 How can I get better error messages from a CGI program?
+=head2 Wie kann ich bessere Fehlermeldungen von einem CGI-Programm bekommen?
 
-Use the CGI::Carp module.  It replaces C<warn> and C<die>, plus the
-normal Carp modules C<carp>, C<croak>, and C<confess> functions with
-more verbose and safer versions.  It still sends them to the normal
-server error log.
+Benutze das CGI::Carp Modul. Es ersetzt C<warn> und C<die> und zusätzlich
+die  C<carp>-, C<croak>- und C<confess>-Funktionen aus dem normalen Carp Modul
+durch ausführlichere und sichere Versionen. Es schickte diese immer noch zur
+normalen Fehler-Logdatei des Servers.
 
 	use CGI::Carp;
 	warn "This is a complaint";
 	die "But this one is serious";
 
-The following use of CGI::Carp also redirects errors to a file of your choice,
-placed in a BEGIN block to catch compile-time warnings as well:
+Die folgende Verwendung von CGI::Carp leitet die Felhler in eine Datei Deiner Wahl um,
+und ist innerhalb eines BEGIN blocks, um auch Fehler während der Kompilier-Zeit abzufangen.
 
 	BEGIN {
 		use CGI::Carp qw(carpout);
@@ -87,17 +87,17 @@ placed in a BEGIN block to catch compile-time warnings as well:
 		carpout(*LOG);
 	}
 
-You can even arrange for fatal errors to go back to the client browser,
-which is nice for your own debugging, but might confuse the end user.
+Du kannst für Schwerwiegende Fehler sogar erreichen, dass sie an den Client-Browser
+zurückgehen, was für Dein eigenes Debugging schön ist, aber den Endbenutzer verwirren könnte.
 
 	use CGI::Carp qw(fatalsToBrowser);
 	die "Bad error here";
 
-Even if the error happens before you get the HTTP header out, the module
-will try to take care of this to avoid the dreaded server 500 errors.
-Normal warnings still go out to the server error log (or wherever
-you've sent them with C<carpout>) with the application name and date
-stamp prepended.
+Selbst wenn der Fehler auftritt, bevor Du den HTTP-Header ausgeben konntest, wird
+das Modul versuchen sich darum zu kümmern, um den gefürchteten 500 Server Error
+zu vermeiden. Normale Warnungen mit dem Namen der Anwendung und Zeitstemplet vorangestellt,
+landen weiterhin in der Fehler-Logdatei des Servers
+(oder wo auch immer Du sie mit C<carpout> hinschickst)
 
 =head2 How do I remove HTML from a string?
 
