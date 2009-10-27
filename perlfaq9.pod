@@ -1,49 +1,49 @@
 =head1 NAME
 
-perlfaq9 - Networking
+perlfaq9 - Netzwerke
 
 =head1 DESCRIPTION
 
-This section deals with questions related to networking, the internet,
-and a few on the web.
+Dieser Abschnitt behandelt Fragen bezüglich Netzwerken, dem Internet
+und einiges über das Web.
 
-=head2 What is the correct form of response from a CGI script?
+=head2 Wie ist die korrekte Form einer Antwort von einem CGI-Skript?
 
-(Alan Flavell <flavell+www@a5.ph.gla.ac.uk> answers...)
+(Alan Flavell <flavell+www@a5.ph.gla.ac.uk> antwortet...)
 
-The Common Gateway Interface (CGI) specifies a software interface between
-a program ("CGI script") and a web server (HTTPD). It is not specific
-to Perl, and has its own FAQs and tutorials, and usenet group,
+Das Common Gateway Interface (CGI) spezifiziert eine Softwareschnittstelle
+zwischen einem Programm ("CGI-Skript") und einem Webserver (HTTPD). Es ist
+nicht Perl-spezifisch und es seine eigenen FAQs und Tutorials und Usenet-Gruppe,
 comp.infosystems.www.authoring.cgi
 
-The CGI specification is outlined in an informational RFC:
+Die CGI-Spezifikation ist in einem informatorischem RFC skizziert:
 http://www.ietf.org/rfc/rfc3875
 
-Other relevant documentation listed in: http://www.perl.org/CGI_MetaFAQ.html
+Weiter relevante Dokumentationen sind unter http://www.perl.org/CGI_MetaFAQ.html
+aufgelistet.
 
-These Perl FAQs very selectively cover some CGI issues. However, Perl
-programmers are strongly advised to use the CGI.pm module, to take care
-of the details for them.
+Diese Perl FAQs behandeln einige sehr ausgesuchte CGI-Sachen. Wieauchimmer,
+Perl-Programmierer sind sehr gut beraten, das CGI.pm Module zu benutzen, das
+sich um die Details für sie kümmert.
 
-The similarity between CGI response headers (defined in the CGI
-specification) and HTTP response headers (defined in the HTTP
-specification, RFC2616) is intentional, but can sometimes be confusing.
+Die Ähnlichkeiten zwischen CGI-Antwort-Headern (definiert in der CGI-Spezifikation)
+und HTTP-Antwort-Headern (definiert in der HTTP-Sepzifikation, RFC2616) sind
+gewollt, können aber manchmal verwirrend sein.
 
-The CGI specification defines two kinds of script: the "Parsed Header"
-script, and the "Non Parsed Header" (NPH) script. Check your server
-documentation to see what it supports. "Parsed Header" scripts are
-simpler in various respects. The CGI specification allows any of the
-usual newline representations in the CGI response (it's the server's
-job to create an accurate HTTP response based on it). So "\n" written in
-text mode is technically correct, and recommended. NPH scripts are more
-tricky: they must put out a complete and accurate set of HTTP
-transaction response headers; the HTTP specification calls for records
-to be terminated with carriage-return and line-feed, i.e ASCII \015\012
-written in binary mode.
+Die CGI-Spezifikation definiert zwei Arten von Skripten: Die "Parsed Header"
+Skripte und die "Non Parsed Header" (NPH) Skripte. Überprüfe die Dokumentation
+Deines Servers, was er unterstützt. "Parsed Header" Skripte sind in verschiedener
+Hinsicht einfacher. Die CGI-Spezifikation erlaubt alle der üblichen Darstellungen
+des Zeilenumbruchs in der CGI Antwort (es ist die Aufgabe des Servers darauf basierend
+eine richtige HTTP Antwort zu erzeugen). Also ist "\n" im Textmodus geschrieben 
+technisch korrekt und empfohlen. NPH Skript sind kniffliger: Sie müssen einen
+kompletten und fehlerfreien Satz an HTTP-Transaktions Antwort-Headern ausgeben;
+die HTTP-Spezifikation verlangt, dass die Datensätze mit Carriage-Return und Line-Feed
+abgeschlossen sind, z.B. ASCII \015\012 im Binärmodus geschrieben.
 
-Using CGI.pm gives excellent platform independence, including EBCDIC
-systems. CGI.pm selects an appropriate newline representation
-($CGI::CRLF) and sets binmode as appropriate.
+Die Verwendung von CGI.pm bedeutet exzellente Plattformunabhängigkeit, einschließlich
+EBCDIC-Systemen. CGI.pm wählt die passende Zeilenumbruch-Darstellung ($CGI::CRLF)
+und setzt den Binärmodus wo es passt.
 
 =head2 My CGI script runs from the command line but not the browser.  (500 Server Error)
 
