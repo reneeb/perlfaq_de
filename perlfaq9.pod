@@ -648,18 +648,19 @@ from the <Socket> module, which also comes with perl.
 		scalar gethostbyname( $host || 'localhost' )
 		);
 
-=head2 How do I fetch a news article or the active newsgroups?
+=head2 Wie kann ich einen News-Artikel oder die aktive Newsgroup holen?
 
-Use the Net::NNTP or News::NNTPClient modules, both available from CPAN.
-This can make tasks like fetching the newsgroup list as simple as
+Benutze das Net::NNTP- oder News::NNTPClient-Modul, die es beide auf dem
+CPAN gibt. Das macht Aufgabe wie das holen der Newsgroup-Liste so einfach wie
 
 	perl -MNews::NNTPClient
 	  -e 'print News::NNTPClient->new->list("newsgroups")'
 
-=head2 How do I fetch/put an FTP file?
+=head2 Wie kann ich eine Datei per FTP holen/hochladen?
 
-LWP::Simple (available from CPAN) can fetch but not put.  Net::FTP (also
-available from CPAN) is more complex but can put as well as fetch.
+LWP::Simple (auf dem CPAN verfügbar) kann Dateien holen aber nicht hochladen.
+Net::FTP (ebenfalls auf dem CPAN verfügbar) is komplexer kann aber sowohl Dateien
+hochladen als auch holen.
 
 =head2 Wie kann ich RPC in Perl verwenden?
 
