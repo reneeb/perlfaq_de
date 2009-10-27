@@ -661,31 +661,33 @@ This can make tasks like fetching the newsgroup list as simple as
 LWP::Simple (available from CPAN) can fetch but not put.  Net::FTP (also
 available from CPAN) is more complex but can put as well as fetch.
 
-=head2 How can I do RPC in Perl?
+=head2 Wie kann ich RPC in Perl verwenden?
 
-(Contributed by brian d foy)
+(beigetragen von brian d foy)
 
-Use one of the RPC modules you can find on CPAN (
+Benutze eines der RPC-Module, die Du auf CPAN finden kannst (
 http://search.cpan.org/search?query=RPC&mode=all ).
 
 =head1 REVISION
 
 Revision: $Revision$
 
-Date: $Date$
+Datum: $Date$
 
-See L<perlfaq> for source control details and availability.
+Für Details über Versionskontrolle und Verfügbarkeit siehe L<perlfaq>.
 
-=head1 AUTHOR AND COPYRIGHT
+=head1 AUTOR UND COPYRIGHT
 
-Copyright (c) 1997-2009 Tom Christiansen, Nathan Torkington, and
-other authors as noted. All rights reserved.
+Copyright (c) 1997-2009 Tom Christiansen, Nathan Torkington und andere
+Autoren wie genannt. Alle Rechte vorbehalten.
 
-This documentation is free; you can redistribute it and/or modify it
-under the same terms as Perl itself.
+Diese Dokument ist frei; Du kannst es unter den gleichen Bedingungen wie
+Perl selbst weiterverteilen und/oder verändern.
 
-Irrespective of its distribution, all code examples in this file
-are hereby placed into the public domain.  You are permitted and
-encouraged to use this code in your own programs for fun
-or for profit as you see fit.  A simple comment in the code giving
-credit would be courteous but is not required.
+Unabhängig von der Verteilung, sind alle Code-Beispiele Gemeingut. Dir wird 
+erlaubt und du wirst ermutigt, sie und beliebige davon abgeleitete in deinen 
+Programmen zum Spaß oder für Profit zu verwenden. 
+Ein einfacher Kommentar im Code, der die FAQ würdigt, wäre nett, ist aber 
+nicht erforderlich. 
+
+Übersetzung von Renée Bäcker
