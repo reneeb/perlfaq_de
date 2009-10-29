@@ -228,14 +228,14 @@ benutzen, um einen eigenen User-Agent (z.B. Browser) zu erstellen um die
 Aufgabe zu erledigen. Wenn Du einen interaktiven Webbrowser simulieren willst,
 kannst Du das Modul C<WWW::Mechanize> verwenden.
 
-=head2 How do I automate an HTML form submission?
+=head2 Wie kann ich HTML-Formulare automatisiert abschicken?
 
-If you are doing something complex, such as moving through many pages
-and forms or a web site, you can use C<WWW::Mechanize>.  See its
-documentation for all the details.
+Wenn Du etwas komplexes machen willst, wie z.B. durch viele Seiten und
+Formulare oder eine Webseite zu bewegen, kannst Du C<WWW::Mechanize>
+verwenden. Schau Dir dessen Dokumentation für alle Details an.
 
-If you're submitting values using the GET method, create a URL and encode
-the form using the C<query_form> method:
+Wenn Du Werte mit der GET-Methode abschicken willst, erstelle eine URL
+und kodiere das Formular mit der C<query_form>-Methode:
 
 	use LWP::Simple;
 	use URI::URL;
@@ -244,8 +244,8 @@ the form using the C<query_form> method:
 	$url->query_form(module => 'DB_File', readme => 1);
 	$content = get($url);
 
-If you're using the POST method, create your own user agent and encode
-the content appropriately.
+Wenn Du die POST-Methode benutzt, erzeuge Dir einen eigenen User-Agent und
+kodiere den Inhalt entsprechend.
 
 	use HTTP::Request::Common qw(POST);
 	use LWP::UserAgent;
