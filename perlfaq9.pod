@@ -145,23 +145,22 @@ einem Text wie diesen scheitern:
 		<B>You can't see me!</B>
 	-->
 
-=head2 How do I extract URLs?
+=head2 Wie kann ich URLs extrahieren?
 
-You can easily extract all sorts of URLs from HTML with
-C<HTML::SimpleLinkExtor> which handles anchors, images, objects,
-frames, and many other tags that can contain a URL.  If you need
-anything more complex, you can create your own subclass of
-C<HTML::LinkExtor> or C<HTML::Parser>.  You might even use
-C<HTML::SimpleLinkExtor> as an example for something specifically
-suited to your needs.
+Du kannst leicht alle Arten von URL aus HTML mit C<HTML::SimpleLinkExtor> herausfiltern,
+das mit Ankern, Bildern, Objekten, Frames und vielen anderen Tags umgehen kann, die
+eine URL enthalten können. Wenn Du etwas komplexeres benötigst, kannst Du Deine eigene
+Subklasse von C<HTML::LinkExtor> oder C<HTML::Parser> schreiben. Du könntest sogar
+C<HTML::SimpleLinkExtor> als Beispiel für etwas nehmen, dass speziell auf Deine
+Bedürfnisse zugeschnitten ist.
 
-You can use URI::Find to extract URLs from an arbitrary text document.
+Du kannst URI::Find benutzen, um URLs aus einem beliebigen Text-Dokument zu filtern.
 
-Less complete solutions involving regular expressions can save
-you a lot of processing time if you know that the input is simple.  One
-solution from Tom Christiansen runs 100 times faster than most
-module based approaches but only extracts URLs from anchors where the first
-attribute is HREF and there are no other attributes.
+Weniger komplette Lösungen, die Reguläre Ausdrücke benutzen, können viel
+Laufzeit sparen, wenn Du weißt, dass die Eingabe einfach ist. Eine Lösung von
+Tom Christians läuft 100x schnelle als die meisten Modul-basierten Ansätze, filtert aber
+nur die URLs von Ankern, bei denen das erste Attribut HREF ist und keine weiteren
+Attribute hat.
 
 	#!/usr/bin/perl -n00
 	# qxurl - tchrist@perl.com
