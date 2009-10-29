@@ -327,21 +327,22 @@ an absolute URLpath.
 	print "Location: $url\n";   # CGI response header
 	print "\n";                 # end of headers
 
-=head2 How do I put a password on my web pages?
+=head2 Wie kann ich ein Passwort auf meiner Webseite einbauen?
 
-To enable authentication for your web server, you need to configure
-your web server.  The configuration is different for different sorts
-of web servers--apache does it differently from iPlanet which does
-it differently from IIS.  Check your web server documentation for
-the details for your particular server.
+Um Authentifizierung für Deinen Webserver einzuschalten, musst Du Deinen
+Webserver konfigurieren. Die Konfiguration ist verschieden bei den unterschiedlichen
+Typen von Webservern--Apache macht es anders als iPlanet, das es anders als der IIS
+macht. Prüfe Deine Webserver-Dokumentation für die Details Deines 
+entsprechenden Servers.
 
-=head2 How do I edit my .htpasswd and .htgroup files with Perl?
+=head2 Wie kann ich meine .htpasswd und .htgroup Dateien mit Perl bearbeiten?
 
-The HTTPD::UserAdmin and HTTPD::GroupAdmin modules provide a
-consistent OO interface to these files, regardless of how they're
-stored.  Databases may be text, dbm, Berkeley DB or any database with
-a DBI compatible driver.  HTTPD::UserAdmin supports files used by the
-"Basic" and "Digest" authentication schemes.  Here's an example:
+Die Module HTTPD::UserAdmin und HTTPD::GroupAdmin bieten eine konsistente
+OO Schnittstelle für diese Dateien, egal wie sie gespeichert sind. Datenbanken
+können Text, DBM, Berkeley DB oder irgendeine Datenbank mit einem
+DBI-kompatiblen Treiber sein. HTTPD::UserAdmin unterstützt Dateien, die für
+das "Basic" und "Digest" Authentifizierungs-Schema verwendet werden. Hier
+ein Beispiel:
 
 	use HTTPD::UserAdmin ();
 	HTTPD::UserAdmin
