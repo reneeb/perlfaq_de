@@ -170,19 +170,19 @@ Attribute hat.
 		\s* >
 	}gsix;
 
-=head2 How do I download a file from the user's machine?  How do I open a file on another machine?
+=head2 Wie kann ich eine Datei von der Maschine des Benutzers herunterladen? Wie kann ich eine
+Datei auf einer anderen Maschine öffnen?
 
-In this case, download means to use the file upload feature of HTML
-forms.  You allow the web surfer to specify a file to send to your web
-server.  To you it looks like a download, and to the user it looks
-like an upload.  No matter what you call it, you do it with what's
-known as B<multipart/form-data> encoding.  The CGI.pm module (which
-comes with Perl as part of the Standard Library) supports this in the
-start_multipart_form() method, which isn't the same as the startform()
-method.
+In diesem Fall bedeutet "herunterladen" die Datei-Upload-Funktion von HTML-Formularen
+zu benutzen. Du erlaubst dem Webuser eine Datei anzugeben, die zu Deinem Webserver
+geschickt werden soll. Für Dich sieht es wie ein Download aus und für den Benutzer sieht
+es wie ein Upload aus. Egal wie Du es nennt, Du tust es mit etwas, das als
+B<mulitpart/form-data>-Encoding bekannt ist. Das CGI.pm Modul (das als Teil der Standardbibliotheken
+mit Perl mitgeliefert wird) unterstützt das in der start_multipart_form()-Methode, die nicht
+das gleiche wie die startform()-Methode ist.
 
-See the section in the CGI.pm documentation on file uploads for code
-examples and details.
+Für Code-Beispiele und Details schau Dir den Abschnitt über Datei-Uploads in der CGI.pm-
+Dokumentation an.
 
 =head2 How do I make an HTML pop-up menu with Perl?
 
