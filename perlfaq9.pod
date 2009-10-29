@@ -99,31 +99,31 @@ zu vermeiden. Normale Warnungen mit dem Namen der Anwendung und Zeitstemplet vor
 landen weiterhin in der Fehler-Logdatei des Servers
 (oder wo auch immer Du sie mit C<carpout> hinschickst)
 
-=head2 How do I remove HTML from a string?
+=head2 Wie entferne ich HTML aus einem String?
 
-The most correct way (albeit not the fastest) is to use HTML::Parser
-from CPAN.  Another mostly correct
-way is to use HTML::FormatText which not only removes HTML but also
-attempts to do a little simple formatting of the resulting plain text.
+Der korrekteste Weg (wenn auch nicht der schnellste) ist, HTML::Parser vom CPAN
+zu benutzen. Ein anderer weitgehend korrekter weg ist, HTML::FormatText zu benutzen,
+das nicht nur HTML entfernt, sondern auch ein wenig einfache Formatierung zu dem
+resultierenden einfachen Text hinzuzufügen.
 
-Many folks attempt a simple-minded regular expression approach, like
-C<< s/<.*?>//g >>, but that fails in many cases because the tags
-may continue over line breaks, they may contain quoted angle-brackets,
-or HTML comment may be present.  Plus, folks forget to convert
-entities--like C<&lt;> for example.
+Viele Leute unternehmen den einfältigen Versuch mit einem einfältigen Regulären
+Ausdruck, wie z.B. C<< s/<.*?>//g >>, aber das schlägt in vielen Fällen fehl, wei die
+Tags vielleicht über mehrere Zeilen gehen, gequotete spitze Klammern enthalten, oder
+ein HTML-Kommentar enthalten ist. Dazu vergessen die Leute Entitäten zu 
+konvertieren -- wie zum Beispiel C<&lt;>.
 
-Here's one "simple-minded" approach, that works for most files:
+Hier ist ein "einfältiger" Versuch, der für die meisten Dateien funktioniert:
 
 	#!/usr/bin/perl -p0777
 	s/<(?:[^>'"]*|(['"]).*?\1)*>//gs
 
-If you want a more complete solution, see the 3-stage striphtml
-program in
+Wenn Du eine komplettere Lösung haben willst, schau Dir das 3-stufige striphtml
+Programm unter
 http://www.cpan.org/authors/Tom_Christiansen/scripts/striphtml.gz
-.
+an.
 
-Here are some tricky cases that you should think about when picking
-a solution:
+Hier ein paar verzwickte Fälle, an die Du denken solltest, wenn Du eine
+Lösung suchst:
 
 	<IMG SRC = "foo.gif" ALT = "A > B">
 
@@ -138,8 +138,8 @@ a solution:
 
 	<![INCLUDE CDATA [ >>>>>>>>>>>> ]]>
 
-If HTML comments include other tags, those solutions would also break
-on text like this:
+Wenn HTML-Kommentare andere Tags enthalten, würden die Lösungen auch an
+einem Text wie diesen scheitern:
 
 	<!-- This section commented out.
 		<B>You can't see me!</B>
@@ -616,11 +616,11 @@ Or more succinctly,
 	$msg[$msgno] .= $_;
 	END { print @msg[ sort { $sub[$a] cmp $sub[$b] || $a <=> $b } (0 .. $#msg) ] }
 
-=head2 How do I find out my hostname, domainname, or IP address?
+=head2 Wie kann ich meinen Hostnamen, Domainnamen oder IP-Adresse herausfinden?
 X<hostname, domainname, IP address, host, domain, hostfqdn, inet_ntoa,
 gethostbyname, Socket, Net::Domain, Sys::Hostname>
 
-(contributed by brian d foy)
+(beigetragen von brian d foy)
 
 The Net::Domain module, which is part of the standard distribution starting
 in perl5.7.3, can get you the fully qualified domain name (FQDN), the host
