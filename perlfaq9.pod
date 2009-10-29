@@ -184,13 +184,12 @@ das gleiche wie die startform()-Methode ist.
 Für Code-Beispiele und Details schau Dir den Abschnitt über Datei-Uploads in der CGI.pm-
 Dokumentation an.
 
-=head2 How do I make an HTML pop-up menu with Perl?
+=head2 Wie mache ich ein HTML Pop-Up-Menü mit Perl?
 
-(contributed by brian d foy)
+(beigetragen von brian d foy)
 
-The CGI.pm module (which comes with Perl) has functions to create
-the HTML form widgets. See the CGI.pm documentation for more
-examples.
+Das CGI.pm-Module (das mit Perl migeliefert wird) hat Funktionen, um die HTML-Formularfelder
+zu erzeugen. Schau Dir die CGI.pm-Dokumentation für mehr Beispiele an.
 
 	use CGI qw/:standard/;
 	print header,
