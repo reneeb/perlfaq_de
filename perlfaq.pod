@@ -1375,7 +1375,7 @@ Wie mache ich ein HTML Pop-Up-Menü mit Perl?
 
 =item *
 
-Wie eine HTML-Datei abrufen?
+Wie rufe ich eine HTML-Datei ab?
 
 =item *
 

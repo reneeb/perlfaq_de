@@ -206,27 +206,27 @@ zu erzeugen. Schau Dir die CGI.pm-Dokumentation für mehr Beispiele an.
 		end_form,
 		end_html;
 
-=head2 How do I fetch an HTML file?
+=head2 Wie rufe ich eine HTML-Datei ab?
 
-(contributed by brian d foy)
+(beigetragen von brian d foy)
 
-Use the libwww-perl distribution. The C<LWP::Simple> module can fetch web
-resources and give their content back to you as a string:
+Benutze die libwww-perl Distribution. Das Modul C<LWP::Simple> kann
+Web-Ressourcen hoen und Dir deren Inhalt als String zurückgeben:
 
 	use LWP::Simple qw(get);
 
 	my $html = get( "http://www.example.com/index.html" );
 
-It can also store the resource directly in a file:
+Es kann auch die Ressouce direkt in einer Datei speichern:
 
 	use LWP::Simple qw(getstore);
 
 	getstore( "http://www.example.com/index.html", "foo.html" );
 
-If you need to do something more complicated, you can use
-C<LWP::UserAgent> module to create your own user-agent (e.g. browser)
-to get the job done. If you want to simulate an interactive web
-browser, you can use the C<WWW::Mechanize> module.
+Wenn Du etwas komplizierteres machen musst, kannst Du das Modul C<LWP::UserAgent>
+benutzen, um einen eigenen User-Agent (z.B. Browser) zu erstellen um die
+Aufgabe zu erledigen. Wenn Du einen interaktiven Webbrowser simulieren willst,
+kannst Du das Modul C<WWW::Mechanize> verwenden.
 
 =head2 How do I automate an HTML form submission?
 
