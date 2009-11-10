@@ -357,19 +357,19 @@ Schau Dir die Sicherheits-Referenzen an, die in der CGI Meta FAQ aufgeführt sind
 
 	http://www.perl.org/CGI_MetaFAQ.html
 
-=head2 How do I parse a mail header?
+=head2 Wie kann ich einen Mail-Header parsen?
 
-For a quick-and-dirty solution, try this solution derived
-from L<perlfunc/split>:
+Für eine "quick-and-dirty" Lösung, probiere dies Lösung aus, die aus L<perlfunc/split>
+abgeleitet ist:
 
 	$/ = '';
 	$header = <MSG>;
 	$header =~ s/\n\s+/ /g;	 # merge continuation lines
 	%head = ( UNIX_FROM_LINE, split /^([-\w]+):\s*/m, $header );
 
-That solution doesn't do well if, for example, you're trying to
-maintain all the Received lines.  A more complete approach is to use
-the Mail::Header module from CPAN (part of the MailTools package).
+Diese Lösung funktioniert nicht richtig, wenn Du z.B. versuchst alle "Received"-Zeilen
+zu behalten. Ein besserer Ansatz ist es, das C<Mail::Header>-Module vom CPAN (Teil
+des C<MailTools> Pakets) zu benutzen.
 
 =head2 How do I decode a CGI form?
 
