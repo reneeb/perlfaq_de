@@ -255,25 +255,25 @@ kodiere den Inhalt entsprechend.
 				   [ module => 'DB_File', readme => 1 ];
 	$content = $ua->request($req)->as_string;
 
-=head2 How do I decode or create those %-encodings on the web?
+=head2 Wie kann ich diese %-Kodierung im Web dekodieren oder erzeugen?
 X<URI> X<CGI.pm> X<CGI> X<URI::Escape> X<RFC 2396>
 
-(contributed by brian d foy)
+(beigetragen von brian d foy)
 
-Those C<%> encodings handle reserved characters in URIs, as described
-in RFC 2396, Section 2. This encoding replaces the reserved character
-with the hexadecimal representation of the character's number from
-the US-ASCII table. For instance, a colon, C<:>, becomes C<%3A>.
+Die C<%> Kodierungen behandeln resvierte Zeichen in URIs, wie es im RFC 2396
+Abschnitt 2 beschrieben ist. Diese Kodierung ersetzt das reservierte Zeichen mit
+der Hexadezimalen Schreibweise der Nummer des Zeiches in der US-ASCII-Tabelle.
+Zum Beispiel wird der Doppelpunkt, C<:>, zu C<%3A>.
 
-In CGI scripts, you don't have to worry about decoding URIs if you are
-using C<CGI.pm>. You shouldn't have to process the URI yourself,
-either on the way in or the way out.
+In CGI-Skripten, brauchst Du dich um das Dekodieren der URIs kümmern, wenn Du
+C<CGI.pm> benutzt. Du solltest Dich nicht selbst um die Behandlung der URI
+kümmern, weder in die eine Richtung noch in die andere.
 
-If you have to encode a string yourself, remember that you should
-never try to encode an already-composed URI. You need to escape the
-components separately then put them together. To encode a string, you
-can use the the C<URI::Escape> module. The C<uri_escape> function
-returns the escaped string:
+Wenn Du einen String selbst kodieren musst, denke daran, dass Du niemals versuchen
+solltest eine bereits zusammengestellte URI zu kodieren. Du musst die Komponenten
+einzeln escapen und danach zusammenfügen. Um einen String zu kodieren, kannst Du
+das C<URI::Escape> Modul verwenden. Die C<uri_escape> Funktion liefert den
+geschützten String zurück:
 
 	my $original = "Colon : Hash # Percent %";
 
@@ -281,15 +281,15 @@ returns the escaped string:
 
 	print "$escaped\n"; # 'Colon%20%3A%20Hash%20%23%20Percent%20%25%20'
 
-To decode the string, use the C<uri_unescape> function:
+Benutze die C<uri_unescape> Funktion, um den String zu dekodieren:
 
 	my $unescaped = uri_unescape( $escaped );
 
 	print $unescaped; # back to original
 
-If you wanted to do it yourself, you simply need to replace the
-reserved characters with their encodings. A global substitution
-is one way to do it:
+Wenn Du es selbst machen möchtest, brauchst Du nur einfach die reservierten
+Zeichen mit ihrer Kodierung zu ersetzen. Eine globale Ersetzung ist ein Weg, das
+zu tun:
 
 	# encode
 	$string =~ s/([^^A-Za-z0-9\-_.!~*'()])/ sprintf "%%%0x", ord $1 /eg;
