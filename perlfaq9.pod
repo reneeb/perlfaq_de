@@ -350,9 +350,10 @@ ein Beispiel:
 	  ->new(DB => "/foo/.htpasswd")
 	  ->add($username => $password);
 
-=head2 How do I make sure users can't enter values into a form that cause my CGI script to do bad things?
+=head2 Wie kann ich sicherstellen, dass Benutzer keine Daten eingeben können, die mein CGI-Skript böse Sachen
+machen lassen?
 
-See the security references listed in the CGI Meta FAQ
+Schau Dir die Sicherheits-Referenzen an, die in der CGI Meta FAQ aufgeführt sind
 
 	http://www.perl.org/CGI_MetaFAQ.html
 
