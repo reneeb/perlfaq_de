@@ -1432,7 +1432,7 @@ Wie kann ich MIME für einen Anhang an einer Mail benutzen?
 
 =item *
 
-Wie kann ich Mails lesen?
+Wie lese ich Mails?
 
 =item *
 

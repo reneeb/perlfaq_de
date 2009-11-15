@@ -585,12 +585,11 @@ C<MIME::Lite> beinhaltet auch eine Methode, um diese Dinge zu senden.
 Das benutzt standardmäßig L<sendmail>, kann aber so angepasst werdn, dass es
 SMTP via L<Net::SMTP> verwendet.
 
-=head2 How do I read mail?
+=head2 Wie lese ich Mails?
 
-While you could use the Mail::Folder module from CPAN (part of the
-MailFolder package) or the Mail::Internet module from CPAN (part
-of the MailTools package), often a module is overkill.  Here's a
-mail sorter.
+Auch wenn Du das C<Mail::Folder> Modul von CPAN (Teil des C<MailFolder> Pakets)
+oder das C<Mail::Internet> Modul von CPAN (Teil des C<MailTools> Pakets) benutzen
+kannst, ist ein Modul oft zu viel. Hier ist ein Mail-Sortierer.
 
 	#!/usr/bin/perl
 
@@ -608,7 +607,7 @@ mail sorter.
 		print $msgs[$i];
 	}
 
-Or more succinctly,
+Oder mehr kurz und bündig,
 
 	#!/usr/bin/perl -n00
 	# bysub2 - awkish sort-by-subject
