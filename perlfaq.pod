@@ -1412,7 +1412,7 @@ Wie dekodiere ich ein CGI-Formular?
 
 =item *
 
-Wie kann ich einen gültige Mail-Adresse prüfen?
+Wie kann ich eine gültige Mail-Adresse prüfen?
 
 =item *
 
