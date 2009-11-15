@@ -551,10 +551,10 @@ C<Mail::Mail>, aber weniger zuverlässiger ist. Vermeide nackte SMTP-Kommandos.
 Es gibt viele Gründe, einen Mail Transport Agent wie C<sendmail> zu verwenden. Das
 schließt das Bilden von Queues, MX-Einträge und Sicherheit ein.
 
-=head2 How do I use MIME to make an attachment to a mail message?
+=head2 Wie kann ich MIME für einen Anhang an einer Mail benutzen?
 
-This answer is extracted directly from the MIME::Lite documentation.
-Create a multipart message (i.e., one with attachments).
+Diese Antwort ist direkt aus der Dokumentation von C<MIME::Lite> herausgezogen.
+Erzeuge eine Multipart-Nachricht (z.B. eine mit Anhängen).
 
 	use MIME::Lite;
 
@@ -578,12 +578,12 @@ Create a multipart message (i.e., one with attachments).
 
 	$text = $msg->as_string;
 
-MIME::Lite also includes a method for sending these things.
+C<MIME::Lite> beinhaltet auch eine Methode, um diese Dinge zu senden.
 
 	$msg->send;
 
-This defaults to using L<sendmail> but can be customized to use
-SMTP via L<Net::SMTP>.
+Das benutzt standardmäßig L<sendmail>, kann aber so angepasst werdn, dass es
+SMTP via L<Net::SMTP> verwendet.
 
 =head2 How do I read mail?
 
