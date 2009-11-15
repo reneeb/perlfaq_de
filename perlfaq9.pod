@@ -410,29 +410,28 @@ Viele Leute versuchen ihren eigenen Dekoder zu schreiben (oder einen von einem
 anderen Programm kopieren) und laufen dann in eine der vielen "Fallen" dieser
 Aufgabe. Es ist viel einfacher und weniger mühevoll, C<CGI.pm> zu verwenden.
 
-=head2 How do I check a valid mail address?
+=head2 Wie kann ich eine gültige Mail-Adresse prüfen?
 
-(partly contributed by Aaron Sherman)
+(teilweise von Aaron Sherman beigetragen)
 
-This isn't as simple a question as it sounds.  There are two parts:
+Das ist keine so einfache Frage wie sie klingt. Es gibt zwei Teile:
 
-a) How do I verify that an email address is correctly formatted?
+a) Wie überprüfe ich, dass eine Mail-Adresse korrekt formatiert ist?
 
-b) How do I verify that an email address targets a valid recipient?
+b) Wie überprüfe ich, dass eine Mail-Adresse auf einen gültigen Empfänger verweist?
 
-Without sending mail to the address and seeing whether there's a human
-on the other end to answer you, you cannot fully answer part I<b>, but
-either the C<Email::Valid> or the C<RFC::RFC822::Address> module will do
-both part I<a> and part I<b> as far as you can in real-time.
+Ohne eine Mail an die Adresse zu schicken und zu schauen, ob ein Mensch auf der
+anderen Seite Dir antwortet, kannst Du Teil I<b> nicht abschließend beantworten,
+aber entweder das C<Email::Valid>- oder das C<RFC::RFC822::Address>-Modul können
+sowohl Teil I<a> als auch Teil <b> machen, soweit es in real-time möglich ist.
 
-If you want to just check part I<a> to see that the address is valid
-according to the mail header standard with a simple regular expression,
-you can have problems, because there are deliverable addresses that
-aren't RFC-2822 (the latest mail header standard) compliant, and
-addresses that aren't deliverable which, are compliant.  However,  the
-following will match valid RFC-2822 addresses that do not have comments,
-folding whitespace, or any other obsolete or non-essential elements.
-This I<just> matches the address itself:
+Wenn Du nur Teil I<a> mit einem einfach Regulären Ausdruck prüfen möchtest, um zu sehen,
+dass eine Adresse nach dem Mail-Header-Standard gültig ist, kannst Du Probleme bekommen,
+weil es zustellbare Adresse gibt, die nicht RFC-2822-konform sind (der aktuellst
+Mail-Header-Standard) und nicht-zustellbare Adressen, die konform sind. Wie auch immer,
+das Folgende wird für gültige RFC-2822-Adressen passen, die keine Kommentare, 
+"folding whitespaces" oder irgendwelche anderen obsoleten oder unwesentlichen
+Elemente haben. Das matcht I<nur> die Adresse selbst:
 
 	my $atom       = qr{[a-zA-Z0-9_!#\$\%&'*+/=?\^`{}~|\-]+};
 	my $dot_atom   = qr{$atom(?:\.$atom)*};
@@ -443,26 +442,27 @@ This I<just> matches the address itself:
  	my $domain     = qr{(?:$dot_atom|$domain_lit)};
 	my $addr_spec  = qr{$local\@$domain};
 
-Just match an address against C</^${addr_spec}$/> to see if it follows
-the RFC2822 specification.  However, because it is impossible to be
-sure that such a correctly formed address is actually the correct way
-to reach a particular person or even has a mailbox associated with it,
-you must be very careful about how you use this.
+Überprüfe eine Adresse einfach mit C</^${addr_spec}$/>, um zu sehen, ob sie
+der RFC2822-Spezifikation folgt. Wie auch immer, weil es unmöglich ist, sicher zu
+sein, dass eine solche korrekt geformte Adresse der richtige Weg ist eine 
+bestimmte Person zu erreichen oder überhaupt mit einer Mailbox verbunden ist, musst
+Du sehr vorsichtig sein, wie Du das nutzt.
 
-Our best advice for verifying a person's mail address is to have them
-enter their address twice, just as you normally do to change a
-password. This usually weeds out typos. If both versions match, send
-mail to that address with a personal message. If you get the message
-back and they've followed your directions, you can be reasonably
-assured that it's real.
+Unser bester Hinweis für die Überprüfung der Mail-Adresse einer Person, ist, sie
+ihre Adresse zweimal eingeben zu lassen, so wie Du es normalerweise machst, um ein
+Passwort zu ändern. Das merzt normalerweise Tippfehler aus. Wenn beide Versionen
+gleich sind, schicke eine Mail mit einer persönlichen Nachricht an diese Adresse.
+Wenn Du eine Nachricht zurückbekommst und sie Deinen Anweisungen gefolgt sind,
+kannst Du einigermaßen sicher sein, dass die Adresse real ist.
 
-A related strategy that's less open to forgery is to give them a PIN
-(personal ID number).  Record the address and PIN (best that it be a
-random one) for later processing. In the mail you send, ask them to
-include the PIN in their reply.  But if it bounces, or the message is
-included via a "vacation" script, it'll be there anyway.  So it's
-best to ask them to mail back a slight alteration of the PIN, such as
-with the characters reversed, one added or subtracted to each digit, etc.
+Eine verwandte Strategie, die weniger anfällig für Missbrauch ist, ist, ihnen eine
+PIN (Persönliche ID Nummer) zu geben. Speichere die Adresse und die PIN (am Besten
+ist sie eine zufällige Nummer) für die spätere Bearbeitung. In der Nachricht, die
+Du ihnen schickst, forderst Du sie auf, die PIN in ihrer Antwort anzugeben. Wenn die
+Mail aber zurückkommt oder in einer Abwesenheitsnotiz enthalten ist, wird die PIN
+auch vorhanden sein. Also ist es das Beste, eine leicht veränderte Version der PIN
+zurück zu mailen, z.B. mit den Zeichen in umgekehrter Reihenfolge, oder zu jeder
+Zahl eins hinzuaddiert oder subtrahiert, etc.
 
 =head2 How do I decode a MIME/BASE64 string?
 
