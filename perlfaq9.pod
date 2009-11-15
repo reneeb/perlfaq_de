@@ -554,7 +554,7 @@ schließt das Bilden von Queues, MX-Einträge und Sicherheit ein.
 =head2 Wie kann ich MIME für einen Anhang an einer Mail benutzen?
 
 Diese Antwort ist direkt aus der Dokumentation von C<MIME::Lite> herausgezogen.
-Erzeuge eine Multipart-Nachricht (z.B. eine mit Anhängen).
+Erzeugen einer Multipart-Nachricht (z.B. eine mit Anhängen).
 
 	use MIME::Lite;
 
@@ -651,7 +651,7 @@ from the <Socket> module, which also comes with perl.
 
 =head2 Wie kann ich einen News-Artikel oder die aktive Newsgroup holen?
 
-Benutze das Net::NNTP- oder News::NNTPClient-Modul, die es beide auf dem
+Benutze das C<Net::NNTP>- oder C<News::NNTPClient>-Modul, die es beide auf dem
 CPAN gibt. Das macht Aufgabe wie das holen der Newsgroup-Liste so einfach wie
 
 	perl -MNews::NNTPClient
@@ -659,8 +659,8 @@ CPAN gibt. Das macht Aufgabe wie das holen der Newsgroup-Liste so einfach wie
 
 =head2 Wie kann ich eine Datei per FTP holen/hochladen?
 
-LWP::Simple (auf dem CPAN verfügbar) kann Dateien holen aber nicht hochladen.
-Net::FTP (ebenfalls auf dem CPAN verfügbar) is komplexer kann aber sowohl Dateien
+C<LWP::Simple> (auf dem CPAN verfügbar) kann Dateien holen aber nicht hochladen.
+C<Net::FTP> (ebenfalls auf dem CPAN verfügbar) is komplexer kann aber sowohl Dateien
 hochladen als auch holen.
 
 =head2 Wie kann ich RPC in Perl verwenden?
