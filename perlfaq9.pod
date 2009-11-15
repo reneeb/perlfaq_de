@@ -1,11 +1,13 @@
+=encoding utf-8
+
 =head1 NAME
 
 perlfaq9 - Netzwerke
 
 =head1 DESCRIPTION
 
-Dieser Abschnitt behandelt Fragen bezüglich Netzwerken, dem Internet
-und einiges über das Web.
+Dieser Abschnitt behandelt Fragen bezÃ¼glich Netzwerken, dem Internet
+und einiges Ã¼ber das Web.
 
 =head2 Wie ist die korrekte Form einer Antwort von einem CGI-Skript?
 
@@ -23,31 +25,31 @@ Weiter relevante Dokumentationen sind unter http://www.perl.org/CGI_MetaFAQ.html
 aufgelistet.
 
 Diese Perl FAQs behandeln einige sehr ausgesuchte CGI-Sachen. Wieauchimmer,
-Perl-Programmierer sind sehr gut beraten, das CGI.pm Module zu benutzen, das
-sich um die Details für sie kümmert.
+Perl-Programmierer sind sehr gut beraten, das C<CGI.pm> Modul zu benutzen, das
+sich um die Details fÃ¼r sie kÃ¼mmert.
 
-Die Ähnlichkeiten zwischen CGI-Antwort-Headern (definiert in der CGI-Spezifikation)
+Die Ã„hnlichkeiten zwischen CGI-Antwort-Headern (definiert in der CGI-Spezifikation)
 und HTTP-Antwort-Headern (definiert in der HTTP-Sepzifikation, RFC2616) sind
-gewollt, können aber manchmal verwirrend sein.
+gewollt, kÃ¶nnen aber manchmal verwirrend sein.
 
 Die CGI-Spezifikation definiert zwei Arten von Skripten: Die "Parsed Header"
-Skripte und die "Non Parsed Header" (NPH) Skripte. Überprüfe die Dokumentation
-Deines Servers, was er unterstützt. "Parsed Header" Skripte sind in verschiedener
-Hinsicht einfacher. Die CGI-Spezifikation erlaubt alle der üblichen Darstellungen
+Skripte und die "Non Parsed Header" (NPH) Skripte. ÃœberprÃ¼fe die Dokumentation
+Deines Servers, was er unterstÃ¼tzt. "Parsed Header" Skripte sind in verschiedener
+Hinsicht einfacher. Die CGI-Spezifikation erlaubt alle der Ã¼blichen Darstellungen
 des Zeilenumbruchs in der CGI Antwort (es ist die Aufgabe des Servers darauf basierend
 eine richtige HTTP Antwort zu erzeugen). Also ist "\n" im Textmodus geschrieben 
-technisch korrekt und empfohlen. NPH Skript sind kniffliger: Sie müssen einen
+technisch korrekt und empfohlen. NPH Skript sind kniffliger: Sie mÃ¼ssen einen
 kompletten und fehlerfreien Satz an HTTP-Transaktions Antwort-Headern ausgeben;
-die HTTP-Spezifikation verlangt, dass die Datensätze mit Carriage-Return und Line-Feed
-abgeschlossen sind, z.B. ASCII \015\012 im Binärmodus geschrieben.
+die HTTP-Spezifikation verlangt, dass die DatensÃ¤tze mit Carriage-Return und Line-Feed
+abgeschlossen sind, z.B. ASCII \015\012 im BinÃ¤rmodus geschrieben.
 
-Die Verwendung von CGI.pm bedeutet exzellente Plattformunabhängigkeit, einschließlich
-EBCDIC-Systemen. CGI.pm wählt die passende Zeilenumbruch-Darstellung ($CGI::CRLF)
-und setzt den Binärmodus wo es passt.
+Die Verwendung von C<CGI.pm> bedeutet exzellente PlattformunabhÃ¤ngigkeit, einschlieÃŸlich
+EBCDIC-Systemen. C<CGI.pm> wÃ¤hlt die passende Zeilenumbruch-Darstellung (C<$CGI::CRLF>)
+und setzt den BinÃ¤rmodus wo es passt.
 
-=head2 Mein CGI-Skript läuft von der Kommandozeile aus, aber nicht im Browser. (500 Server Error)
+=head2 Mein CGI-Skript lÃ¤uft von der Kommandozeile aus, aber nicht im Browser. (500 Server Error)
 
-Verschiedene Dinge können falsch sein. Du kannst den "Troubleshooting Perl CGI Skript"-Leitfaden
+Verschiedene Dinge kÃ¶nnen falsch sein. Du kannst den "Troubleshooting Perl CGI Skript"-Leitfaden
 unter
 
   http://www.perl.org/troubleshooting_CGI.html
@@ -61,24 +63,24 @@ stellst (wenn es etwas mit HTTP oder mit dem CGI-Protokoll zu tun hat). Fragen, 
 sind aber in Wirklichkeit CGI-Fragen und auf comp.lang.perl.misc gestellt werden, kommen
 nicht so gut an.
 
-Die hilfreichen FAQs, verwandte Dokumente und Leitfaden für die Fehlersuche
+Die hilfreichen FAQs, verwandte Dokumente und Leitfaden fÃ¼r die Fehlersuche
 sind in der CGI Meta-FAQ aufgelistet:
 
     http://www.perl.org/CGI_MetaFAQ.html
 
 =head2 Wie kann ich bessere Fehlermeldungen von einem CGI-Programm bekommen?
 
-Benutze das CGI::Carp Modul. Es ersetzt C<warn> und C<die> und zusätzlich
-die  C<carp>-, C<croak>- und C<confess>-Funktionen aus dem normalen Carp Modul
-durch ausführlichere und sichere Versionen. Es schickte diese immer noch zur
+Benutze das C<CGI::Carp> Modul. Es ersetzt C<warn> und C<die> und zusÃ¤tzlich
+die  C<carp>-, C<croak>- und C<confess>-Funktionen aus dem normalen C<Carp> Modul
+durch ausfÃ¼hrlichere und sichere Versionen. Es schickte diese immer noch zur
 normalen Fehler-Logdatei des Servers.
 
 	use CGI::Carp;
 	warn "This is a complaint";
 	die "But this one is serious";
 
-Die folgende Verwendung von CGI::Carp leitet die Felhler in eine Datei Deiner Wahl um,
-und ist innerhalb eines BEGIN blocks, um auch Fehler während der Kompilier-Zeit abzufangen.
+Die folgende Verwendung von C<CGI::Carp> leitet die Felhler in eine Datei Deiner Wahl um,
+und ist innerhalb eines C<BEGIN>-Blocks, um auch Fehler wÃ¤hrend der Kompilier-Zeit abzufangen.
 
 	BEGIN {
 		use CGI::Carp qw(carpout);
@@ -87,43 +89,43 @@ und ist innerhalb eines BEGIN blocks, um auch Fehler während der Kompilier-Zeit 
 		carpout(*LOG);
 	}
 
-Du kannst für Schwerwiegende Fehler sogar erreichen, dass sie an den Client-Browser
-zurückgehen, was für Dein eigenes Debugging schön ist, aber den Endbenutzer verwirren könnte.
+Du kannst fÃ¼r Schwerwiegende Fehler sogar erreichen, dass sie an den Client-Browser
+zurÃ¼ckgehen, was fÃ¼r Dein eigenes Debugging schÃ¶n ist, aber den Endbenutzer verwirren kÃ¶nnte.
 
 	use CGI::Carp qw(fatalsToBrowser);
 	die "Bad error here";
 
 Selbst wenn der Fehler auftritt, bevor Du den HTTP-Header ausgeben konntest, wird
-das Modul versuchen sich darum zu kümmern, um den gefürchteten 500 Server Error
+das Modul versuchen sich darum zu kÃ¼mmern, um den gefÃ¼rchteten 500 Server Error
 zu vermeiden. Normale Warnungen mit dem Namen der Anwendung und Zeitstemplet vorangestellt,
 landen weiterhin in der Fehler-Logdatei des Servers
 (oder wo auch immer Du sie mit C<carpout> hinschickst)
 
 =head2 Wie entferne ich HTML aus einem String?
 
-Der korrekteste Weg (wenn auch nicht der schnellste) ist, HTML::Parser vom CPAN
-zu benutzen. Ein anderer weitgehend korrekter weg ist, HTML::FormatText zu benutzen,
+Der korrekteste Weg (wenn auch nicht der schnellste) ist, C<HTML::Parser> vom CPAN
+zu benutzen. Ein anderer weitgehend korrekter weg ist, C<HTML::FormatText> zu benutzen,
 das nicht nur HTML entfernt, sondern auch ein wenig einfache Formatierung zu dem
-resultierenden einfachen Text hinzuzufügen.
+resultierenden einfachen Text hinzuzufÃ¼gen.
 
-Viele Leute unternehmen den einfältigen Versuch mit einem einfältigen Regulären
-Ausdruck, wie z.B. C<< s/<.*?>//g >>, aber das schlägt in vielen Fällen fehl, wei die
-Tags vielleicht über mehrere Zeilen gehen, gequotete spitze Klammern enthalten, oder
-ein HTML-Kommentar enthalten ist. Dazu vergessen die Leute Entitäten zu 
+Viele Leute unternehmen den einfÃ¤ltigen Versuch mit einem einfÃ¤ltigen RegulÃ¤ren
+Ausdruck, wie z.B. C<< s/<.*?>//g >>, aber das schlÃ¤gt in vielen FÃ¤llen fehl, wei die
+Tags vielleicht Ã¼ber mehrere Zeilen gehen, gequotete spitze Klammern enthalten, oder
+ein HTML-Kommentar enthalten ist. Dazu vergessen die Leute EntitÃ¤ten zu 
 konvertieren -- wie zum Beispiel C<&lt;>.
 
-Hier ist ein "einfältiger" Versuch, der für die meisten Dateien funktioniert:
+Hier ist ein "einfÃ¤ltiger" Versuch, der fÃ¼r die meisten Dateien funktioniert:
 
 	#!/usr/bin/perl -p0777
 	s/<(?:[^>'"]*|(['"]).*?\1)*>//gs
 
-Wenn Du eine komplettere Lösung haben willst, schau Dir das 3-stufige striphtml
+Wenn Du eine komplettere LÃ¶sung haben willst, schau Dir das 3-stufige striphtml
 Programm unter
 http://www.cpan.org/authors/Tom_Christiansen/scripts/striphtml.gz
 an.
 
-Hier ein paar verzwickte Fälle, an die Du denken solltest, wenn Du eine
-Lösung suchst:
+Hier ein paar verzwickte FÃ¤lle, an die Du denken solltest, wenn Du eine
+LÃ¶sung suchst:
 
 	<IMG SRC = "foo.gif" ALT = "A > B">
 
@@ -138,7 +140,7 @@ Lösung suchst:
 
 	<![INCLUDE CDATA [ >>>>>>>>>>>> ]]>
 
-Wenn HTML-Kommentare andere Tags enthalten, würden die Lösungen auch an
+Wenn HTML-Kommentare andere Tags enthalten, wÃ¼rden die LÃ¶sungen auch an
 einem Text wie diesen scheitern:
 
 	<!-- This section commented out.
@@ -149,16 +151,16 @@ einem Text wie diesen scheitern:
 
 Du kannst leicht alle Arten von URL aus HTML mit C<HTML::SimpleLinkExtor> herausfiltern,
 das mit Ankern, Bildern, Objekten, Frames und vielen anderen Tags umgehen kann, die
-eine URL enthalten können. Wenn Du etwas komplexeres benötigst, kannst Du Deine eigene
-Subklasse von C<HTML::LinkExtor> oder C<HTML::Parser> schreiben. Du könntest sogar
-C<HTML::SimpleLinkExtor> als Beispiel für etwas nehmen, dass speziell auf Deine
-Bedürfnisse zugeschnitten ist.
+eine URL enthalten kÃ¶nnen. Wenn Du etwas komplexeres benÃ¶tigst, kannst Du Deine eigene
+Subklasse von C<HTML::LinkExtor> oder C<HTML::Parser> schreiben. Du kÃ¶nntest sogar
+C<HTML::SimpleLinkExtor> als Beispiel fÃ¼r etwas nehmen, dass speziell auf Deine
+BedÃ¼rfnisse zugeschnitten ist.
 
-Du kannst URI::Find benutzen, um URLs aus einem beliebigen Text-Dokument zu filtern.
+Du kannst C<URI::Find> benutzen, um URLs aus einem beliebigen Text-Dokument zu filtern.
 
-Weniger komplette Lösungen, die Reguläre Ausdrücke benutzen, können viel
-Laufzeit sparen, wenn Du weißt, dass die Eingabe einfach ist. Eine Lösung von
-Tom Christians läuft 100x schnelle als die meisten Modul-basierten Ansätze, filtert aber
+Weniger komplette LÃ¶sungen, die RegulÃ¤re AusdrÃ¼cke benutzen, kÃ¶nnen viel
+Laufzeit sparen, wenn Du weiÃŸt, dass die Eingabe einfach ist. Eine LÃ¶sung von
+Tom Christians lÃ¤uft 100x schnelle als die meisten Modul-basierten AnsÃ¤tze, filtert aber
 nur die URLs von Ankern, bei denen das erste Attribut HREF ist und keine weiteren
 Attribute hat.
 
@@ -171,25 +173,25 @@ Attribute hat.
 	}gsix;
 
 =head2 Wie kann ich eine Datei von der Maschine des Benutzers herunterladen? Wie kann ich eine
-Datei auf einer anderen Maschine öffnen?
+Datei auf einer anderen Maschine Ã¶ffnen?
 
 In diesem Fall bedeutet "herunterladen" die Datei-Upload-Funktion von HTML-Formularen
 zu benutzen. Du erlaubst dem Webuser eine Datei anzugeben, die zu Deinem Webserver
-geschickt werden soll. Für Dich sieht es wie ein Download aus und für den Benutzer sieht
+geschickt werden soll. FÃ¼r Dich sieht es wie ein Download aus und fÃ¼r den Benutzer sieht
 es wie ein Upload aus. Egal wie Du es nennt, Du tust es mit etwas, das als
-B<mulitpart/form-data>-Encoding bekannt ist. Das CGI.pm Modul (das als Teil der Standardbibliotheken
-mit Perl mitgeliefert wird) unterstützt das in der start_multipart_form()-Methode, die nicht
-das gleiche wie die startform()-Methode ist.
+B<mulitpart/form-data>-Encoding bekannt ist. Das C<CGI.pm> Modul (das als Teil der Standardbibliotheken
+mit Perl mitgeliefert wird) unterstÃ¼tzt das in der C<start_multipart_form()>-Methode, die nicht
+das gleiche wie die C<startform()>-Methode ist.
 
-Für Code-Beispiele und Details schau Dir den Abschnitt über Datei-Uploads in der CGI.pm-
+FÃ¼r Code-Beispiele und Details schau Dir den Abschnitt Ã¼ber Datei-Uploads in der C<CGI.pm>-
 Dokumentation an.
 
-=head2 Wie mache ich ein HTML Pop-Up-Menü mit Perl?
+=head2 Wie mache ich ein HTML Pop-Up-MenÃ¼ mit Perl?
 
 (beigetragen von brian d foy)
 
-Das CGI.pm-Module (das mit Perl migeliefert wird) hat Funktionen, um die HTML-Formularfelder
-zu erzeugen. Schau Dir die CGI.pm-Dokumentation für mehr Beispiele an.
+Das C<CGI.pm>-Module (das mit Perl mitgeliefert wird) hat Funktionen, um die HTML-Formularfelder
+zu erzeugen. Schau Dir die C<CGI.pm>-Dokumentation fÃ¼r mehr Beispiele an.
 
 	use CGI qw/:standard/;
 	print header,
@@ -211,13 +213,13 @@ zu erzeugen. Schau Dir die CGI.pm-Dokumentation für mehr Beispiele an.
 (beigetragen von brian d foy)
 
 Benutze die libwww-perl Distribution. Das Modul C<LWP::Simple> kann
-Web-Ressourcen hoen und Dir deren Inhalt als String zurückgeben:
+Web-Ressourcen holen und Dir deren Inhalt als String zurÃ¼ckgeben:
 
 	use LWP::Simple qw(get);
 
 	my $html = get( "http://www.example.com/index.html" );
 
-Es kann auch die Ressouce direkt in einer Datei speichern:
+Es kann auch die Ressource direkt in einer Datei speichern:
 
 	use LWP::Simple qw(getstore);
 
@@ -232,7 +234,7 @@ kannst Du das Modul C<WWW::Mechanize> verwenden.
 
 Wenn Du etwas komplexes machen willst, wie z.B. durch viele Seiten und
 Formulare oder eine Webseite zu bewegen, kannst Du C<WWW::Mechanize>
-verwenden. Schau Dir dessen Dokumentation für alle Details an.
+verwenden. Schau Dir dessen Dokumentation fÃ¼r alle Details an.
 
 Wenn Du Werte mit der GET-Methode abschicken willst, erstelle eine URL
 und kodiere das Formular mit der C<query_form>-Methode:
@@ -265,15 +267,15 @@ Abschnitt 2 beschrieben ist. Diese Kodierung ersetzt das reservierte Zeichen mit
 der Hexadezimalen Schreibweise der Nummer des Zeiches in der US-ASCII-Tabelle.
 Zum Beispiel wird der Doppelpunkt, C<:>, zu C<%3A>.
 
-In CGI-Skripten, brauchst Du dich um das Dekodieren der URIs kümmern, wenn Du
+In CGI-Skripten, brauchst Du dich um das Dekodieren der URIs kÃ¼mmern, wenn Du
 C<CGI.pm> benutzt. Du solltest Dich nicht selbst um die Behandlung der URI
-kümmern, weder in die eine Richtung noch in die andere.
+kÃ¼mmern, weder in die eine Richtung noch in die andere.
 
 Wenn Du einen String selbst kodieren musst, denke daran, dass Du niemals versuchen
 solltest eine bereits zusammengestellte URI zu kodieren. Du musst die Komponenten
-einzeln escapen und danach zusammenfügen. Um einen String zu kodieren, kannst Du
+einzeln escapen und danach zusammenfÃ¼gen. Um einen String zu kodieren, kannst Du
 das C<URI::Escape> Modul verwenden. Die C<uri_escape> Funktion liefert den
-geschützten String zurück:
+geschÃ¼tzten String zurÃ¼ck:
 
 	my $original = "Colon : Hash # Percent %";
 
@@ -287,7 +289,7 @@ Benutze die C<uri_unescape> Funktion, um den String zu dekodieren:
 
 	print $unescaped; # back to original
 
-Wenn Du es selbst machen möchtest, brauchst Du nur einfach die reservierten
+Wenn Du es selbst machen mÃ¶chtest, brauchst Du nur einfach die reservierten
 Zeichen mit ihrer Kodierung zu ersetzen. Eine globale Ersetzung ist ein Weg, das
 zu tun:
 
@@ -301,9 +303,9 @@ zu tun:
 
 Lege die komplette URL des Ziels fest (selbst wenn es auf dem gleichen Server ist).
 Dies ist eine der zwei unterschiedlichen Arten von CGI "Location:" Antworten, die
-in der CGI-Spezifikation für ein "Parsed Headers" Skript definiert sind. Die andere
-Art (ein absoluter URL-Pfad) wird intern auf dem Server aufgelöst, ohne jede
-HTTP-Weiterleitung. Die CGI-Spezifikation erlaubt in keinem dieser Fälle relative
+in der CGI-Spezifikation fÃ¼r ein "Parsed Headers" Skript definiert sind. Die andere
+Art (ein absoluter URL-Pfad) wird intern auf dem Server aufgelÃ¶st, ohne jede
+HTTP-Weiterleitung. Die CGI-Spezifikation erlaubt in keinem dieser FÃ¤lle relative
 URLs.
 
 Die Verwendung von C<CGI.pm> ist dringend empfohlen. Dieses Beispiel zeigt die
@@ -315,14 +317,14 @@ Webbrowser gehandhabt.
 	my $url = 'http://www.cpan.org/';
 	print redirect($url);
 
-Dieses Beispiel zeigt die Weiterleitung mit einem absoluten URL-PFad. Diese
+Dieses Beispiel zeigt die Weiterleitung mit einem absoluten URL-Pfad. Diese
 Weiterleitung wird durch den Webbrowser gehandhabt.
 
 	my $url = '/CPAN/index.html';
 	print redirect($url);
 
-Aber direkt gecodet, könnte es wie folgt aussehen (das abschließende "\n" ist
-zur Übersichtlichkeit extra angegeben) und benutzt entweder eine komplette URL
+Aber direkt gecodet, kÃ¶nnte es wie folgt aussehen (das abschlieÃŸende "\n" ist
+zur Ãœbersichtlichkeit extra angegeben) und benutzt entweder eine komplette URL
 oder einen absoluten URL-Pfad.
 
 	print "Location: $url\n";   # CGI response header
@@ -330,18 +332,18 @@ oder einen absoluten URL-Pfad.
 
 =head2 Wie kann ich ein Passwort auf meiner Webseite einbauen?
 
-Um Authentifizierung für Deinen Webserver einzuschalten, musst Du Deinen
+Um Authentifizierung fÃ¼r Deinen Webserver einzuschalten, musst Du Deinen
 Webserver konfigurieren. Die Konfiguration ist verschieden bei den unterschiedlichen
 Typen von Webservern--Apache macht es anders als iPlanet, das es anders als der IIS
-macht. Prüfe Deine Webserver-Dokumentation für die Details Deines 
+macht. PrÃ¼fe Deine Webserver-Dokumentation fÃ¼r die Details Deines 
 entsprechenden Servers.
 
 =head2 Wie kann ich meine .htpasswd und .htgroup Dateien mit Perl bearbeiten?
 
-Die Module HTTPD::UserAdmin und HTTPD::GroupAdmin bieten eine konsistente
-OO Schnittstelle für diese Dateien, egal wie sie gespeichert sind. Datenbanken
-können Text, DBM, Berkeley DB oder irgendeine Datenbank mit einem
-DBI-kompatiblen Treiber sein. HTTPD::UserAdmin unterstützt Dateien, die für
+Die Module C<HTTPD::UserAdmin> und C<HTTPD::GroupAdmin> bieten eine konsistente
+OO Schnittstelle fÃ¼r diese Dateien, egal wie sie gespeichert sind. Datenbanken
+kÃ¶nnen Text, DBM, Berkeley DB oder irgendeine Datenbank mit einem
+DBI-kompatiblen Treiber sein. C<HTTPD::UserAdmin> unterstÃ¼tzt Dateien, die fÃ¼r
 das "Basic" und "Digest" Authentifizierungs-Schema verwendet werden. Hier
 ein Beispiel:
 
@@ -350,16 +352,16 @@ ein Beispiel:
 	  ->new(DB => "/foo/.htpasswd")
 	  ->add($username => $password);
 
-=head2 Wie kann ich sicherstellen, dass Benutzer keine Daten eingeben können, die mein CGI-Skript böse Sachen
+=head2 Wie kann ich sicherstellen, dass Benutzer keine Daten eingeben kÃ¶nnen, die mein CGI-Skript bÃ¶se Sachen
 machen lassen?
 
-Schau Dir die Sicherheits-Referenzen an, die in der CGI Meta FAQ aufgeführt sind
+Schau Dir die Sicherheits-Referenzen an, die in der CGI Meta FAQ aufgefÃ¼hrt sind
 
 	http://www.perl.org/CGI_MetaFAQ.html
 
 =head2 Wie kann ich einen Mail-Header parsen?
 
-Für eine "quick-and-dirty" Lösung, probiere dies Lösung aus, die aus L<perlfunc/split>
+FÃ¼r eine "quick-and-dirty" LÃ¶sung, probiere dies LÃ¶sung aus, die aus L<perlfunc/split>
 abgeleitet ist:
 
 	$/ = '';
@@ -367,24 +369,22 @@ abgeleitet ist:
 	$header =~ s/\n\s+/ /g;	 # merge continuation lines
 	%head = ( UNIX_FROM_LINE, split /^([-\w]+):\s*/m, $header );
 
-Diese Lösung funktioniert nicht richtig, wenn Du z.B. versuchst alle "Received"-Zeilen
+Diese LÃ¶sung funktioniert nicht richtig, wenn Du z.B. versuchst alle "Received"-Zeilen
 zu behalten. Ein besserer Ansatz ist es, das C<Mail::Header>-Module vom CPAN (Teil
 des C<MailTools> Pakets) zu benutzen.
 
-=head2 How do I decode a CGI form?
+=head2 Wie dekodiere ich ein CGI-Formular?
 
-(contributed by brian d foy)
+(beigetragen von brian d foy)
 
-Use the CGI.pm module that comes with Perl.  It's quick,
-it's easy, and it actually does quite a bit of work to
-ensure things happen correctly.  It handles GET, POST, and
-HEAD requests, multipart forms, multivalued fields, query
-string and message body combinations, and many other things
-you probably don't want to think about.
+Verwende das C<CGI.pm>-Modul, das mit Perl mitgeliefert wird. Es is schnell, es
+ist einfach und es macht wirklich eine ganze Menge um sicherzustellen, dass die
+Dinge korrekt funktionieren. Es handhabt GET-, POST- und HEAD-Anfragen, multipart
+Formulare, Felder mit mehreren Werten, Query-Strings, Nachrichtentext Kombinationen
+und viele andere Dinge, Ã¼ber Dir Du nicht nachdenken willst.
 
-It doesn't get much easier: the CGI module automatically
-parses the input and makes each value available through the
-C<param()> function.
+Es geht nicht viel einfacher: Das C<CGI.pm> Modul parst automatisch die Eingabe und
+macht jeden Wert Ã¼ber die C<param()>-Funktion verfÃ¼gbar.
 
 	use CGI qw(:standard);
 
@@ -392,7 +392,7 @@ C<param()> function.
 
 	my @items = param( 'item' ); # multiple values, same field name
 
-If you want an object-oriented approach, CGI.pm can do that too.
+Wenn Du einen Objektorientierten Ansatz mÃ¶chtest, kann C<CGI.pm> das auch.
 
 	use CGI;
 
@@ -402,13 +402,13 @@ If you want an object-oriented approach, CGI.pm can do that too.
 
 	my @items = $cgi->param( 'item' );
 
-You might also try CGI::Minimal which is a lightweight version
-of the same thing.  Other CGI::* modules on CPAN might work better
-for you, too.
+Vielleicht mÃ¶chtest Du auch C<CGI::Minimal> testen, das eine leichtgewichtige Version
+der gleichen Sache ist. Andere CGI::* Module auf CPAN kÃ¶nnen fÃ¼r Dich auch besser
+funktionieren.
 
-Many people try to write their own decoder (or copy one from
-another program) and then run into one of the many "gotchas"
-of the task.  It's much easier and less hassle to use CGI.pm.
+Viele Leute versuchen ihren eigenen Dekoder zu schreiben (oder einen von einem
+anderen Programm kopieren) und laufen dann in eine der vielen "Fallen" dieser
+Aufgabe. Es ist viel einfacher und weniger mÃ¼hevoll, C<CGI.pm> zu verwenden.
 
 =head2 How do I check a valid mail address?
 
@@ -659,8 +659,8 @@ CPAN gibt. Das macht Aufgabe wie das holen der Newsgroup-Liste so einfach wie
 
 =head2 Wie kann ich eine Datei per FTP holen/hochladen?
 
-LWP::Simple (auf dem CPAN verfügbar) kann Dateien holen aber nicht hochladen.
-Net::FTP (ebenfalls auf dem CPAN verfügbar) is komplexer kann aber sowohl Dateien
+LWP::Simple (auf dem CPAN verfÃ¼gbar) kann Dateien holen aber nicht hochladen.
+Net::FTP (ebenfalls auf dem CPAN verfÃ¼gbar) is komplexer kann aber sowohl Dateien
 hochladen als auch holen.
 
 =head2 Wie kann ich RPC in Perl verwenden?
@@ -676,7 +676,7 @@ Revision: $Revision$
 
 Datum: $Date$
 
-Für Details über Versionskontrolle und Verfügbarkeit siehe L<perlfaq>.
+FÃ¼r Details Ã¼ber Versionskontrolle und VerfÃ¼gbarkeit siehe L<perlfaq>.
 
 =head1 AUTOR UND COPYRIGHT
 
@@ -684,12 +684,12 @@ Copyright (c) 1997-2009 Tom Christiansen, Nathan Torkington und andere
 Autoren wie genannt. Alle Rechte vorbehalten.
 
 Diese Dokument ist frei; Du kannst es unter den gleichen Bedingungen wie
-Perl selbst weiterverteilen und/oder verändern.
+Perl selbst weiterverteilen und/oder verÃ¤ndern.
 
-Unabhängig von der Verteilung, sind alle Code-Beispiele Gemeingut. Dir wird 
+UnabhÃ¤ngig von der Verteilung, sind alle Code-Beispiele Gemeingut. Dir wird 
 erlaubt und du wirst ermutigt, sie und beliebige davon abgeleitete in deinen 
-Programmen zum Spaß oder für Profit zu verwenden. 
-Ein einfacher Kommentar im Code, der die FAQ würdigt, wäre nett, ist aber 
+Programmen zum SpaÃŸ oder fÃ¼r Profit zu verwenden. 
+Ein einfacher Kommentar im Code, der die FAQ wÃ¼rdigt, wÃ¤re nett, ist aber 
 nicht erforderlich. 
 
-Übersetzung von Renée Bäcker
+Ãœbersetzung von RenÃ©e BÃ¤cker
