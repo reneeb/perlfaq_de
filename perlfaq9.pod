@@ -279,15 +279,15 @@ geschützten String zurück:
 
 	my $original = "Colon : Hash # Percent %";
 
-	my $escaped = uri_escape( $original )
+	my $escaped = uri_escape( $original );
 
-	print "$escaped\n"; # 'Colon%20%3A%20Hash%20%23%20Percent%20%25%20'
+	print "$escaped\n"; # 'Colon%20%3A%20Hash%20%23%20Percent%20%25'
 
 Benutze die C<uri_unescape> Funktion, um den String zu dekodieren:
 
 	my $unescaped = uri_unescape( $escaped );
 
-	print $unescaped; # back to original
+	print $unescaped; # zurueck beim Original
 
 Wenn Du es selbst machen möchtest, brauchst Du nur einfach die reservierten
 Zeichen mit ihrer Kodierung zu ersetzen. Eine globale Ersetzung ist ein Weg, das
@@ -327,8 +327,8 @@ Aber direkt gecodet, könnte es wie folgt aussehen (das abschließende "\n" ist
 zur Übersichtlichkeit extra angegeben) und benutzt entweder eine komplette URL
 oder einen absoluten URL-Pfad.
 
-	print "Location: $url\n";   # CGI response header
-	print "\n";                 # end of headers
+	print "Location: $url\n";   # CGI Antwort-Header
+	print "\n";                 # Ende der Header
 
 =head2 Wie kann ich ein Passwort auf meiner Webseite einbauen?
 
@@ -464,26 +464,25 @@ auch vorhanden sein. Also ist es das Beste, eine leicht veränderte Version der 
 zurück zu mailen, z.B. mit den Zeichen in umgekehrter Reihenfolge, oder zu jeder
 Zahl eins hinzuaddiert oder subtrahiert, etc.
 
-=head2 How do I decode a MIME/BASE64 string?
+=head2 Wie dekodiere ich einen MIME/BASE64 String?
 
-The MIME-Base64 package (available from CPAN) handles this as well as
-the MIME/QP encoding.  Decoding BASE64 becomes as simple as:
+Das C<MIME-Base64> Paket (auf CPAN verfügbar) handhabt das - genauso wie das
+MIME/QP-Encoding. BASE64 zu dekodieren wird so einfach wie:
 
 	use MIME::Base64;
 	$decoded = decode_base64($encoded);
 
-The MIME-Tools package (available from CPAN) supports extraction with
-decoding of BASE64 encoded attachments and content directly from email
-messages.
+Das C<MIME-Tools> Pakete (auf CPAN verfügbar) unterstützt das Herausziehen und
+dekodieren von BASE64-kodierten Anhängen und Inhalten direkt aus Mail-Nachrichten.
 
-If the string to decode is short (less than 84 bytes long)
-a more direct approach is to use the unpack() function's "u"
-format after minor transliterations:
+Wenn der zu dekodierende String kurz ist (kürzer als 84 Bytes) ist ein direkterer
+Ansatz, das "u" Format der C<unpack()>-Funktion nach einer kleineren Transliteration
+zu verwenden:
 
-	tr#A-Za-z0-9+/##cd;                   # remove non-base64 chars
-	tr#A-Za-z0-9+/# -_#;                  # convert to uuencoded format
-	$len = pack("c", 32 + 0.75*length);   # compute length byte
-	print unpack("u", $len . $_);         # uudecode and print
+	tr#A-Za-z0-9+/##cd;                   # loesche nicht-BASE64 Zeichen
+	tr#A-Za-z0-9+/# -_#;                  # konvertiere in uuencoded Format
+	$len = pack("c", 32 + 0.75*length);   # Berechne Längen-Byte
+	print unpack("u", $len . $_);         # uudecode und Ausgabe
 
 =head2 How do I return the user's mail address?
 
