@@ -622,25 +622,25 @@ gethostbyname, Socket, Net::Domain, Sys::Hostname>
 
 (beigetragen von brian d foy)
 
-The Net::Domain module, which is part of the standard distribution starting
-in perl5.7.3, can get you the fully qualified domain name (FQDN), the host
-name, or the domain name.
+Das C<Net::Domain> Modul, das Teil der Standard-Distribution seit perl5.7.3 ist,
+kann Dir den vollqualifizierten Domain-Namen (FQDN), den Hostnamen oder den 
+Domain-Namen holen.
 
 	use Net::Domain qw(hostname hostfqdn hostdomain);
 
 	my $host = hostfqdn();
 
-The C<Sys::Hostname> module, included in the standard distribution since
-perl5.6, can also get the hostname.
+Das C<Sys::Hostname> Modul, in der Standard-Distribution seit perl5.6, kann cu
+den Hostnamen holen.
 
 	use Sys::Hostname;
 
 	$host = hostname();
 
-To get the IP address, you can use the C<gethostbyname> built-in function
-to turn the name into a number. To turn that number into the dotted octet
-form (a.b.c.d) that most people expect, use the C<inet_ntoa> function
-from the <Socket> module, which also comes with perl.
+Um die IP-Adresse zu bekommen, kannst Du die C<gethostbyname> Built-in Funktion
+verwenden und den Namen in eine Nummer umwandeln. Um diese Nummer in die Oktett-Form
+mit Punkten (a.b.c.d) zu bekommen, die die meisten Leute erwarten, benutze die
+C<inet_ntoa> Funktion aus dem C<Socket> Modul, das ebenfalls mit perl mitkommt.
 
 	use Socket;
 
