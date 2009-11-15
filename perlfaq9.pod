@@ -505,9 +505,9 @@ Es macht einen intelligenteren Rateversuch als der Code oben, indem es Informati
 benutzt, die bei der Installation des Moduls gegeben wurden - aber es kann immer noch
 falsch sein. Noch einmal, der beste Weg ist es oft, einfach den Benutzer zu fragen.
 
-=head2 How do I send mail?
+=head2 Wie verschicke ich Mails?
 
-Use the C<sendmail> program directly:
+Verwende direkt das C<sendmail> Programm:
 
 	open(SENDMAIL, "|/usr/lib/sendmail -oi -t -odq")
 		or die "Can't fork for sendmail: $!\n";
@@ -521,35 +521,35 @@ Use the C<sendmail> program directly:
 	EOF
 	close(SENDMAIL)     or warn "sendmail didn't close nicely";
 
-The B<-oi> option prevents sendmail from interpreting a line consisting
-of a single dot as "end of message".  The B<-t> option says to use the
-headers to decide who to send the message to, and B<-odq> says to put
-the message into the queue.  This last option means your message won't
-be immediately delivered, so leave it out if you want immediate
-delivery.
+Die B<-oi>-Option unterdrückt, dass C<sendmail> eine Zeile, die nur aus einem
+einzlenen Punkt besteht, als "Ende der Nachricht" interpretiert. Die B<-t> Option
+sagt, dass die Header benutzt werden sollen, um zu entscheiden, an wen die
+Nachricht geschickt werden soll. Und C<-odq> sagt, dass die Nachricht in die Queue
+geschoben werden soll. Diese letzte Option bedeutet, dass Deine Nachrichte nicht
+unmittelbar ausgeliefert wird, also lasse es weg, wenn Du eine unmittelbare
+Zustellung willst.
 
-Alternate, less convenient approaches include calling mail (sometimes
-called mailx) directly or simply opening up port 25 have having an
-intimate conversation between just you and the remote SMTP daemon,
-probably sendmail.
+Alternativ, weniger bequeme Ansätze beinhalten den direkten Aufruf von C<mail> (manchmal
+C<mailx> genannt) oder einfach Port 25 zu öffnen, um eine vertrauliche Konversation
+zwischen Dir und dem entfernten SMTP-Daemon, wahrscheinlich C<sendmail>, zu haben.
 
-Or you might be able use the CPAN module Mail::Mailer:
+Oder Du könntest das CPAN-Modul C<Mail::Mailer> verwenden:
 
 	use Mail::Mailer;
 
 	$mailer = Mail::Mailer->new();
 	$mailer->open({ From    => $from_address,
-					To      => $to_address,
-					Subject => $subject,
-				  })
+				To      => $to_address,
+				Subject => $subject,
+			})
 		or die "Can't open: $!\n";
 	print $mailer $body;
 	$mailer->close();
 
-The Mail::Internet module uses Net::SMTP which is less Unix-centric than
-Mail::Mailer, but less reliable.  Avoid raw SMTP commands.  There
-are many reasons to use a mail transport agent like sendmail.  These
-include queuing, MX records, and security.
+Das C<Mail::Internet> Modul verwendet C<Net::SMTP>, das weniger Unix-bezogen ist als
+C<Mail::Mail>, aber weniger zuverlässiger ist. Vermeide nackte SMTP-Kommandos.
+Es gibt viele Gründe, einen Mail Transport Agent wie C<sendmail> zu verwenden. Das
+schließt das Bilden von Queues, MX-Einträge und Sicherheit ein.
 
 =head2 How do I use MIME to make an attachment to a mail message?
 
