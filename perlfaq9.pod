@@ -484,25 +484,26 @@ zu verwenden:
 	$len = pack("c", 32 + 0.75*length);   # Berechne Längen-Byte
 	print unpack("u", $len . $_);         # uudecode und Ausgabe
 
-=head2 How do I return the user's mail address?
+=head2 Wie kann ich die Mail-Adresse des Users zurückgeben?
 
-On systems that support getpwuid, the $< variable, and the
-Sys::Hostname module (which is part of the standard perl distribution),
-you can probably try using something like this:
+Auf Systemen, die C<getpwuid>, die C<< $< >> Variable und das C<Sys::Hostname>
+Modul (das Teil der Standard perl Distribution ist) unterstützen, kannst Du wahrscheinlich
+versuchen, so etwas zu benutzen:
 
 	use Sys::Hostname;
 	$address = sprintf('%s@%s', scalar getpwuid($<), hostname);
 
-Company policies on mail address can mean that this generates addresses
-that the company's mail system will not accept, so you should ask for
-users' mail addresses when this matters.  Furthermore, not all systems
-on which Perl runs are so forthcoming with this information as is Unix.
+Unternehmensrichtlinien bezüglich Mail-Adressen können dazu führen, dass dies
+Adressen generiert, die das Mailsystem des Unternehmens nicht akzeptiert. Also solltest
+Du nach der Mail-Adresse eines Benutzers fragen, wenn das von Bedeutung ist. 
+Weiterhin sind nicht alle Systeme, auf denen Perl läuft, so mitteilsam bei solchen
+Informationen wie Unix.
 
-The Mail::Util module from CPAN (part of the MailTools package) provides a
-mailaddress() function that tries to guess the mail address of the user.
-It makes a more intelligent guess than the code above, using information
-given when the module was installed, but it could still be incorrect.
-Again, the best way is often just to ask the user.
+Das C<Mail::Util> Modul von CPAN (Teil des C<MailTools> Pakets) bietet eine 
+C<mailaddress()> Funktion, die versucht, die Mail-Adresse des Benutzers zu erraten.
+Es macht einen intelligenteren Rateversuch als der Code oben, indem es Informationen
+benutzt, die bei der Installation des Moduls gegeben wurden - aber es kann immer noch
+falsch sein. Noch einmal, der beste Weg ist es oft, einfach den Benutzer zu fragen.
 
 =head2 How do I send mail?
 
