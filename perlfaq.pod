@@ -1424,7 +1424,7 @@ Wie kann ich die Mail-Adresse des Users zurückgeben?
 
 =item *
 
-Wie kann ich Mails versenden?
+Wie verschicke ich Mails?
 
 =item *
 
