@@ -1408,7 +1408,7 @@ Wie kann ich einen Mail-Header parsen?
 
 =item *
 
-Wie kann ich ein CGI-Formular dekodieren?
+Wie dekodiere ich ein CGI-Formular?
 
 =item *
 
