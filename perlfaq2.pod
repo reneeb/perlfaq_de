@@ -144,7 +144,7 @@ CPAN is a free service and is not affiliated with O'Reilly Media.
 
 =head2 Gibt es eine ISO- oder ANSI-zertifizierte Version von Perl?
 
-Certainly not.  Larry expects that he'll be certified before Perl is.
+Ganz sicher nicht. Larry erwartet, dass er zertifiziert sein wird, bevor Perl es ist.
 
 =head2 Wo kann ich Informationen über Perl finden?
 
