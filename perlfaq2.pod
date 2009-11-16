@@ -70,25 +70,28 @@ einschließlich Compiler und Perl.
 
 =head2 Ich habe den Perl-Interpreter von einer Maschine auf eine andere kopiert, aber Skripte funktionieren nicht.
 
-That's probably because you forgot libraries, or library paths differ.
-You really should build the whole distribution on the machine it will
-eventually live on, and then type C<make install>.  Most other
-approaches are doomed to failure.
+Das ist wahrscheinlich, weil Du Bibliotheken vergessen hast oder die Pfade der
+Bibliotheken unterschiedlich sind. Du solltest wirklich die komplette Distribution
+auf der Maschiene bauen, auf der es wahrscheinlich bleiben wird und dann
+C<make install> eingeben. Die meisten anderen Ansätze sind zum Scheitern verurteilt.
 
-One simple way to check that things are in the right place is to print out
-the hard-coded @INC that perl looks through for libraries:
+Ein einfacher Weg zu überprüfen, ob die Dinge am richtigen Ort sind, ist, das
+Hardkodierte C<@INC> auszugeben, das perl nach Bibliotheken durchsucht:
 
     % perl -le 'print for @INC'
 
-If this command lists any paths that don't exist on your system, then you
-may need to move the appropriate libraries to these locations, or create
-symbolic links, aliases, or shortcuts appropriately.  @INC is also printed as
-part of the output of
+Wenn dieses Kommando Pfade auflistet, die auf Deinem System nicht existieren, musst
+Du die passenden Bibliotheken an diese Stellen verschieben, oder einen symbolischen
+Link, Aliases oder passende Shortcuts erzeugen. C<@INC> wird auch als Teil der
+Ausgabe von
 
     % perl -V
 
-You might also want to check out
-L<perlfaq8/"How do I keep my own module/library directory?">.
+ausgegebn.
+
+Du solltest auch 
+L<perlfaq8/"Wie kann ich mein Verzeichnis für eigene Module/Bibliotheken pflegen?">
+lesen.
 
 =head2 Ich habe die Sourcen geholt und versucht, diese zu kompilieren, aber gdbm/dynamic loading/malloc/linking/... ist fehlgeschlagen. Wie kann ich es zum Laufen bringen?
 
