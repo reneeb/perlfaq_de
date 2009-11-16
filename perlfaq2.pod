@@ -95,10 +95,9 @@ lesen.
 
 =head2 Ich habe die Sourcen geholt und versucht, diese zu kompilieren, aber gdbm/dynamic loading/malloc/linking/... ist fehlgeschlagen. Wie kann ich es zum Laufen bringen?
 
-Read the F<INSTALL> file, which is part of the source distribution.
-It describes in detail how to cope with most idiosyncrasies that the
-Configure script can't work around for any given system or
-architecture.
+Lese die F<INSTALL>-Datei, die Teil der Source-Distribution ist. Es beschreibt
+detailliert, wie mit die meisten Eigenheiten bewältigt werden können, mit denen das
+C<Configure>-Skript für ein System oder eine Architektur nicht umgehen kann.
 
 =head2 Welche Module und Erweiterungen sind für Perl erhältlich? Was ist CPAN? Was bedeutet CPAN/src/...?
 
