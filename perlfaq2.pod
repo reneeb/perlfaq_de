@@ -1,33 +1,33 @@
+=encoding utf-8
+
 =head1 NAME
 
 perlfaq2 - Bezugsquellen und Dokumentation
 
 =head1 DESCRIPTION
 
-This section of the FAQ answers questions about where to find
-source and documentation for Perl, support, and
-related matters.
+Dieser Abschnitt der FAQ beantwortet Fragen wo die Quellen und Dokumentation zu
+Perl, Unterstützung und verwandte Themen zu finden sind.
 
-=head2 Welche Maschinen unterstützen Perl? Wo bekomme ich es her?
+=head2 Welche Maschinen unterstützt Perl? Wo bekomme ich es her?
 
-The standard release of perl (the one maintained by the perl
-development team) is distributed only in source code form.  You
-can find the latest releases at http://www.cpan.org/src/README.html .
+Das Standard-Releas von perl (das vom perl Entwicklungs-Team gewartet wird) wird
+nur in Quelltext-Form verteilt. Du findest das letzten Releases unter
+http://www.cpan.org/src/README.html .
 
-Perl builds and runs on a bewildering number of platforms.  Virtually
-all known and current Unix derivatives are supported (perl's native
-platform), as are other systems like VMS, DOS, OS/2, Windows,
-QNX, BeOS, OS X, MPE/iX and the Amiga.
+Perl kann auf einer verblüffenden Anzahl von Plattformen gebaut und laufen
+gelassen werden. Praktisch alle bekannten und aktuellen Unix-Derivate werden
+unterstützt (perl's native Plattform), genauso wie andere Systeme wie
+VMS, DOS, OS/2, Windows, QNX, BeOS, OS X, MPE/iX und Amiga
 
-Binary distributions for some proprietary platforms can be found
-http://www.cpan.org/ports/ directory. Because these are not part of
-the standard distribution, they may and in fact do differ from the
-base perl port in a variety of ways. You'll have to check their
-respective release notes to see just what the differences are.  These
-differences can be either positive (e.g. extensions for the features
-of the particular platform that are not supported in the source
-release of perl) or negative (e.g. might be based upon a less current
-source release of perl).
+Binär-Distributionen für einige proprietäre Plattformen sind im http://www.cpan.org/ports/
+Verzeichnis zu finden. Weil diese nicht Teil der Standard-Distribution sind,
+können sie - und das tun sie auch - sich in einer Vielzahl von Möglichkeiten von
+der perl-Basis unterscheiden. Du wirst deren Release Notes prüfen müssen, um zu sehen,
+was die Unterschiede sind. Diese Unterschiede können entweder positiv (z.B.
+Erweiterungen für die Features der einzelnen Plattform, die nicht im Source-Release
+von Perl unterstützt werden) oder negativ (z.B. es kann auf einer weniger aktuellen
+Version des Perl-Quellcodes basieren) sein.
 
 =head2 Wie kann ich eine Binär-Version von Perl bekommen?
 
