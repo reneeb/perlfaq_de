@@ -200,7 +200,7 @@ zu finden sind.
 
 =item *
 
-Welche Maschinen unterstützen Perl? Wo bekomme ich es her?
+Welche Maschinen unterstützt Perl? Wo bekomme ich es her?
 
 =item *
 
