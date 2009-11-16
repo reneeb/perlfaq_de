@@ -51,23 +51,22 @@ IndigoPerl: Windows
 
 =head2 Ich habe keinen C-Compiler. Wie kann ich meinen eigenen Perl-Interpreter bauen?
 
-Since you don't have a C compiler, you're doomed and your vendor
-should be sacrificed to the Sun gods.  But that doesn't help you.
+Da Du keinen C-Compiler hast, bist Du dem Untergang geweiht und Dein Anbieter sollte
+den Sun-Göttern geopfert werden. Aber das hilft Dir nicht weiter.
 
-What you need to do is get a binary version of gcc for your system
-first.  Consult the Usenet FAQs for your operating system for
-information on where to get such a binary version.
+Was Du brauchst, ist als erstes eine Binär-Version von C<gcc> für Dein System
+zu bekommen. Befrage die Usenet FAQs für Dein Betriessystem für Informationen darüber,
+wo Du eine solche Binär-Version bekommst.
 
-You might look around the net for a pre-built binary of Perl (or a
-C compiler!) that meets your needs, though:
+Du könntest Dich im Netz nach einer vorgefertigten Binär-Version von Perl (oder
+eines C-Compilers!), das Deinen Ansprüchen genügt, also:
 
-For Windows, Vanilla Perl ( http://vanillaperl.com/ ) and Strawberry Perl
-( http://strawberryperl.com/ ) come with a
-bundled C compiler. ActivePerl is a pre-compiled version of Perl
-ready-to-use.
+Für Windows, Vanilla Perl ( http://vanillaperl.com ) und Strawberry Perl 
+( http://strawberryperl.com/ ) kommen mit einem C-Compiler. ActivePerl ist eine
+vorgefertigte Version von Perl, die direkt eingesetzt werden kann.
 
-For Sun systems, SunFreeware.com provides binaries of most popular
-applications, including compilers and Perl.
+Für Sun-Systeme bietet SunFreeware.com Binaries für die beliebtesten Programme,
+einschließlich Compiler und Perl.
 
 =head2 Ich habe den Perl-Interpreter von einer Maschine auf eine andere kopiert, aber Skripte funktionieren nicht.
 
