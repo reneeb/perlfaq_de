@@ -488,6 +488,9 @@ Um festzustellen, ob ein Modul mit Deiner Version von Perl mitgekommen ist, kann
 Du das C<Module::CoreList> Modul verwenden. Es hat die Informationen über die
 Module (mit deren Versionen), die in jedem Release von Perl enthalten sind.
 
+Wenn C<Module::CoreList> nicht auf Deinem System installiert ist, sieh Dir
+http://perlpunks.de/corelist an.
+
 Jedes CPAN-Modul einen Bug-Tracker in RT, http://rt.cpan.org . Du kannst 
 Bugs an RT entweder über das Webinterfaces oder per E-Mail schicken. Um einen
 Bugreport zu mailen sende ihn an bug-E<lt>distribution-nameE<gt>@rt.cpan.org .
