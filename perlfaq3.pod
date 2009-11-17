@@ -42,25 +42,25 @@ Du kannst auch die Symboltabelle inspizieren, den Backtrace des Stacks holen,
 Werte von Variablen prüfen, Breakpoints setzen und andere Operationen, die 
 typischerweise in symbolischen Debuggern zu finden sind.
 
-=head2 Is there a Perl shell?
+=head2 Gibt es eine Perl shell?
 
-The psh (Perl sh) is currently at version 1.8. The Perl Shell is a shell
-that combines the interactive nature of a Unix shell with the power of
-Perl. The goal is a full featured shell that behaves as expected for
-normal shell activity and uses Perl syntax and functionality for
-control-flow statements and other things. You can get psh at
-http://sourceforge.net/projects/psh/ .
+Die C<psh> (Perl sh) is aktuell bei Version 1.8. Die Perl Shell ist eine shell
+die die interaktiven Eingenschaften einer Unix shell mit der Mächtigkeit von Perl
+vereint. Das Ziel ist eine shell mit allen Features, die sich verhält, wie man es
+für normale shell Aktivitäten erwartet und Perl-Syntax und -Funktionalitäten für
+Kontrollfluss Befehle und andere Dinge verwendet. Du kannst C<psh> unter
+http://sourceforge.net/projects/psh/ bekommen.
 
-Zoidberg is a similar project and provides a shell written in perl,
-configured in perl and operated in perl. It is intended as a login shell
-and development environment. It can be found at
-http://pardus-larus.student.utwente.nl/~pardus/projects/zoidberg/
-or your local CPAN mirror.
+C<Zoidberg> ist ein ähliches Projekt und bietet eine shell in perl geschrieben,
+in perl konfiguriert und in perl betrieben. Es ist als eine Login shell und
+Entwicklungsumgebung gedacht. Es ist unter 
+http://pardus-larus.student.utwente.nl/~pardus/projects/zoidberg/ zu finden oder
+auf Deinem nächsten CPAN-Spiegel.
 
-The Shell.pm module (distributed with Perl) makes Perl try commands
-which aren't part of the Perl language as shell commands.  perlsh from
-the source distribution is simplistic and uninteresting, but may still
-be what you want.
+Das C<Shell.pm> Module (mit Perl verteilt) bringt Perl dazu, Kommandos als 
+Shell-Kommandos zu probieren, die nicht Teil der Sprache Perl sind. C<perlsh>
+aus der Quell-Distribution ist zu einfach und uninteresant, könnte aber dennoch
+sein was Du willst.
 
 =head2 How do I find which modules are installed on my system?
 
