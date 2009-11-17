@@ -30,17 +30,17 @@ entsprechenden Hilfeseiten gelesen? Hier eine kurze Übersicht:
 
 Eine grobe Inhaltsübersicht für die Hilfeseiten von Perl ist in L<perltoc> zu finden.
 
-=head2 How can I use Perl interactively?
+=head2 Wie kann ich Perl interaktiv benutzen?
 
-The typical approach uses the Perl debugger, described in the
-perldebug(1) manpage, on an "empty" program, like this:
+Der typische Ansatz benutzt den Perl-Debugger, der in der C<perldebug(1)> Hilfeseite
+beschrieben ist, mit einem "leeren" Programm, wie dieses:
 
     perl -de 42
 
-Now just type in any legal Perl code, and it will be immediately
-evaluated.  You can also examine the symbol table, get stack
-backtraces, check variable values, set breakpoints, and other
-operations typically found in symbolic debuggers.
+Jetzt einfach jeglichen gültigen Perl-Code eingeben und es wird unmittelbar evaluiert.
+Du kannst auch die Symboltabelle inspizieren, den Backtrace des Stacks holen,
+Werte von Variablen prüfen, Breakpoints setzen und andere Operationen, die 
+typischerweise in symbolischen Debuggern zu finden sind.
 
 =head2 Is there a Perl shell?
 
