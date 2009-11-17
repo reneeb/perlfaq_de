@@ -101,46 +101,43 @@ C<Configure>-Skript für ein System oder eine Architektur nicht umgehen kann.
 
 =head2 Welche Module und Erweiterungen sind für Perl erhältlich? Was ist CPAN? Was bedeutet CPAN/src/...?
 
-CPAN stands for Comprehensive Perl Archive Network, a multi-gigabyte
-archive replicated on hundreds of machines all over the world. CPAN
-contains source code, non-native ports, documentation, scripts, and
-many third-party modules and extensions, designed for everything from
-commercial database interfaces to keyboard/screen control to web
-walking and CGI scripts. The master web site for CPAN is
-http://www.cpan.org/ and there is the CPAN Multiplexer at
-http://www.cpan.org/CPAN.html which will choose a mirror near you via
-DNS.  See http://www.perl.com/CPAN (without a slash at the end) for
-how this process works. Also, http://mirror.cpan.org/ has a nice
-interface to the http://www.cpan.org/MIRRORED.BY mirror directory.
+CPAN steht für "Comprehensive Perl Archive Network", ein Multi-Gigabyte Archive, 
+dass auf hunderte Maschinen auf der Welt repliziert ist. CPAN enthält Source-Code,
+Nicht-native Portierungen, Dokumentation, Skripte und viele Module und Erweiterungen
+von Drittanbietern, konzipiert für alles von Schnittstellen zu kommerziellen 
+Datenbanken über Tastatur/Monitor-Steuerung bis zu Web- und CGI-Skripten. Die
+Haupt-Webseite von CPAN ist http://www.cpan.org/ und dort ist der CPAN-Multiplexer
+unter http://www.cpan.org/CPAN.html, der ein "Spiegelbild" in Deiner Nähe über DNS
+auswählt. Für Informationen wie dieser Prozess funktioniert, siehe auch 
+http://www.perl.com/CPAN (Ohne Slash am Ende). http://mirror.cpan.org hat eine
+schöne Schnittstelle zum http://www.cpan.org/MIRRORED.BY Spiegelverzeichnis.
 
-See the CPAN FAQ at http://www.cpan.org/misc/cpan-faq.html for answers
-to the most frequently asked questions about CPAN including how to
-become a mirror.
+Siehe auch die CPAN FAQ unter http://www.cpan.org/misc/cpan-faq.html für Antworten
+zu den am häufigsten gestellten Fragen über CPAN, einschließlich wie man ein
+"Spiegelbild" erstellen kann.
 
-CPAN/path/... is a naming convention for files available on CPAN
-sites.  CPAN indicates the base directory of a CPAN mirror, and the
-rest of the path is the path from that directory to the file. For
-instance, if you're using ftp://ftp.funet.fi/pub/languages/perl/CPAN
-as your CPAN site, the file CPAN/misc/japh is downloadable as
-ftp://ftp.funet.fi/pub/languages/perl/CPAN/misc/japh .
+C<CPAN/path/...> ist eine Namenskonvention für Dateien, die auf CPAN verfügbar
+sind. CPAN bezeichnet das Basis-Verzeichnis des CPAN-Spiegels und der Rest des
+Pfads ist der Pfad von diesem Verzeichnis zu der Datei. Wenn Du zum Beispiel
+ftp://ftp.funet.fi/pub/languages/perl/CPAN als Deine CPAN-Seite benutzt, kann man die
+Datei C<CPAN/misc/japh> unter ftp://ftp.funet.fi/pub/languages/perl/CPAN/misc/japh
+herunterladen.
 
-Considering that, as of 2006, there are over ten thousand existing
-modules in the archive, one probably exists to do nearly anything you
-can think of. Current categories under CPAN/modules/by-category/
-include Perl core modules; development support; operating system
-interfaces; networking, devices, and interprocess communication; data
-type utilities; database interfaces; user interfaces; interfaces to
-other languages; filenames, file systems, and file locking;
-internationalization and locale; world wide web support; server and
-daemon utilities; archiving and compression; image manipulation; mail
-and news; control flow utilities; filehandle and I/O; Microsoft
-Windows modules; and miscellaneous modules.
+In Anbetracht, dass nach Stand 2006, mehr als zehn tausend Module in dem Archiv
+existieren, existiert wahrscheinlich für nahezu alles, was Du Dir vorstellen kannst,
+ein Modul. Zu den aktuellen Kategorien unter C<CPAN/modules/by-category/> gehören
+Perl Kern-Module, Entwicklungsunterstützung, Betriebssystem-Schnittstellen,
+Netzwerke, Geräte und Kommunikation zwischen Prozessen, Tools für Datentypen,
+Datenbank-Schnittstellen, Benutzeroberflächen, Schnittstellen zu anderen Sprachen,
+Dateinamen, Dateisystem und Dateisperren, Internationalisierung und Lokalisierung,
+Unterstützung für das World Wide Web, Server und Daemon Tools, Archivierung und
+Komprimierung, Bildbearbeitung, Mails und News, Hilfsprogramme für die Ablaufsteuerung,
+Filehandles und I/O, Microsoft Windows Module und verschiedene Module.
 
-See http://www.cpan.org/modules/00modlist.long.html or
-http://search.cpan.org/ for a more complete list of modules by
-category.
+Siehe http://www.cpan.org/modules/00modlist.long.html oder http://search.cpan.org/
+für eine komplettere Liste von Modulen nach der Kategorie sortiert.
 
-CPAN is a free service and is not affiliated with O'Reilly Media.
+CPAN ist ein kostenloser Service und ist nicht mit O'Reilly Media verbunden.
 
 =head2 Gibt es eine ISO- oder ANSI-zertifizierte Version von Perl?
 
