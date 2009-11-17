@@ -454,7 +454,7 @@ finden, die Du suchst.
 =head2 Wo kann ich eine Kommerzielle Version von Perl kaufen?
 
 Im wahrsten Sinne des Wortest I<ist> perl schon eine kommerzielle Software: Es hat
-eine Lizenz, die Du nehmen und vorsichtig Deinem Manager vorlesen kannst. Es ist
+eine Lizenz, die Du nehmen und sorgf‰ltig Deinem Manager vorlesen kannst. Es ist
 in Releases verteilt und kommt in wohldefinierten Paketen. Es gibt eine sehr groﬂe
 User-Gemeinschaft und umfangreiche Literatur. Die comp.lang.perl.* Newsgruppen und
 etliche Mailinglisten bieten kostenlose Antworten auf Deine Antworten in nahezu
