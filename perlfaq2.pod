@@ -177,7 +177,7 @@ sein. Diese URLs können auch nützlich sein:
 
 =head2 Welche Perl newsgroups gibt es im Usenet? Wo stelle ich Fragen?
 
-Several groups devoted to the Perl language are on Usenet:
+Einige Gruppen, die Perl gewidmet sind, gibt es im Usenet:
 
 	comp.lang.perl.announce      Moderated announcement group
 	comp.lang.perl.misc          High traffic general Perl discussion
@@ -185,27 +185,25 @@ Several groups devoted to the Perl language are on Usenet:
 	comp.lang.perl.modules       Use and development of Perl modules
 	comp.lang.perl.tk            Using Tk (and X) from Perl
 
-Some years ago, comp.lang.perl was divided into those groups, and
-comp.lang.perl itself officially removed.  While that group may still
-be found on some news servers, it is unwise to use it, because
-postings there will not appear on news servers which honour the
-official list of group names.  Use comp.lang.perl.misc for topics
-which do not have a more-appropriate specific group.
+Vor einigen Jahren wurde comp.lang.perl in diese Gruppen aufgeteilt und
+comp.lang.perl wurde offiziell gelöscht. Auch wenn diese Gruppe vielleicht auf einigen
+News-Servern gefunden werden kann, ist es unklug, diese zu benutzen, weil Nachrichten
+von dort nicht auf News-Servern auftauchen werden, die die offizielle Liste der
+Gruppennamen beachten. Benutze comp.lang.perl.misc für Themen, die keine
+passendere spezifische Gruppe haben.
 
-There is also a Usenet gateway to Perl mailing lists sponsored by
-perl.org at nntp://nntp.perl.org , a web interface to the same lists
-at http://nntp.perl.org/group/ and these lists are also available
-under the C<perl.*> hierarchy at http://groups.google.com . Other
-groups are listed at http://lists.perl.org/ ( also known as
-http://lists.cpan.org/ ).
+Es gibt auch ein Usenet-Gateway zu den Perl-Mailinglisten unter nntp://nntp.perl.org,
+das von perl.org gesponsort wird, eine Web-Schnittstelle zu den gleichen Listen ist
+unter http://nntp.perl.org/group/ und diese Listen sind auch unter der C<perl.*>
+Hierarchie auf http://groups.google.com verfügbar. Weitere Gruppen sind unter
+http://lists.perl.org/ aufgeführt ( auch bekannt als http://lists.cpan.org/ ).
 
-A nice place to ask questions is the PerlMonks site,
-http://www.perlmonks.org/ , or the Perl Beginners mailing list
-http://lists.perl.org/showlist.cgi?name=beginners .
+Ein guter Platz um Fragen zu stellen ist die PerlMonks-Seite, http://www.perlmonks.org/ ,
+oder die Perl Beginner Mailingliste http://lists.perl.org/showlist.cgi?name=beginners .
 
-Note that none of the above are supposed to write your code for you:
-asking questions about particular problems or general advice is fine,
-but asking someone to write your code for free is not very cool.
+Beachte, dass keine der oben genannten Steillen den Code für Dich schreiben werden:
+Fragen über besondere Probleme oder allgemeine Hilfe ist in Ordnung,
+aber jemanden fragen, ob sie Code kostenlos für Dich schreiben, ist nicht sehr cool.
 
 =head2 Wo sollte ich Source Code einstellen?
 
