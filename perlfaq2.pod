@@ -207,16 +207,17 @@ aber jemanden fragen, ob sie Code kostenlos für Dich schreiben, ist nicht sehr c
 
 =head2 Wo sollte ich Source Code einstellen?
 
-You should post source code to whichever group is most appropriate, but
-feel free to cross-post to comp.lang.perl.misc.  If you want to cross-post
-to alt.sources, please make sure it follows their posting standards,
-including setting the Followup-To header line to NOT include alt.sources;
-see their FAQ ( http://www.faqs.org/faqs/alt-sources-intro/ ) for details.
+Du solltest den Source Code in der Gruppe einstellen, die am besten passt. Aber
+Du kann auch zusätzlich in comp.lang.perl.misc posten. Wenn Du einen Cross-Post
+auf alt.sources machen willst, stelle bitte sicher, dass es ihren 
+Veröffentlichungs-Standards entspricht, einschließlich dem Setzen der Followup-To
+Header-Zeile, so dass diese alt.sources NICHT enthält; siehe auch deren FAQ
+( http://www.faqs.org/faqs/alt-sources-intro/ ) für Details.
 
-If you're just looking for software, first use Google
-( http://www.google.com ), Google's usenet search interface
-( http://groups.google.com ),  and CPAN Search ( http://search.cpan.org ).
-This is faster and more productive than just posting a request.
+Wenn Du nur nach Software suchst, benutze zuerst Google ( http://www.google.com ), 
+Google's Suche für das Usenet ( http://groups.google.com ) und die CPAN-Suche
+( http://search.cpan.org ).
+Das ist schneller und produktiver als nur eine Anfrage zu stellen.
 
 =head2 Perl Bücher
 
