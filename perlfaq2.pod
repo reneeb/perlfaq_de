@@ -473,31 +473,30 @@ mit perl.
 
 =head2 Wo kann ich Bug-Reports hinschicken?
 
-(contributed by brian d foy)
+(beigetragen von brian d foy)
 
-First, ensure that you've found an actual bug. Second, ensure you've
-found an actual bug.
+Als erstes solltest Du sicherstellen, dass Du wirklich einen Bug gefunden hast. 
+Als zweites solltest Du sicherstellen, dass Du wirklich einen Bug gefunden hast.
 
-If you've found a bug with the perl interpreter or one of the modules
-in the standard library (those that come with Perl), you can use the
-C<perlbug> utility that comes with Perl (>= 5.004). It collects
-information about your installation to include with your message, then
-sends the message to the right place.
+Wenn Du einen Bug im perl Interpreter oder in einem der Module aus der 
+Standard-Bibliothek (die mit Perl mitgeliefert werden) gefunden hast, kannst Du
+das C<perlbug> Tool verwenden, das mit Perl (>= 5.004) mitkommt. Es sammelt 
+Information über Deine Installtion, um sie in Deine Nachricht einzufügen und schickt
+die Nachricht dann an die richtige Stelle.
 
-To determine if a module came with your version of Perl, you can
-use the C<Module::CoreList> module. It has the information about
-the modules (with their versions) included with each release of Perl.
+Um festzustellen, ob ein Modul mit Deiner Version von Perl mitgekommen ist, kannst
+Du das C<Module::CoreList> Modul verwenden. Es hat die Informationen über die
+Module (mit deren Versionen), die in jedem Release von Perl enthalten sind.
 
-Every CPAN module has a bug tracker set up in RT, http://rt.cpan.org .
-You can submit bugs to RT either through its web interface or by
-email. To email a bug report, send it to
-bug-E<lt>distribution-nameE<gt>@rt.cpan.org . For example, if you
-wanted to report a bug in C<Business::ISBN>, you could send a message to
-bug-Business-ISBN@rt.cpan.org .
+Jedes CPAN-Modul einen Bug-Tracker in RT, http://rt.cpan.org . Du kannst 
+Bugs an RT entweder über das Webinterfaces oder per E-Mail schicken. Um einen
+Bugreport zu mailen sende ihn an bug-E<lt>distribution-nameE<gt>@rt.cpan.org .
+Wenn Du zum Beispiel einen Bug in C<Business::ISBN> melden willst, kannst Du die
+Nachricht an bug-Business-ISBN@rt.cpan.org schicken.
 
-Some modules might have special reporting requirements, such as a
-Sourceforge or Google Code tracking system, so you should check the
-module documentation too.
+Einige Module können spezielle Anforderung an das Melden von Bugs haben, wie 
+ein Sourceforge oder Google Code Tracking-System, so dass Du auch die
+Modul-Dokumentation prüfen solltest.
 
 =head2 Was ist perl.com? Perl-Mongers? pm.org? perl.org? cpan.org?
 
