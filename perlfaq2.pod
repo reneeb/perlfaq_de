@@ -402,32 +402,33 @@ Empfohlene Bücher über (oder hauptsächlich über) Perl folgen.
 
 =head2 Welche Magazine haben Perl-Inhalte
 
-I<The Perl Review> ( http://www.theperlreview.com ) focuses on Perl
-almost completely (although it sometimes sneaks in an article about
-another language). There's also I<$foo Magazin>, a german magazine
-dedicated to Perl, at ( http://www.foo-magazin.de ).
+I<The Perl Review> ( http://www.theperlreview.com ) konzentriert sich fast
+ausschließlich auf Perl (auch wenn sich manchmal ein Artikel über eine andere Sprache
+einschleicht). Es gibt noch das I<$foo Magazin>, ein deutsches Magazin, das
+Perl gewidmet ist, unter ( http://www.foo-magazin.de ).
 
-Magazines that frequently carry quality articles on Perl include I<The
-Perl Review> ( http://www.theperlreview.com ), I<Unix Review> (
-http://www.unixreview.com/ ), I<Linux Magazine> (
-http://www.linuxmagazine.com/ ), and Usenix's newsletter/magazine to
-its members, I<login:> ( http://www.usenix.org/ )
+Die I<Perl-Zeitung> ist ein deutschsprachiges Magazin für Perl Einsteiger (siehe
+http://perl-zeitung.at.tf ).
 
-The Perl columns of Randal L. Schwartz are available on the web at
+Magazine, die regelmäßig gute Artikel über Perl haben, schließen I<The Perl Review>
+( http://www.theperlreview.com ), I<Unix Review> ( http://www.unixreview.com/ ),
+I<Linux Magazine> ( http://www.linuxmagazine.com/ ) und Usenix's Newsletter/Magazin
+für seine Mitglieder, I<Login:> ( http://www.usenix.org/ ) ein.
+
+Die Perl Kolumnen von Randal L. Schwartz sind im Web unter
 http://www.stonehenge.com/merlyn/WebTechniques/ ,
-http://www.stonehenge.com/merlyn/UnixReview/ , and
-http://www.stonehenge.com/merlyn/LinuxMag/ .
+http://www.stonehenge.com/merlyn/UnixReview/ und
+http://www.stonehenge.com/merlyn/LinuxMag/ verfügbar.
 
-The first (and for a long time, only) periodical devoted to All Things
-Perl, I<The Perl Journal> contains tutorials, demonstrations, case
-studies, announcements, contests, and much more.  I<TPJ> has columns
-on web development, databases, Win32 Perl, graphical programming,
-regular expressions, and networking, and sponsors the Obfuscated Perl
-Contest and the Perl Poetry Contests.  Beginning in November 2002, TPJ
-moved to a reader-supported monthly e-zine format in which subscribers
-can download issues as PDF documents. In 2006, TPJ merged with Dr.
-Dobbs Journal (online edition). To read old TPJ articles, see
-http://www.ddj.com/ .
+Die erste (und für lange Zeit einzige) Zeitschrift, die Perl für Alle Dinge
+gewidmet war, I<The Perl Journal>, enthält Tutorials, Demonstrationen, Fallstudien,
+Ankündigungen, Wettbewerbe und vieles mehr. I<TPJ> hat Kolumnen über Webentwicklung,
+Datenbanken, Win32-Perl, graphische Programmierung, Reguläre Ausdrücke und Netzwerke
+und sponsrt sowohl den Obfuscated Perl Contest und den Perl Poetry Contest. Ab
+November 2002 wurde I<TPJ> zu einem von Lesern unterstützten monatlichen e-zine Format,
+von dem sich Abonnenten die Ausgaben als PDF-Dokument herunterladen können. 2006
+schloss sich I<TPJ> mit I<Dr. Dobbs Journal> (Online-Ausgabe) zusammen. Um alte
+I<TPJ> Artikel zu lesen, siehe http://www.ddj.com/ .
 
 =head2 Welche Mailinglisten gibt es über Perl?
 
