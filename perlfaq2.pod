@@ -432,11 +432,11 @@ I<TPJ> Artikel zu lesen, siehe http://www.ddj.com/ .
 
 =head2 Welche Mailinglisten gibt es über Perl?
 
-Most of the major modules (Tk, CGI, libwww-perl) have their own
-mailing lists.  Consult the documentation that came with the module for
-subscription information.
+Die meisten der großen Module (C<Tk>, C<CGI>, C<libwww-perl>) haben ihre eigenen
+Mailinglisten. Für Abonnements-Information schau Dir die Dokumentation an , die
+mit den Modulen kommt.
 
-A comprehensive list of Perl related mailing lists can be found at:
+Eine umfassende Liste von Perl-bezogenen Mailinglisten findest Du unter:
 
 	http://lists.perl.org/
 
