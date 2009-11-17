@@ -9,26 +9,26 @@ perlfaq3 - Programmierwerkzeuge
 Dieser Abschnitt der FAQ beantwortet Fragen bezüglich Programmierwerkzuge
 und Programmierunterstützung.
 
-=head2 How do I do (anything)?
+=head2 Wie mache ich (irgendwas)?
 
-Have you looked at CPAN (see L<perlfaq2>)?  The chances are that
-someone has already written a module that can solve your problem.
-Have you read the appropriate manpages?  Here's a brief index:
+Hast Du auf CPAN nachgeschaut (siehe L<perlfaq2>)? Die Chancen sind gut, dass 
+jemand bereits ein Modul geschrieben hat, das Dein Problem löst. Hast Du die
+entsprechenden Hilfeseiten gelesen? Hier eine kurze Übersicht:
 
-	Basics	        perldata, perlvar, perlsyn, perlop, perlsub
-	Execution	perlrun, perldebug
-	Functions	perlfunc
-	Objects		perlref, perlmod, perlobj, perltie
-	Data Structures	perlref, perllol, perldsc
-	Modules		perlmod, perlmodlib, perlsub
-	Regexes		perlre, perlfunc, perlop, perllocale
-	Moving to perl5	perltrap, perl
-	Linking w/C	perlxstut, perlxs, perlcall, perlguts, perlembed
-	Various 	http://www.cpan.org/misc/olddoc/FMTEYEWTK.tgz
-			(not a man-page but still useful, a collection
-			 of various essays on Perl techniques)
+	Grundlagen	        perldata, perlvar, perlsyn, perlop, perlsub
+	Ausführung		perlrun, perldebug
+	Funktionen		perlfunc
+	Objekte			perlref, perlmod, perlobj, perltie
+	Datenstrukturen		perlref, perllol, perldsc
+	Module			perlmod, perlmodlib, perlsub
+	Reguläre Ausdrücke	perlre, perlfunc, perlop, perllocale
+	Umstieg auf perl5	perltrap, perl
+	Verknüpfen mit C	perlxstut, perlxs, perlcall, perlguts, perlembed
+	Verschiedenes	 	http://www.cpan.org/misc/olddoc/FMTEYEWTK.tgz
+				(keine Hilfeseite, trotzdem nützlich, eine Sammlung
+				verschiedener Essays über Perl-Techniken)
 
-A crude table of contents for the Perl manpage set is found in L<perltoc>.
+Eine grobe Inhaltsübersicht für die Hilfeseiten von Perl ist in L<perltoc> zu finden.
 
 =head2 How can I use Perl interactively?
 
