@@ -62,29 +62,30 @@ Shell-Kommandos zu probieren, die nicht Teil der Sprache Perl sind. C<perlsh>
 aus der Quell-Distribution ist zu einfach und uninteresant, könnte aber dennoch
 sein was Du willst.
 
-=head2 How do I find which modules are installed on my system?
+=head2 Wie finde ich heraus, welche Module auf meinem System installiert sind?
 
-From the command line, you can use the C<cpan> command's C<-l> switch:
+Aus der Kommandozeile, kannst Du den C<-l>-Schalter des C<cpan> Kommandos benutzen:
 
 	$ cpan -l
 
-You can also use C<cpan>'s C<-a> switch to create an autobundle file
-that C<CPAN.pm> understands and can use to re-install every module:
+Du kannst auch den C<-a>-Schalter von C<cpan> verwenden, um eine autobundle-Datei
+zu erstellen, die C<CPAN.pm> versteht und benutzen kann um jedes Modul wieder zu
+installieren:
 
 	$ cpan -a
 
-Inside a Perl program, you can use the ExtUtils::Installed module to
-show all installed distributions, although it can take awhile to do
-its magic.  The standard library which comes with Perl just shows up
-as "Perl" (although you can get those with C<Module::CoreList>).
+Innerhalb eines Perl-Programms kannst Du das C<ExtUtils::Installed> Module verwenden
+um alle installieren Distributionen anzuzeigen, auch wenn es eine Zeit dauern kann
+um seine Magie zu tun. Die Standard-Bibliothek, die mit Perl mitgeliefert wird,
+wir nur als "Perl" angezeigt (auch wenn Du diese mit C<Module::CoreList> holen kannst).
 
 	use ExtUtils::Installed;
 
 	my $inst    = ExtUtils::Installed->new();
 	my @modules = $inst->modules();
 
-If you want a list of all of the Perl module filenames, you
-can use C<File::Find::Rule>:
+Wenn Du eine Liste mit allen Dateinamen der Perl-Module haben willst, kannst Du
+C<File::Find::Rule> verwenden:
 
 	use File::Find::Rule;
 
@@ -95,8 +96,8 @@ can use C<File::Find::Rule>:
 		in( @INC )
 		;
 
-If you do not have that module, you can do the same thing
-with File::Find which is part of the standard library:
+Wenn Du dieses Modul nicht hast, kannst Du das gleiche mit C<File::Find> machen,
+das Teil der Standard-Bibliothek ist:
 
 	use File::Find;
 	my @files;
@@ -115,16 +116,16 @@ with File::Find which is part of the standard library:
 
 	print join "\n", @files;
 
-If you simply need to quickly check to see if a module is
-available, you can check for its documentation.  If you can
-read the documentation the module is most likely installed.
-If you cannot read the documentation, the module might not
-have any (in rare cases):
+Wenn Du einfach eine schnelle Überprüfung brauchst, um zu sehen ob ein Modul
+verfügbar ist, kannst Du auf dessen Dokumentation prüfen. Wenn Du die Dokumentation
+lesen kannst, ist das Modul höchstwahrscheinlich installiert. Wenn Du die
+Dokumentation nicht lesen kannst, hat das Modul vielleicht keine (in seltenen
+Fällen):
 
 	$ perldoc Module::Name
 
-You can also try to include the module in a one-liner to see if
-perl finds it:
+Du kannst auch versuchen, das Modul in einem Einzeiler einzubinden, um zu sehen
+ob perl es findet:
 
 	$ perl -MModule::Name -e1
 
