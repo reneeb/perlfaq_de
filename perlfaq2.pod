@@ -453,24 +453,23 @@ finden, die Du suchst.
 
 =head2 Wo kann ich eine Kommerzielle Version von Perl kaufen?
 
-In a real sense, perl already I<is> commercial software: it has a license
-that you can grab and carefully read to your manager. It is distributed
-in releases and comes in well-defined packages. There is a very large
-user community and an extensive literature.  The comp.lang.perl.*
-newsgroups and several of the mailing lists provide free answers to your
-questions in near real-time.  Perl has traditionally been supported by
-Larry, scores of software designers and developers, and myriad
-programmers, all working for free to create a useful thing to make life
-better for everyone.
+Im wahrsten Sinne des Wortest I<ist> perl schon eine kommerzielle Software: Es hat
+eine Lizenz, die Du nehmen und vorsichtig Deinem Manager vorlesen kannst. Es ist
+in Releases verteilt und kommt in wohldefinierten Paketen. Es gibt eine sehr große
+User-Gemeinschaft und umfangreiche Literatur. Die comp.lang.perl.* Newsgruppen und
+etliche Mailinglisten bieten kostenlose Antworten auf Deine Antworten in nahezu
+Echtzeit. Perl wird seit jeher durch Larry, eine große Anzahl an Software-Designern
+und -Entwicklern und unzähligen Programmierern unterstützt, die alle kostenlos
+arbeiten, um etwas nützliches zu schaffen, das das Leben von jedem einfacher macht.
 
-However, these answers may not suffice for managers who require a
-purchase order from a company whom they can sue should anything go awry.
-Or maybe they need very serious hand-holding and contractual obligations.
-Shrink-wrapped CDs with perl on them are available from several sources if
-that will help.  For example, many Perl books include a distribution of perl,
-as do the O'Reilly Perl Resource Kits (in both the Unix flavor
-and in the proprietary Microsoft flavor); the free Unix distributions
-also all come with perl.
+Allerdings könnten diese Antwoten Managern nicht ausreichen, die eine Bestellung
+von einer Firma verlangen, die sie verklagen können, wenn etwas schief geht. Oder
+vielleicht brauchen sie ernsthaftes Händchen halten und vertragliche Verplichtungen.
+CDs mit Perl darauf in Schrumpffolie verpackt sind bei verschiedenen Quellen erhältlich
+wenn das hilft. Viele Perl-Bücher zum Beispiel beinhalten eine Perl-Distribution,
+wie das O'Reilly Perl Resource Kits (sowohl in der Unix-Variante als auch der
+proprietären Windows-Variante); die freien Unix-Distributionen kommen auch alle
+mit perl.
 
 =head2 Wo kann ich Bug-Reports hinschicken?
 
