@@ -442,15 +442,14 @@ Eine umfassende Liste von Perl-bezogenen Mailinglisten findest Du unter:
 
 =head2 Wo sind die Archive von comp.lang.perl.misc?
 
-The Google search engine now carries archived and searchable newsgroup
-content.
+Die Google-Suchmaschine hat jetzt archivierte und durchsuchbare Newsgroup Inhalte.
 
 http://groups.google.com/group/comp.lang.perl.misc/topics
 
-If you have a question, you can be sure someone has already asked the
-same question at some point on c.l.p.m. It requires some time and patience
-to sift through all the content but often you will find the answer you
-seek.
+Wenn Du eine Frage hast, kannst Du ziemlich sicher sein, dass jemand die gleiche
+Frage zu irgendeinem Zeitpunkt schonmal auf c.l.p.m gestellt hat. Es braucht einige
+Zeit und Gedult, durch den ganzen Inhalt zu sichten, aber oft wirst Du die Antwort
+finden, die Du suchst.
 
 =head2 Wo kann ich eine Kommerzielle Version von Perl kaufen?
 
