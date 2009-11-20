@@ -304,7 +304,7 @@ Wie profile ich meine Perl-Programme?
 
 =item *
 
-How do I cross-reference my Perl programs?
+Wie erstelle ich Querverweise meiner Perl-Programme?
 
 =item *
 

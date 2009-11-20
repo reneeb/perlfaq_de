@@ -222,10 +222,10 @@ für I<Unix Review> unter http://www.stonehenge.com/merlyn/UnixReview/col49.html
 und "Profiling in Template Toolkit via Overriding" für das I<Linux Magazine>
 unter http://www.stonehenge.com/merlyn/LinuxMag/col75.html .
 
-=head2 How do I cross-reference my Perl programs?
+=head2 Wie erstelle ich Quer-Referenzen meiner Perl-Programme?
 
-The C<B::Xref> module can be used to generate cross-reference reports
-for Perl programs.
+Das C<B::Xref> Modul kann zum Generieren von Quer-Referenz-Berichte für
+Perl-Programme zu erzeugen.
 
     perl -MO=Xref[,OPTIONS] scriptname.plx
 
