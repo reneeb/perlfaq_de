@@ -129,43 +129,42 @@ ob perl es findet:
 
 	$ perl -MModule::Name -e1
 
-=head2 How do I debug my Perl programs?
+=head2 Wie debugge ich meine Perl-Programme?
 
-(contributed by brian d foy)
+(beigetragen brian d foy)
 
-Before you do anything else, you can help yourself by ensuring that
-you let Perl tell you about problem areas in your code. By turning
-on warnings and strictures, you can head off many problems before
-they get too big. You can find out more about these in L<strict>
-and L<warnings>.
+Bevor Du irgendetwas anders machst, kannst Du Dir selbst helfen, indem Du sicherstellst,
+dass Du Perl Dir alles über Problemfelder in Deinem Code erzählt. Durch das Anschalten
+von Warnungen und "Strictures" kannst Du viele Probleme abfangen, bevor sie zu
+groß werden. Da kannst mehr darüber in L<strict> und L<warnings> herausfinden.
 
 	#!/usr/bin/perl
 	use strict;
 	use warnings;
 
-Beyond that, the simplest debugger is the C<print> function. Use it
-to look at values as you run your program:
+Darüber hinaus, ist der einfachste Debugger die C<print> Funktion. Benutze sie
+um Werte anzuschauen wenn Du Dein Programm laufen lässt:
 
 	print STDERR "The value is [$value]\n";
 
-The C<Data::Dumper> module can pretty-print Perl data structures:
+Das C<Data::Dumper> Modul kann Perl-Datenstrukturen schön ausgeben:
 
 	use Data::Dumper qw( Dumper );
 	print STDERR "The hash is " . Dumper( \%hash ) . "\n";
 
-Perl comes with an interactive debugger, which you can start with the
-C<-d> switch. It's fully explained in L<perldebug>.
+Perl kommt mit einem interaktiven Debugger, den Du mit dem C<-d>-Schalter starten
+kannst. Er wird vollständig in L<perldebug> erklärt.
 
-If you'd like a graphical user interface and you have Tk, you can use
-C<ptkdb>. It's on CPAN and available for free.
+Wenn Du eine Graphische Benutzeroberfläche haben möchtest und C<Tk> hast, kannst
+Du C<ptkdb> verwenden. Es ist auf CPAN und frei erhältlich.
 
-If you need something much more sophisticated and controllable, Leon
-Brocard's Devel::ebug (which you can call with the -D switch as -Debug)
-gives you the programmatic hooks into everything you need to write your
-own (without too much pain and suffering).
+Wenn Du etwas anspruchsvolleres und kontrollierbares brauchst, dann gibt Dir Leon
+Brocard's C<Devel::ebug> (das Du mit dem C<-D>-Schalter als C<-Debug> aufrufen
+kannst) den programmatischen Aufhänger für alles was Du braucht um Deinen eigenen
+Debugger zu schreiben (ohne allzuviel Mühen und Leid).
 
-You can also use a commercial debugger such as Affrus (Mac OS X), Komodo
-from Activestate (Windows and Mac OS X), or EPIC (most platforms).
+Du kannst auch einen kommerziellen Debugger wie Affrus (Mac OS X), Komodo von
+Activestate (Windows und Mac OS X) oder EPIC (die meisten Plattformen) benutzen.
 
 =head2 How do I profile my Perl programs?
 
@@ -227,18 +226,18 @@ http://www.stonehenge.com/merlyn/LinuxMag/col75.html .
 
 =head2 How do I cross-reference my Perl programs?
 
-The B::Xref module can be used to generate cross-reference reports
+The C<B::Xref> module can be used to generate cross-reference reports
 for Perl programs.
 
     perl -MO=Xref[,OPTIONS] scriptname.plx
 
 =head2 Is there a pretty-printer (formatter) for Perl?
 
-Perltidy is a Perl script which indents and reformats Perl scripts
+C<Perltidy> is a Perl script which indents and reformats Perl scripts
 to make them easier to read by trying to follow the rules of the
 L<perlstyle>. If you write Perl scripts, or spend much time reading
 them, you will probably find it useful.  It is available at
-http://perltidy.sourceforge.net
+http://perltidy.sourceforge.net .
 
 Of course, if you simply follow the guidelines in L<perlstyle>,
 you shouldn't need to reformat.  The habit of formatting your code
