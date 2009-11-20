@@ -166,63 +166,61 @@ Debugger zu schreiben (ohne allzuviel Mühen und Leid).
 Du kannst auch einen kommerziellen Debugger wie Affrus (Mac OS X), Komodo von
 Activestate (Windows und Mac OS X) oder EPIC (die meisten Plattformen) benutzen.
 
-=head2 How do I profile my Perl programs?
+=head2 Wie profile ich meine Perl-Programme?
 
-(contributed by brian d foy, updated Fri Jul 25 12:22:26 PDT 2008)
+(beigetragen von brian d foy, aktualisiert Fr Jul 25 12:22:26 PDT 2008)
 
-The C<Devel> namespace has several modules which you can use to
-profile your Perl programs. The C<Devel::DProf> module comes with Perl
-and you can invoke it with the C<-d> switch:
+Der C<Devel> Namensraum beinhaltet etliche Module, die Du zum Profilen Deiner
+Perl-Programme benutzen kannst. Das C<Devel::DProf> Modul ist bei Perl dabei und
+Du kannst es mit dem C<-d>-Schalter aufrufen:
 
 	perl -d:DProf program.pl
 
-After running your program under C<DProf>, you'll get a F<tmon.out> file
-with the profile data. To look at the data, you can turn it into a
-human-readable report with the C<dprofpp> program that comes with
-C<Devel::DProf>.
+Nachdem Dein Programm unter C<DProf> gelaufen ist, bekommst Du eine F<tmon.out>
+Datei mit den Profil-Daten. Um diese Daten anzuschauen, kannst Du sie in einen
+menschlich lesbaren Bericht mit dem C<dprofpp>-Programm umwandeln, das mit
+C<Devel::DProf> mitkommt.
 
 	dprofpp
 
-You can also do the profiling and reporting in one step with the C<-p>
-switch to <dprofpp>:
+Du kannst das Profiling und das Reporting auch in einem Schritt mit der C<-p>
+Option von C<dprofpp> machen:
 
 	dprofpp -p program.pl
 
-The C<Devel::NYTProf> (New York Times Profiler) does both statement
-and subroutine profiling. It's available from CPAN and you also invoke
-it with the C<-d> switch:
+Das C<Devel::NYTProf> (New York Times Profiler) macht beides, Befehls- und
+Subroutinen-Profiling. Es ist auf CPAN verfügbar und Du kannst es auch mit der
+C<-d> Option aufrufen:
 
 	perl -d:NYTProf some_perl.pl
 
-Like C<DProf>, it creates a database of the profile information that you
-can turn into reports. The C<nytprofhtml> command turns the data into
-an HTML report similar to the C<Devel::Cover> report:
+Wie C<DProf> erzeugt es eine Datenbank mit den Profil-Informationen, die Du in einen
+Bericht umwandeln kannst. Das C<nytprofhtml> Kommando wandelt die Daten in einen
+HTML-Report um, ähnlich dem C<Devel::Cover>-Report:
 
 	nytprofhtml
 
-CPAN has several other profilers that you can invoke in the same
-fashion. You might also be interested in using the C<Benchmark> to
-measure and compare code snippets.
+CPAN hat etliche andere Profiler, die Du in der gleichen Art aufrufen kannst.
+Du könntest auch daran interessiert sein, C<Benchmark> zu benutzen, um Code-Teile
+zu messen und zu vergleichen.
 
-You can read more about profiling in I<Programming Perl>, chapter 20,
-or I<Mastering Perl>, chapter 5.
+Du kannst mehr über Profiling in I<Programming Perl>, Kapitel 20 oder
+I<Mastering Perl>, Kapitel 5 lesen.
 
-L<perldebguts> documents creating a custom debugger if you need to
-create a special sort of profiler. brian d foy describes the process
-in I<The Perl Journal>, "Creating a Perl Debugger",
-http://www.ddj.com/184404522 , and "Profiling in Perl"
-http://www.ddj.com/184404580 .
+L<perldebguts> beschreibt, wie man einen eigenen Debugger schreibt, wenn Du eine
+besondere Art von Profiler erstellen musst. brian d foy beschreibt den Vorgang in
+I<The Perl Journl>, "Creating a Perl Debugger", http://www.ddj.com/184404522 und
+"Profiling in Perl" http://www.ddj.com/184404580 .
 
-Perl.com has two interesting articles on profiling: "Profiling Perl",
-by Simon Cozens, http://www.perl.com/lpt/a/850 and "Debugging and
-Profiling mod_perl Applications", by Frank Wiles,
+Perl.com hat zwei interessante Artikel über Profiling: "Profiling Perl" von
+Simon Cozens, http://www.perl.com/lpt/a/850 und "Debugging and Profiling
+mod_perl Applications" von Frank Wiles unter
 http://www.perl.com/pub/a/2006/02/09/debug_mod_perl.html .
 
-Randal L. Schwartz writes about profiling in "Speeding up Your Perl
-Programs" for I<Unix Review>,
-http://www.stonehenge.com/merlyn/UnixReview/col49.html , and "Profiling
-in Template Toolkit via Overriding" for I<Linux Magazine>,
-http://www.stonehenge.com/merlyn/LinuxMag/col75.html .
+Randal L. Schwartz schreibt über Profiling in "Speeding up Your Perl Programs"
+für I<Unix Review> unter http://www.stonehenge.com/merlyn/UnixReview/col49.html
+und "Profiling in Template Toolkit via Overriding" für das I<Linux Magazine>
+unter http://www.stonehenge.com/merlyn/LinuxMag/col75.html .
 
 =head2 How do I cross-reference my Perl programs?
 
