@@ -6,25 +6,24 @@ perlfaq4 - Datenverarbeitung
 
 =head1 Beschreibung
 
-Dieser Abschnitt der FAQ beantwortet Fragen bezüglich Verarbeitung von Nummern,
+Dieser Abschnitt der FAQ beantwortet Fragen bezüglich Verarbeitung von Zahlen,
 Daten, Strings, Arrays, Hashes und verschiedene Daten-Sachen.
 
-=head1 Data: Numbers
+=head1 Daten: Zahlen
 
-=head2 Why am I getting long decimals (eg, 19.9499999999999) instead of the numbers I should be getting (eg, 19.95)?
+=head2 Warum bekomme ich lange Dezimalzahlen (z.B. 19,9499999999999) anstatt der Zahl, die ich bekommen sollt (z.B. 19,95)?
 
-Internally, your computer represents floating-point numbers in binary.
-Digital (as in powers of two) computers cannot store all numbers
-exactly.  Some real numbers lose precision in the process.  This is a
-problem with how computers store numbers and affects all computer
-languages, not just Perl.
+Dein Computer repräsentiert intern Fließkommazahlen in Binärform. Digitale (in Bedeutung
+von "hoch zwei") Computer können nicht alle Zahlen exakt speichern. Einige Reelle
+Zahlen verlieren in dem Prozess an Genauigkeit. Das ist ein Problem damit, wie 
+Computer Zahlen speichern und betrifft alle Computersprachen, nicht nur Perl.
 
-L<perlnumber> shows the gory details of number representations and
-conversions.
+L<perlnumber> zeigt all die schmutzigen Details der Zahlendarstellung und
+-konvertierung.
 
-To limit the number of decimal places in your numbers, you can use the
-printf or sprintf function.  See the L<"Floating Point
-Arithmetic"|perlop> for more details.
+Um die Anzahl der Dezimalstellen in Deinen Zahlen einzuschränken, kannst Du die
+C<printf> oder C<sprintf> Funktion verwenden. Für mehr Details, siehe
+L<"Floating Point Arithmetic"|perlop>.
 
 	printf "%.2f", 10/3;
 

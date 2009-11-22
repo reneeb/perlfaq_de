@@ -401,15 +401,15 @@ What's MakeMaker?
 =back
 
 
-=head2 L<perlfaq4>: Data Manipulation
+=head2 L<perlfaq4>: Datenverarbeitung
 
-Manipulating numbers, dates, strings, arrays, hashes, and miscellaneous data issues.
+Verarbeitung von Zahlen, Daten, Strings, Arrays, Hashes und verschiedene Daten-Sachen.
 
 =over 4
 
 =item *
 
-Why am I getting long decimals (eg, 19.9499999999999) instead of the numbers I should be getting (eg, 19.95)?
+Warum bekomme ich lange Dezimalzahlen (z.B. 19,9499999999999) anstatt der Zahl, die ich bekommen sollt (z.B. 19,95)?
 
 =item *
 
