@@ -89,34 +89,33 @@ Gib es im Oktal- und im Dezimalformat aus:
 
 	printf "0%o %d", $number, $number;
 
-=head2 Does Perl have a round() function?  What about ceil() and floor()?  Trig functions?
+=head2 Hat Perl eine round() Funktion? Was ist mit ceil() und floor()? Trigonometrische Funktionen?
 
-Remember that C<int()> merely truncates toward 0.  For rounding to a
-certain number of digits, C<sprintf()> or C<printf()> is usually the
-easiest route.
+Beachte, dass C<int()> nur in Richtung 0 abschneidet. Zum Runden auf eine bestimmte
+Anzahl von Ziffern sind C<sprintf()> oder C<printf()> in der Regel der einfachste
+Weg.
 
 	printf("%.3f", 3.1415926535);   # prints 3.142
 
-The C<POSIX> module (part of the standard Perl distribution)
-implements C<ceil()>, C<floor()>, and a number of other mathematical
-and trigonometric functions.
+Das C<POSIX> Modul (Teil der Standard-Perl-Distribution) implementiert C<ceil()>,
+C<floor()> und eine Reihe anderer Mathematischer und trigonometrischer Funktionen.
 
 	use POSIX;
 	$ceil   = ceil(3.5);   # 4
 	$floor  = floor(3.5);  # 3
 
-In 5.000 to 5.003 perls, trigonometry was done in the C<Math::Complex>
-module.  With 5.004, the C<Math::Trig> module (part of the standard Perl
-distribution) implements the trigonometric functions. Internally it
-uses the C<Math::Complex> module and some functions can break out from
-the real axis into the complex plane, for example the inverse sine of
-2.
+In Perl 5.000 bis 5.003 wurde Trigonometrie im C<Math::Complex> Modul gemacht.
+Mit 5.004, implementiert das C<Math::Trig> Modul (Teil der Standard-Perl-Distribution)
+die trigonometrischen Funktionen. Intern benutzt es das C<Math::Complex> Module
+und einige Funktionen aus der realen Achse in die komplexe Ebene wechseln,
+wie zum Beispiel der Inverse Sinus von 2.
 
-Rounding in financial applications can have serious implications, and
-the rounding method used should be specified precisely.  In these
-cases, it probably pays not to trust whichever system rounding is
-being used by Perl, but to instead implement the rounding function you
-need yourself.
+Runden in Finanzanwendungen kann schwerwiegende Auswirkungen haben und die
+verwendete Rundungs-Methode sollte genau vorgegeben werden. In diesen Fällen
+zahlt es sich nicht aus, auf das von Perl verwendete Rundungs-System zu vertrauen,
+sondern stattdessen die Rundungsfunktion zu implementieren, die Du brauchst.
+
+Um zu sehen warum, sieh, wie Du immer noch ein Problem mit 
 
 To see why, notice how you'll still have an issue on half-way-point
 alternation:
@@ -126,10 +125,10 @@ alternation:
 	0.0 0.1 0.1 0.2 0.2 0.2 0.3 0.3 0.4 0.4 0.5 0.5 0.6 0.7 0.7
 	0.8 0.8 0.9 0.9 1.0 1.0
 
-Don't blame Perl.  It's the same as in C.  IEEE says we have to do
-this. Perl numbers whose absolute values are integers under 2**31 (on
-32 bit machines) will work pretty much like mathematical integers.
-Other numbers are not guaranteed.
+Wirf das nicht Perl vor. Es ist das selbe wie in C. Die IEEE sagt, dass wir das so
+machen müssen. Zahlen in Perl, deren absolute Werte Integer bis 2**31 (auf
+32-bit Maschinen) funktionieren ziemlich genauso wie mathematische Integer.
+Bei anderen Zahlen ist das nicht garantiert.
 
 =head2 How do I convert between numeric representations/bases/radixes?
 

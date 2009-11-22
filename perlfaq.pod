@@ -421,7 +421,7 @@ Warum werden meine Oktal-Daten nicht korrekt interpretiert?
 
 =item *
 
-Does Perl have a round() function?  What about ceil() and floor()?  Trig functions?
+Hat Perl eine round() Funktion? Was ist mit ceil() und floor()? Trigonometrische Funktionen?
 
 =item *
 
