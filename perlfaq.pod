@@ -413,7 +413,7 @@ Warum bekomme ich lange Dezimalzahlen (z.B. 19,9499999999999) anstatt der Zahl, 
 
 =item *
 
-Why is int() broken?
+Warum ist int() defekt?
 
 =item *
 
