@@ -1,11 +1,13 @@
+=encoding utf-8
+
 =head1 NAME
 
-perlfaq4 - Data Manipulation
+perlfaq4 - Datenverarbeitung
 
-=head1 DESCRIPTION
+=head1 Beschreibung
 
-This section of the FAQ answers questions related to manipulating
-numbers, dates, strings, arrays, hashes, and miscellaneous data issues.
+Dieser Abschnitt der FAQ beantwortet Fragen bezüglich Verarbeitung von Nummern,
+Daten, Strings, Arrays, Hashes und verschiedene Daten-Sachen.
 
 =head1 Data: Numbers
 
@@ -1006,7 +1008,7 @@ handle that format, such as C<Text::CSV>, C<Text::CSV_XS>, or
 C<Text::CSV_PP>.
 
 If you want to break apart an entire line of fixed columns, you can use
-C<unpack> with the A (ASCII) format. by using a number after the format
+C<unpack> with the A (ASCII) format. By using a number after the format
 specifier, you can denote the column width. See the C<pack> and C<unpack>
 entries in L<perlfunc> for more details.
 
@@ -1545,7 +1547,7 @@ X<cycle> X<modulus>
 
 (contributed by brian d foy)
 
-If you want to cycle through an array endlessy, you can increment the
+If you want to cycle through an array endlessly, you can increment the
 index modulo the number of elements in the array:
 
 	my @array = qw( a b c );
@@ -2156,7 +2158,7 @@ C<$hash{$key}> will be C<undef> while C<exists $hash{$key}>
 will return true.  This corresponds to (C<$key>, C<undef>)
 being in the hash.
 
-Pictures help...  here's the C<%hash> table:
+Pictures help...  Here's the C<%hash> table:
 
 	  keys  values
 	+------+------+
@@ -2506,20 +2508,22 @@ See L<http://search.cpan.org/dist/PGPLOT> for the code.
 
 Revision: $Revision$
 
-Date: $Date$
+Datum: $Date$
 
-See L<perlfaq> for source control details and availability.
+Für Details über Versionskontrolle und Verfügbarkeit siehe L<perlfaq>.
 
-=head1 AUTHOR AND COPYRIGHT
+=head1 AUTOR UND COPYRIGHT
 
-Copyright (c) 1997-2009 Tom Christiansen, Nathan Torkington, and
-other authors as noted. All rights reserved.
+Copyright (c) 1997-2009 Tom Christiansen, Nathan Torkington und andere
+Autoren wie genannt. Alle Rechte vorbehalten.
 
-This documentation is free; you can redistribute it and/or modify it
-under the same terms as Perl itself.
+Diese Dokument ist frei; Du kannst es unter den gleichen Bedingungen wie
+Perl selbst weiterverteilen und/oder verändern.
 
-Irrespective of its distribution, all code examples in this file
-are hereby placed into the public domain.  You are permitted and
-encouraged to use this code in your own programs for fun
-or for profit as you see fit.  A simple comment in the code giving
-credit would be courteous but is not required.
+Unabhängig von der Verteilung, sind alle Code-Beispiele Gemeingut. Dir wird 
+erlaubt und du wirst ermutigt, sie und beliebige davon abgeleitete in deinen 
+Programmen zum Spaß oder für Profit zu verwenden. 
+Ein einfacher Kommentar im Code, der die FAQ würdigt, wäre nett, ist aber 
+nicht erforderlich. 
+
+Übersetzung Renée Bäcker

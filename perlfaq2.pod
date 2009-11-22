@@ -548,3 +548,5 @@ erlaubt und du wirst ermutigt, sie und beliebige davon abgeleitete in deinen
 Programmen zum Spaß oder für Profit zu verwenden. 
 Ein einfacher Kommentar im Code, der die FAQ würdigt, wäre nett, ist aber 
 nicht erforderlich. 
+
+Übersetzung Renée Bäcker
