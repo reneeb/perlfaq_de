@@ -47,14 +47,14 @@ wie 0,6 und 0,2 nicht exakt von Fließkommazahlen dargestellt werden können.
 Was Du oben für 'drei' hältst ist in Wirklichkeit mehr wie
 2,9999999999999995559.
 
-=head2 Why isn't my octal data interpreted correctly?
+=head2 Warum werden meine Oktal-Daten nicht korrekt interpretiert?
 
-(contributed by brian d foy)
+(beigetragen von brian d foy)
 
-You're probably trying to convert a string to a number, which Perl only
-converts as a decimal number. When Perl converts a string to a number, it
-ignores leading spaces and zeroes, then assumes the rest of the digits
-are in base 10:
+Du versuchst wahrscheinlich einen String in eine Zahl umzuwandeln, was Perl nur
+als Dezimalzahl umwandelt. Wenn Perl einen String in eine Zahl umwandelt, ignoriert
+es führende Leerzeichen und Nullen und nimmt dann an, dass die restlichen
+Ziffern zur Basis 10 sind:
 
 	my $string = '0644';
 
@@ -62,30 +62,30 @@ are in base 10:
 
 	print $string + 44; # prints 688, certainly not octal!
 
-This problem usually involves one of the Perl built-ins that has the
-same name a unix command that uses octal numbers as arguments on the
-command line. In this example, C<chmod> on the command line knows that
-its first argument is octal because that's what it does:
+Dieses Problem betrifft in der Regel eine der eingebauten Perl-Funktionen, die 
+die gleichen Namen wie das Unix-Kommando hat und Oktalzahlen als Argument auf
+der Kommandozeile benutzt. In diesem Beispiel weiß C<chmod> auf der Kommandozeile,
+dass dessen erstes Argument Oktal ist, weil es das ist, was es tut:
 
 	%prompt> chmod 644 file
 
-If you want to use the same literal digits (644) in Perl, you have to tell
-Perl to treat them as octal numbers either by prefixing the digits with
-a C<0> or using C<oct>:
+Wenn Du die gleichen Ziffern (644) in Perl benutzen willst, musst Du Perl sagen,
+dass es sie als Oktalziffern behandeln soll, indem Du entweder den Zahlen eine
+C<0> voranstellst oder C<oct> benutzt:
 
 	chmod(     0644, $file);   # right, has leading zero
 	chmod( oct(644), $file );  # also correct
 
-The problem comes in when you take your numbers from something that Perl
-thinks is a string, such as a command line argument in C<@ARGV>:
+Das Problem taucht auf, wenn Du Deine Zahlen von etwas nimmst, von dem Perl denkt,
+dass es ein String ist, wie zum Beispiel Kommandozeilenargumente in C<@ARGV>:
 
 	chmod( $ARGV[0],      $file);   # wrong, even if "0644"
 
 	chmod( oct($ARGV[0]), $file );  # correct, treat string as octal
 
-You can always check the value you're using by printing it in octal
-notation to ensure it matches what you think it should be. Print it
-in octal  and decimal format:
+Du kannst den Wert, den Du benutzt, immer durch die Ausgabe in Oktal-Schreibweise
+überprüfen, um sicherzustellen dass es mit dem übereinstimmt, was es sein sollte.
+Gib es im Oktal- und im Dezimalformat aus:
 
 	printf "0%o %d", $number, $number;
 

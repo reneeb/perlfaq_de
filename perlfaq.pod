@@ -417,7 +417,7 @@ Warum ist int() defekt?
 
 =item *
 
-Why isn't my octal data interpreted correctly?
+Warum werden meine Oktal-Daten nicht korrekt interpretiert?
 
 =item *
 
