@@ -370,24 +370,24 @@ generieren, aber das dauert eine ganze Weile. Wenn Du einen besseren
 Pseudo-Zufallsgenerator als den Deines Betriebssystem haben möchtest, schau Dir
 die "Numerical Recipes in C" unter L<http://www.nr.com> an.
 
-=head2 How do I get a random number between X and Y?
+=head2 Wie bekomme ich eine Zufallszahl zwischen X und Y?
 
-To get a random number between two values, you can use the C<rand()>
-built-in to get a random number between 0 and 1. From there, you shift
-that into the range that you want.
+Um eine Zufallszahlen zwischen zwei Werten zu bekommen, kannst Du die eingebaute
+C<rand()> Funktion für eine Zufallszahl zwischen 0 und 1 verwenden. Von dort aus
+schiebst Du das in den Bereich, den Du möchtest.
 
-C<rand($x)> returns a number such that C<< 0 <= rand($x) < $x >>. Thus
-what you want to have perl figure out is a random number in the range
-from 0 to the difference between your I<X> and I<Y>.
+C<rand($x)> liefert eine Zahl, für die C<< 0 <= rand($x) < $x >> gilt. Also was
+Du willst ist, ist dass Perl eine Zufallszahl in dem Bereich von 0 bis zu der
+Differenz Deines C<X> und C<Y> liefert.
 
-That is, to get a number between 10 and 15, inclusive, you want a
-random number between 0 and 5 that you can then add to 10.
+Um also eine Zahl zwischen einschließlich 10 und 15 zu bekommen, brauchst Du eine
+Zufallszahl zwischen 0 und 5, so dass Du dann 10 addieren kannst.
 
 	my $number = 10 + int rand( 15-10+1 ); # ( 10,11,12,13,14, or 15 )
 
-Hence you derive the following simple function to abstract
-that. It selects a random integer between the two given
-integers (inclusive), For example: C<random_int_between(50,120)>.
+So leitest Du die folgende einfache Funktion ab, die das abstrahiert. Es wählt
+eine zufällige Ganzzahl zwischen den zwei gegebenen Integern aus (einschließlich),
+zum Beispiel C<random_int_between(50,120)>.
 
 	sub random_int_between {
 		my($min, $max) = @_;

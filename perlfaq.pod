@@ -449,7 +449,7 @@ Warum sind meine Zufallszahlen nicht zufällig?
 
 =item *
 
-How do I get a random number between X and Y?
+Wie bekomme ich eine Zufallszahl zwischen X und Y?
 
 =item *
 
