@@ -477,7 +477,7 @@ Wie bekomme ich das gestrige Datum?
 
 =item *
 
-Does Perl have a Year 2000 problem? Is Perl Y2K compliant?
+Hat Perl ein Jahr-2000-Problem? Ist Perl Jahr-2000-fähig?
 
 =item *
 

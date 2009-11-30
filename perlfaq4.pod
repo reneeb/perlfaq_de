@@ -532,35 +532,32 @@ vorigen Kalendertag, wenn auch nicht mittags. Wenn Du Dich nicht um die Zeit
 kümmerst, spielt diese eine Stunde Unterschied keine Rolle und Du hast am Ende
 das vorige Datum.
 
-=head2 Does Perl have a Year 2000 problem? Is Perl Y2K compliant?
+=head2 Hat Perl ein Jahr-2000-Problem? Ist Perl Jahr-2000-fähig?
 
-Short answer: No, Perl does not have a Year 2000 problem.  Yes, Perl is
-Y2K compliant (whatever that means). The programmers you've hired to
-use it, however, probably are not.
+Kurze Antwort: Nein, Perl hat kein Jahr-2000-Problem. Ja, Perl ist Jahr-2000-fähig
+(was auch immer das bedeutet). Aber die Programmierer, die Du engagiert hast um
+es zu benutzen, sind es vielleicht nicht.
 
-Long answer: The question belies a true understanding of the issue.
-Perl is just as Y2K compliant as your pencil--no more, and no less.
-Can you use your pencil to write a non-Y2K-compliant memo?  Of course
-you can.  Is that the pencil's fault?  Of course it isn't.
+Lange Antwort: Die Frage täuscht über das wirkliche Verständnis der Sache hinweg.
+Perl ist genause Jahr-2000-fähig, wie es Dein Bleistift ist--nicht mehr und nicht
+nicht wenig. Kannst Du Deinen Bleistift benutzen, ein nicht-Jahr-2000-fähiges
+Memo zu schreiben? Natürlich. Ist es der Fehler des Bleistifts? Natürlich nicht.
 
-The date and time functions supplied with Perl (gmtime and localtime)
-supply adequate information to determine the year well beyond 2000
-(2038 is when trouble strikes for 32-bit machines).  The year returned
-by these functions when used in a list context is the year minus 1900.
-For years between 1910 and 1999 this I<happens> to be a 2-digit decimal
-number. To avoid the year 2000 problem simply do not treat the year as
-a 2-digit number.  It isn't.
+Die Datums- und Zeitfunktionen von Perl (C<gmtime> und C<localtime>) liefern
+ausreichende Information um das Jahr weit über 2000 hinaus zu bestimmen (2038 ist
+es, wann Probleme auf 32-Bit-Maschinen zukommt). Das Jahr, das diese Funktionen
+im Listen-Kontext liefern ist das Jahr minus 1900. Für Jahre zwischen 1910 und 1999
+sind das 2-stellige Dezimalzahlen. Um das Jahr-2000-Problem zu vermeiden, behandele
+das Jahr einfach nicht als eine zweistellige Nummer. Das ist es nämlich nicht.
 
-When gmtime() and localtime() are used in scalar context they return
-a timestamp string that contains a fully-expanded year.  For example,
-C<$timestamp = gmtime(1005613200)> sets $timestamp to "Tue Nov 13 01:00:00
-2001".  There's no year 2000 problem here.
+Wenn C<gmtime()> und C<localtime()> im Skalaren Kontext verwendet werden, liefern
+sie einen Zeitstempel als String, der das vollausgeschriebene Jahr enthält. Zum
+Beispiel C<$timestamp = gmtime(1005613200)> setzt C<$timestamp> auf 
+"Tue Nov 13 01:00:00 2001". Hier gibt es kein Jahr-2000-Problem.
 
-That doesn't mean that Perl can't be used to create non-Y2K compliant
-programs.  It can.  But so can your pencil.  It's the fault of the user,
-not the language.  At the risk of inflaming the NRA: "Perl doesn't
-break Y2K, people do."  See http://www.perl.org/about/y2k.html for
-a longer exposition.
+Das bedeutet nicht, dass Perl nicht dazu verwendet werden kann nicht-Jahr-2000-fähige
+Programme zu schreiben. Es geht. Genause wie mit Deinem Bleistift. Es ist die
+Schuld des Anwenders, nicht der Sprache.
 
 =head1 Data: Strings
 
