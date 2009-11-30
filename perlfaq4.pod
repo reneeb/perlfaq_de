@@ -297,45 +297,48 @@ Aber ein String bestehend aus zwei Null Bytes (das Ergebnis von C<"\020\020" &
 Benutze das C<Math::Matrix> oder das C<Math::MatrixReal> Modul (auf CPAN verfügbar)
 oder die C<PDL>-Erweiterung (auch auf CPAN verfügbar).
 
-=head2 How do I perform an operation on a series of integers?
+=head2 Wie kann ich eine Operation auf eine Reihe von Integern anwenden?
 
-To call a function on each element in an array, and collect the
-results, use:
+Benutze:
 
 	@results = map { my_func($_) } @array;
 
-For example:
+um eine Funktion für jedes Element eines Arrays aufzurufen und die Ergebnisse zu
+sammeln.
+
+Zum Beispiel:
 
 	@triple = map { 3 * $_ } @single;
 
-To call a function on each element of an array, but ignore the
-results:
+Um eine Funktion für jedes Element eines Arrays aufzurufen, aber das Ergebnis zu
+ignorieren:
 
 	foreach $iterator (@array) {
 		some_func($iterator);
 		}
 
-To call a function on each integer in a (small) range, you B<can> use:
+Um eine Funktion für jeden Integer in einem (kleinen) Bereich aufzurufen, B<kannst>
+Du das benutzen:
 
 	@results = map { some_func($_) } (5 .. 25);
 
-but you should be aware that the C<..> operator creates an array of
-all integers in the range.  This can take a lot of memory for large
-ranges.  Instead use:
+Aber Du solltest wissen, dass der C<..> Operator ein Array mit allen Integern in
+diesem Bereich erzeugt. Das kann bei großen Bereichen viel Speicher brauchen.
+Benutze stattdessen:
 
 	@results = ();
 	for ($i=5; $i < 500_005; $i++) {
 		push(@results, some_func($i));
 		}
 
-This situation has been fixed in Perl5.005. Use of C<..> in a C<for>
-loop will iterate over the range, without creating the entire range.
+Das wurde in Perl5.005 gefixt. Die Verwendung von C<..> in einer C<for>-Schleife
+iteriert über den Bereich - ohne den kompletten Bereich zu erzeugen.
 
 	for my $i (5 .. 500_005) {
 		push(@results, some_func($i));
 		}
 
-will not create a list of 500,000 integers.
+Erzeugt keine Liste mit 500.000 Integern.
 
 =head2 How can I output Roman numerals?
 
