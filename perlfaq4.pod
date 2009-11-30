@@ -265,28 +265,28 @@ für den geneigen Leser übrig.
 
 =back
 
-=head2 Why doesn't & work the way I want it to?
+=head2 Warum funktioniert & nicht so wie ich es will?
 
-The behavior of binary arithmetic operators depends on whether they're
-used on numbers or strings.  The operators treat a string as a series
-of bits and work with that (the string C<"3"> is the bit pattern
-C<00110011>).  The operators work with the binary form of a number
-(the number C<3> is treated as the bit pattern C<00000011>).
+Das Verhalten der binären arithmetischen Operatoren hängt davon ab, ob sie auf
+Zahlen oder Strings angewendet werden. Die Operatoren behandelt einen String als
+eine Reihe von Bits und arbeitet damit (der String C<"3" ist das Bitmuster 
+C<00110011>). Die Operatoren arbeiten mit der Binären Form einer Zahl (die Zahl 
+C<3> wird als Bitmuster C<00000011> behandelt).
 
-So, saying C<11 & 3> performs the "and" operation on numbers (yielding
-C<3>).  Saying C<"11" & "3"> performs the "and" operation on strings
-(yielding C<"1">).
+Also bei C<11 & 3> wird die "und" Operation auf Zahlen angewendet (mit dem Ergebnis
+C<3>). Bei C<"11" & "3"> wird die "und" Operation auf Strings angewendet (mit dem
+Ergebnis C<"1">).
 
-Most problems with C<&> and C<|> arise because the programmer thinks
-they have a number but really it's a string.  The rest arise because
-the programmer says:
+Die meisten Probleme mit C<&> und C<|> tauchen auf, weil der Programmierer denkt,
+er hat eine Zahl, dabei ist es ein String. Die restlichen Probleme tauchen auf,
+weil das Programmier sagt:
 
 	if ("\020\020" & "\101\101") {
 		# ...
 		}
 
-but a string consisting of two null bytes (the result of C<"\020\020"
-& "\101\101">) is not a false value in Perl.  You need:
+Aber ein String bestehend aus zwei Null Bytes (das Ergebnis von C<"\020\020" &
+"\101\101">) ist nicht ein "unwahrer" Wert in Perl. Du brauchst:
 
 	if ( ("\020\020" & "\101\101") !~ /[^\000]/) {
 		# ...

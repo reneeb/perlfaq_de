@@ -429,7 +429,7 @@ Wie kann ich zwischen numerischen Darstellungen/Basen/Zahlensystem umwandeln?
 
 =item *
 
-Why doesn't & work the way I want it to?
+Warum funktioniert & nicht so wie ich es will?
 
 =item *
 
