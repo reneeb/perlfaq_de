@@ -576,15 +576,17 @@ Einige Module können bestimmte Arten von Eingaben validieren, wie zum Beispiel
 C<Business::ISBN>, C<Business::CreditCard>, C<Email::Valid> und
 C<Data::Validate::IP>.
 
-=head2 How do I unescape a string?
+=head2 Wie kann ich einen String "unescape"n?
 
-It depends just what you mean by "escape".  URL escapes are dealt
-with in L<perlfaq9>.  Shell escapes with the backslash (C<\>)
-character are removed with
+Es hängt davon ab, was Du unter "escape" verstehst. URL "escapes" werden in
+L<perlfaq9> behandelt. Shell "escapes" mit dem Backslash (C<\>) werden mit
 
 	s/\\(.)/$1/g;
 
-This won't expand C<"\n"> or C<"\t"> or any other special escapes.
+entfernt.
+
+Das wird weder C<"\n"> noch C<"\t"> oder irgendein anderes Spezialzeichen 
+auswerten.
 
 =head2 How do I remove consecutive pairs of characters?
 

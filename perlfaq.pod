@@ -485,7 +485,7 @@ Wie validiere ich Eingaben?
 
 =item *
 
-How do I unescape a string?
+Wie kann ich einen String "unescape"n?
 
 =item *
 
