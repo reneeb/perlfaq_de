@@ -397,30 +397,30 @@ zum Beispiel C<random_int_between(50,120)>.
 		return $min + int rand(1 + $max - $min);
 		}
 
-=head1 Data: Dates
+=head1 Daten: Datum
 
-=head2 How do I find the day or week of the year?
+=head2 Wie bekomme ich den Tag oder die Woche des Jahres?
 
-The localtime function returns the day of the year.  Without an
-argument localtime uses the current time.
+Die C<localtime> Funktion liefert den Tag des Jahres. Ohne ein Argument benutzt
+C<localtime> die aktuelle Zeit.
 
 	$day_of_year = (localtime)[7];
 
-The C<POSIX> module can also format a date as the day of the year or
-week of the year.
+Das C<POSIX> Modul kann auch ein Datum als Tag des Jahres oder Woche des Jahres
+formatieren.
 
 	use POSIX qw/strftime/;
 	my $day_of_year  = strftime "%j", localtime;
 	my $week_of_year = strftime "%W", localtime;
 
-To get the day of year for any date, use C<POSIX>'s C<mktime> to get
-a time in epoch seconds for the argument to localtime.
+Um den Tag des Jahres für ein beliebiges Datum zu bekommen, benutze C<POSIX>s
+C<mktime> um die Zeit in Epochensekunden als Argument für C<localtime> zu bekommen.
 
 	use POSIX qw/mktime strftime/;
 	my $week_of_year = strftime "%W",
 		localtime( mktime( 0, 0, 0, 18, 11, 87 ) );
 
-The C<Date::Calc> module provides two functions to calculate these.
+Das C<Date::Calc> Modul bietet zwei Funktionen um das zu berechnen.
 
 	use Date::Calc;
 	my $day_of_year  = Day_of_Year(  1987, 12, 18 );
