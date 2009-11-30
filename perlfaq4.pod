@@ -115,10 +115,9 @@ verwendete Rundungs-Methode sollte genau vorgegeben werden. In diesen Fällen
 zahlt es sich nicht aus, auf das von Perl verwendete Rundungs-System zu vertrauen,
 sondern stattdessen die Rundungsfunktion zu implementieren, die Du brauchst.
 
-Um zu sehen warum, sieh, wie Du immer noch ein Problem mit 
-
-To see why, notice how you'll still have an issue on half-way-point
-alternation:
+Wenn Du eine Begründung sehen möchtest, schau Dir den folgenden Code an. Es gibt
+immer noch das Problem, dass die Rundungsrichtung genau auf halbem Weg zwischen
+zwei Werten nicht eindeutig ist, sondern wechselt:
 
 	for ($i = 0; $i < 1.01; $i += 0.05) { printf "%.1f ",$i}
 
@@ -130,111 +129,109 @@ machen müssen. Zahlen in Perl, deren absolute Werte Integer bis 2**31 (auf
 32-bit Maschinen) funktionieren ziemlich genauso wie mathematische Integer.
 Bei anderen Zahlen ist das nicht garantiert.
 
-=head2 How do I convert between numeric representations/bases/radixes?
+=head2 Wie kann ich zwischen numerischen Darstellungen/Basen/Zahlensystem umwandeln?
 
-As always with Perl there is more than one way to do it.  Below are a
-few examples of approaches to making common conversions between number
-representations.  This is intended to be representational rather than
-exhaustive.
+Wie immer bei Perl, gibt es mehr als einen Weg, das zu tun. Unten sind ein paar
+Beispiele von Ansätzen, um allgemeine Umwandlungen zwischen numerischen Darstellungen
+zu machen. Das ist eher als Darstellung gedacht als dass es vollständig ist.
 
-Some of the examples later in L<perlfaq4> use the C<Bit::Vector>
-module from CPAN. The reason you might choose C<Bit::Vector> over the
-perl built in functions is that it works with numbers of ANY size,
-that it is optimized for speed on some operations, and for at least
-some programmers the notation might be familiar.
+Einige der Beispiele, die später in L<perlfaq4> kommen, benutzen das C<Bit::Vector>
+Modul vom CPAN. Ein Grund dafür, dass Du C<Bit::Vector> den perl Built-In Funktionen
+vorziehen könntest, ist, dass es mit Nummern ALLER Größen funktioniern, dass es
+bei einigen Operationen auf Geschwindigkeit optimiert ist und zumindest für einige
+Programmierer ist die Schreibweise bekannt.
 
 =over 4
 
-=item How do I convert hexadecimal into decimal
+=item Wie wandele ich Hexadezimalzahlen in Dezimalzahlen um
 
-Using perl's built in conversion of C<0x> notation:
+Mit Perls Built-In Umwandlung der C<0x>-Schreibweise:
 
 	$dec = 0xDEADBEEF;
 
-Using the C<hex> function:
+Mit der C<hex> Funktion:
 
 	$dec = hex("DEADBEEF");
 
-Using C<pack>:
+Mit C<pack>:
 
 	$dec = unpack("N", pack("H8", substr("0" x 8 . "DEADBEEF", -8)));
 
-Using the CPAN module C<Bit::Vector>:
+Mit dem CPAN-Modul C<Bit::Vector>:
 
 	use Bit::Vector;
 	$vec = Bit::Vector->new_Hex(32, "DEADBEEF");
 	$dec = $vec->to_Dec();
 
-=item How do I convert from decimal to hexadecimal
+=item Wie wandele ich Dezimalzahlen in Hexadezimalzahlen um
 
-Using C<sprintf>:
+Mit C<sprintf>:
 
 	$hex = sprintf("%X", 3735928559); # upper case A-F
 	$hex = sprintf("%x", 3735928559); # lower case a-f
 
-Using C<unpack>:
+Mit C<unpack>:
 
 	$hex = unpack("H*", pack("N", 3735928559));
 
-Using C<Bit::Vector>:
+Mit C<Bit::Vector>:
 
 	use Bit::Vector;
 	$vec = Bit::Vector->new_Dec(32, -559038737);
 	$hex = $vec->to_Hex();
 
-And C<Bit::Vector> supports odd bit counts:
+Und C<Bit::Vector> unterstützt die Angabe einer ungeraden Anzahl von Bits:
 
 	use Bit::Vector;
 	$vec = Bit::Vector->new_Dec(33, 3735928559);
 	$vec->Resize(32); # suppress leading 0 if unwanted
 	$hex = $vec->to_Hex();
 
-=item How do I convert from octal to decimal
+=item Wie wandele ich Oktalzahlen in Dezimalzahlen um
 
-Using Perl's built in conversion of numbers with leading zeros:
+Mit der in Perl eingebauten Umwandlung von Zahlen mit führenden Nullen:
 
 	$dec = 033653337357; # note the leading 0!
 
-Using the C<oct> function:
+Mit der C<oct> Funktion:
 
 	$dec = oct("33653337357");
 
-Using C<Bit::Vector>:
+Mit C<Bit::Vector>:
 
 	use Bit::Vector;
 	$vec = Bit::Vector->new(32);
 	$vec->Chunk_List_Store(3, split(//, reverse "33653337357"));
 	$dec = $vec->to_Dec();
 
-=item How do I convert from decimal to octal
+=item Wie wandele ich Dezimalzahlen in Oktalzahlen um
 
-Using C<sprintf>:
+Mit C<sprintf>:
 
 	$oct = sprintf("%o", 3735928559);
 
-Using C<Bit::Vector>:
+Mit C<Bit::Vector>:
 
 	use Bit::Vector;
 	$vec = Bit::Vector->new_Dec(32, -559038737);
 	$oct = reverse join('', $vec->Chunk_List_Read(3));
 
-=item How do I convert from binary to decimal
+=item Wie wandele ich Binärzahlen in Dezimalzahlen um
 
-Perl 5.6 lets you write binary numbers directly with
-the C<0b> notation:
+Perl 5.6 erlaubt es, Binärzahlen direkt mit der C<0b> Schreibweise zu schreiben:
 
 	$number = 0b10110110;
 
-Using C<oct>:
+Mit C<oct>:
 
 	my $input = "10110110";
 	$decimal = oct( "0b$input" );
 
-Using C<pack> and C<ord>:
+Mit C<pack> und C<ord>:
 
 	$decimal = ord(pack('B8', '10110110'));
 
-Using C<pack> and C<unpack> for larger strings:
+Mit C<pack> und C<unpack> für größere Strings:
 
 	$int = unpack("N", pack("B32",
 	substr("0" x 32 . "11110101011011011111011101111", -32)));
@@ -242,29 +239,29 @@ Using C<pack> and C<unpack> for larger strings:
 
 	# substr() is used to left pad a 32 character string with zeros.
 
-Using C<Bit::Vector>:
+Mit C<Bit::Vector>:
 
 	$vec = Bit::Vector->new_Bin(32, "11011110101011011011111011101111");
 	$dec = $vec->to_Dec();
 
-=item How do I convert from decimal to binary
+=item Wie wandele ich Dezimalzahlen in Binärzahlen um
 
-Using C<sprintf> (perl 5.6+):
+Mit C<sprintf> (perl 5.6+):
 
 	$bin = sprintf("%b", 3735928559);
 
-Using C<unpack>:
+Mit C<unpack>:
 
 	$bin = unpack("B*", pack("N", 3735928559));
 
-Using C<Bit::Vector>:
+Mit C<Bit::Vector>:
 
 	use Bit::Vector;
 	$vec = Bit::Vector->new_Dec(32, -559038737);
 	$bin = $vec->to_Bin();
 
-The remaining transformations (e.g. hex -> oct, bin -> hex, etc.)
-are left as an exercise to the inclined reader.
+Die übrigen Umwandlungen (z.B. hex -> oct, bin -> hex, usw.) bleiben als Übung
+für den geneigen Leser übrig.
 
 =back
 

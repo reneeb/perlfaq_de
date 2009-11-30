@@ -425,7 +425,7 @@ Hat Perl eine round() Funktion? Was ist mit ceil() und floor()? Trigonometrische
 
 =item *
 
-How do I convert between numeric representations/bases/radixes?
+Wie kann ich zwischen numerischen Darstellungen/Basen/Zahlensystem umwandeln?
 
 =item *
 
