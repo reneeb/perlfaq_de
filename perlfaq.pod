@@ -437,7 +437,7 @@ Wie kann ich Matrizen mulitplizieren?
 
 =item *
 
-How do I perform an operation on a series of integers?
+Wie kann ich eine Operation auf eine Reihe von Integern anwenden?
 
 =item *
 
