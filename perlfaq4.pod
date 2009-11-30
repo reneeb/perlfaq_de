@@ -445,14 +445,14 @@ dieser System nur die ersten zwei Ziffern des vierstelligen Jahres ist und daher
 zur Zuverlässigen Bestimmung des aktuellen Jahrhundersts oder Jahrtausends verwendet
 werden kann.
 
-=head2 How can I compare two dates and find the difference?
+=head2 Wie kann ich zwei Daten vergleichen und die Differenz bekommen?
 
-(contributed by brian d foy)
+(beigetragen von brian d foy)
 
-You could just store all your dates as a number and then subtract.
-Life isn't always that simple though. If you want to work with
-formatted dates, the C<Date::Manip>, C<Date::Calc>, or C<DateTime>
-modules can help you.
+Du könntest einfach alle Deine Daten als Zahl speichern und dann subtrahieren.
+Das Leben ist aber nicht immer so einfach. Wenn Du mit formatierten Daten
+arbeiten möchtest, können Dir das C<Date::Manip>, C<Date::Calc> oder das C<DateTime>
+Modul helfen.
 
 =head2 How can I take a string and turn it into epoch seconds?
 

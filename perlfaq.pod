@@ -461,7 +461,7 @@ Wie bekomme ich das aktuelle Jahrhundert oder Jahrtausend?
 
 =item *
 
-How can I compare two dates and find the difference?
+Wie kann ich zwei Daten vergleichen und die Differenz bekommen?
 
 =item *
 
