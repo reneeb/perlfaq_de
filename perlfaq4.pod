@@ -461,41 +461,41 @@ Du ihn teilen und die Teile an C<timelocal> aus dem Standardmodul C<Time::Local>
 übergeben. Ansonsten solltest Du Dir das C<Date::Calc> und das C<Date::Manip> Modul
 vom CPAN anschauen.
 
-=head2 How can I find the Julian Day?
+=head2 Wie bekomme ich den Julianischen Tag?
 
-(contributed by brian d foy and Dave Cross)
+(beigetragen von brian d foy und Dave Cross)
 
-You can use the C<Time::JulianDay> module available on CPAN.  Ensure
-that you really want to find a Julian day, though, as many people have
-different ideas about Julian days.  See
-http://www.hermetic.ch/cal_stud/jdn.htm for instance.
+Du kannst das Modul C<Time::JulianDay> benutzen, das auf CPAN verfügbar ist. Stelle
+sicher, dass Du wirklich den Julianischen Tag bekommen willst, auch wenn viele
+Leute unterschiedliche Vorstellung über den Julianischen Tag haben. Schau Dir
+zum Beispiel L<http://www.hermetic.ch/cal_stud/jdn.htm> an.
 
-You can also try the C<DateTime> module, which can convert a date/time
-to a Julian Day.
+Du kannst auch das C<DateTime> Modul ausprobieren, das ein Datum/eine Zeit in einen
+Julianischen Tag umwandeln kann.
 
 	$ perl -MDateTime -le'print DateTime->today->jd'
 	2453401.5
 
-Or the modified Julian Day
+Oder den modifizierten Julianischen Tag
 
 	$ perl -MDateTime -le'print DateTime->today->mjd'
 	53401
 
-Or even the day of the year (which is what some people think of as a
-Julian day)
+Oder auch den Tag des Jahres (das ist, was einige Leute für den Julianischen Tag
+halten)
 
 	$ perl -MDateTime -le'print DateTime->today->doy'
 	31
 
-=head2 How do I find yesterday's date?
-X<date> X<yesterday> X<DateTime> X<Date::Calc> X<Time::Local>
-X<daylight saving time> X<day> X<Today_and_Now> X<localtime>
+=head2 Wie bekomme ich das gestrige Datum?
+X<Datum> X<gestern> X<DateTime> X<Date::Calc> X<Time::Local>
+X<Sommerzeit> X<Tag> X<Today_and_Now> X<localtime>
 X<timelocal>
 
-(contributed by brian d foy)
+(beigetragen von brian d foy)
 
-Use one of the Date modules. The C<DateTime> module makes it simple, and
-give you the same time of day, only the day before.
+Benutze eines der Date-Module. Das C<DateTime> Modul macht es einfach und gibt
+Dir die gleiche Zeit des Tages, nur für den vorigen Tag.
 
 	use DateTime;
 
@@ -503,8 +503,8 @@ give you the same time of day, only the day before.
 
 	print "Yesterday was $yesterday\n";
 
-You can also use the C<Date::Calc> module using its C<Today_and_Now>
-function.
+Du kannst auch das das C<Date::Calc> Modul verwenden und dessen C<Today_an_Now>
+Funktion benutzen.
 
 	use Date::Calc qw( Today_and_Now Add_Delta_DHMS );
 
@@ -512,14 +512,13 @@ function.
 
 	print "@date_time\n";
 
-Most people try to use the time rather than the calendar to figure out
-dates, but that assumes that days are twenty-four hours each.  For
-most people, there are two days a year when they aren't: the switch to
-and from summer time throws this off. Let the modules do the work.
+Die meisten Leute versuchen eher die Zeit als den Kalender zu benutzen, um Daten
+herauszufinden. Aber das geht davon aus, dass jeder Tag 24 Stunden hat. Bei den
+meisten Leuten gibt es aber zwei Tage im Jahr, wo das nicht zutrifft: Die Umstellung
+von und zur Sommerzeit wirft das über Bord. Lass die Module die Arbeit machen.
 
-If you absolutely must do it yourself (or can't use one of the
-modules), here's a solution using C<Time::Local>, which comes with
-Perl:
+Wenn Du es unbedingt selbst machen musst (oder keines der Module benutzen kannst),
+ist hier eine Lösung, die C<Time::Local> verwendet, das mit Perl mitkommt:
 
 	# contributed by Gunnar Hjalmarsson
 	 use Time::Local;
@@ -527,11 +526,11 @@ Perl:
 	 my ($d, $m, $y) = ( localtime $today-86400 )[3..5];
 	 printf "Yesterday: %d-%02d-%02d\n", $y+1900, $m+1, $d;
 
-In this case, you measure the day starting at noon, and subtract 24
-hours. Even if the length of the calendar day is 23 or 25 hours,
-you'll still end up on the previous calendar day, although not at
-noon. Since you don't care about the time, the one hour difference
-doesn't matter and you end up with the previous date.
+In diesem Fall beginnt der Tag um 12 Uhr mittags und zieht 24 Stunden ab. Selbst
+wenn die Länge des Kalendertags 23 oder 25 Stunden ist, landest Du dennoch beim
+vorigen Kalendertag, wenn auch nicht mittags. Wenn Du Dich nicht um die Zeit
+kümmerst, spielt diese eine Stunde Unterschied keine Rolle und Du hast am Ende
+das vorige Datum.
 
 =head2 Does Perl have a Year 2000 problem? Is Perl Y2K compliant?
 

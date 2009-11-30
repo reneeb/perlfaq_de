@@ -469,11 +469,11 @@ Wie kann ich einen String nehmen und in Epochensekunden umwandeln?
 
 =item *
 
-How can I find the Julian Day?
+Wie bekomme ich den Julianischen Tag?
 
 =item *
 
-How do I find yesterday's date?
+Wie bekomme ich das gestrige Datum?
 
 =item *
 
