@@ -340,35 +340,35 @@ iteriert über den Bereich - ohne den kompletten Bereich zu erzeugen.
 
 Erzeugt keine Liste mit 500.000 Integern.
 
-=head2 How can I output Roman numerals?
+=head2 Wie kann ich römische Zahlen ausgeben?
 
-Get the http://www.cpan.org/modules/by-module/Roman module.
+Hole das L<http://www.cpan.org/modules/by-module/Roman> Modul.
 
-=head2 Why aren't my random numbers random?
+=head2 Warum sind meine Zufallszahlen nicht zufällig?
 
-If you're using a version of Perl before 5.004, you must call C<srand>
-once at the start of your program to seed the random number generator.
+Wenn Du eine Version von Perl vor 5.004 benutzt, musst Du C<srand> einmal zu Beginn
+Deines Programms aufrufen, um den Anfangswert des Zufallszahlen-Generators zu setzen.
 
 	 BEGIN { srand() if $] < 5.004 }
 
-5.004 and later automatically call C<srand> at the beginning.  Don't
-call C<srand> more than once--you make your numbers less random,
-rather than more.
+5.004 und spätere Versionen rufen am Anfang automatisch C<srand> auf. Rufe C<srand>
+nicht mehr als einmal auf--Du machst Deine Zufallszahlen dadurch eher weniger
+zufällig als mehr zufällig.
 
-Computers are good at being predictable and bad at being random
-(despite appearances caused by bugs in your programs :-).  see the
-F<random> article in the "Far More Than You Ever Wanted To Know"
-collection in http://www.cpan.org/misc/olddoc/FMTEYEWTK.tgz , courtesy
-of Tom Phoenix, talks more about this.  John von Neumann said, "Anyone
-who attempts to generate random numbers by deterministic means is, of
-course, living in a state of sin."
+Computer sind gut darin, vorhersagbar zu sein und schlech darin, zufällig zu sein
+(entgegen dem äußeren Anschein, der durch Fehler in Deinem Programm hervorgerufen
+wird :-). Schau Dir den F<random>-Artikel in der "Far More Than You Ever Wanted To
+Know"-Sammlung unter L<http://www.cpan.org/misc/olddoc/FMTEYEWTK.tgz> an, mit
+freundlicher Genehmigung von Tom Phoenix, der mehr darüber sagt. John vom Neumann
+sagte: "Wer versucht Zufallszahlen mit deterministischen Mitteln zu erzeugen, lebt,
+natürlich, in einem Zustand der Sünde."
 
-If you want numbers that are more random than C<rand> with C<srand>
-provides, you should also check out the C<Math::TrulyRandom> module from
-CPAN.  It uses the imperfections in your system's timer to generate
-random numbers, but this takes quite a while.  If you want a better
-pseudorandom generator than comes with your operating system, look at
-"Numerical Recipes in C" at http://www.nr.com/ .
+Wenn Du Zahlen möchtest, die zufälliger sind als die, die C<rand> mit C<srand>
+bietet, solltest Du Dir das C<Math::TrulyRandom> Modul vom CPAN anschauen. Es
+verwendet die Unvollkommenheiten des Timers in Deinem System um Zufallszahlen zu
+generieren, aber das dauert eine ganze Weile. Wenn Du einen besseren 
+Pseudo-Zufallsgenerator als den Deines Betriebssystem haben möchtest, schau Dir
+die "Numerical Recipes in C" unter L<http://www.nr.com> an.
 
 =head2 How do I get a random number between X and Y?
 

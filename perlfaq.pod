@@ -441,11 +441,11 @@ Wie kann ich eine Operation auf eine Reihe von Integern anwenden?
 
 =item *
 
-How can I output Roman numerals?
+Wie kann ich römische Zahlen ausgeben?
 
 =item *
 
-Why aren't my random numbers random?
+Warum sind meine Zufallszahlen nicht zufällig?
 
 =item *
 
