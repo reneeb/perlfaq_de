@@ -563,18 +563,18 @@ L<http://www.perl.org/about/y2k.html> für eine längere Ausführung.
 
 =head1 Daten: Strings
 
-=head2 Wie validiere ich How do I validate input?
+=head2 Wie validiere ich Eingaben?
 
-(contributed by brian d foy)
+(beigetragen von brian d foy)
 
-There are many ways to ensure that values are what you expect or
-want to accept. Besides the specific examples that we cover in the
-perlfaq, you can also look at the modules with "Assert" and "Validate"
-in their names, along with other modules such as C<Regexp::Common>.
+Es gibt viele Wege, sicherzustellen, dass die Werte das sind was Du erwartest oder
+akzeptieren willst. Neben den spezifischen Beispielen, die wir in der perlfaq
+zeigen, kannst Du Dir auch Module mit "Assert" und "Validate" im Namen anschauen,
+zusammen mit anderen Modulen wie C<Regexp::Common>.
 
-Some modules have validation for particular types of input, such
-as C<Business::ISBN>, C<Business::CreditCard>, C<Email::Valid>,
-and C<Data::Validate::IP>.
+Einige Module können bestimmte Arten von Eingaben validieren, wie zum Beispiel
+C<Business::ISBN>, C<Business::CreditCard>, C<Email::Valid> und
+C<Data::Validate::IP>.
 
 =head2 How do I unescape a string?
 

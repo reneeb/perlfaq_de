@@ -481,7 +481,7 @@ Hat Perl ein Jahr-2000-Problem? Ist Perl Jahr-2000-fähig?
 
 =item *
 
-How do I validate input?
+Wie validiere ich Eingaben?
 
 =item *
 
