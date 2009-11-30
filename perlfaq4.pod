@@ -426,9 +426,9 @@ Das C<Date::Calc> Modul bietet zwei Funktionen um das zu berechnen.
 	my $day_of_year  = Day_of_Year(  1987, 12, 18 );
 	my $week_of_year = Week_of_Year( 1987, 12, 18 );
 
-=head2 How do I find the current century or millennium?
+=head2 Wie bekomme ich das aktuelle Jahrhundert oder Jahrtausend?
 
-Use the following simple functions:
+Benutze die folgenden einfachen Funktionen:
 
 	sub get_century    {
 		return int((((localtime(shift || time))[5] + 1999))/100);
@@ -438,12 +438,12 @@ Use the following simple functions:
 		return 1+int((((localtime(shift || time))[5] + 1899))/1000);
 		}
 
-On some systems, the C<POSIX> module's C<strftime()> function has been
-extended in a non-standard way to use a C<%C> format, which they
-sometimes claim is the "century". It isn't, because on most such
-systems, this is only the first two digits of the four-digit year, and
-thus cannot be used to reliably determine the current century or
-millennium.
+Auf einigen System wurde die Funktion C<strftime()> aus dem C<POSIX> Modul auf einem
+Nicht-Standard Weg erweitert, dass es das C<%C> Format benutzt, das manchmal als
+"Jahrhundert (century)" bezeichnet wird. Das ist es nicht, weil das auf den meisten
+dieser System nur die ersten zwei Ziffern des vierstelligen Jahres ist und daher nicht
+zur Zuverlässigen Bestimmung des aktuellen Jahrhundersts oder Jahrtausends verwendet
+werden kann.
 
 =head2 How can I compare two dates and find the difference?
 

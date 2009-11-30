@@ -453,11 +453,11 @@ Wie bekomme ich eine Zufallszahl zwischen X und Y?
 
 =item *
 
-How do I find the day or week of the year?
+Wie bekomme ich den Tag oder die Woche des Jahres?
 
 =item *
 
-How do I find the current century or millennium?
+Wie bekomme ich das aktuelle Jahrhundert oder Jahrtausend?
 
 =item *
 
