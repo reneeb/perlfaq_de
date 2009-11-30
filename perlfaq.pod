@@ -489,7 +489,7 @@ Wie kann ich einen String "unescape"n?
 
 =item *
 
-How do I remove consecutive pairs of characters?
+Wie entferne ich aufeinanderfolgende Paare von Zeichen?
 
 =item *
 

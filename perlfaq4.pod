@@ -588,27 +588,26 @@ entfernt.
 Das wird weder C<"\n"> noch C<"\t"> oder irgendein anderes Spezialzeichen 
 auswerten.
 
-=head2 How do I remove consecutive pairs of characters?
+=head2 Wie entferne ich aufeinanderfolgende Paare von Zeichen?
 
-(contributed by brian d foy)
+(beigetragen von brian d foy)
 
-You can use the substitution operator to find pairs of characters (or
-runs of characters) and replace them with a single instance. In this
-substitution, we find a character in C<(.)>. The memory parentheses
-store the matched character in the back-reference C<\1> and we use
-that to require that the same thing immediately follow it. We replace
-that part of the string with the character in C<$1>.
+Du kannst den Substitutions-Operater benutzen, um Paare von Zeichen (oder
+Reihen von Zeichen) zu finden und sie durch ein einzelnes Vorkommen des Zeichens
+ersetzen. In dieser Ersetzung finden wir ein Zeichen in C<(.)>. Die speichernden
+Klammern speichern das gefundene Zeichen in der Back-Referenz C<\1>. Das verwenden
+wir um zu verlangen, dass das gleiche Zeichen unmittelbar darauf folgt. Wir
+ersetzen diesen Teil des Strings durch das Zeichen in C<$1>.
 
 	s/(.)\1/$1/g;
 
-We can also use the transliteration operator, C<tr///>. In this
-example, the search list side of our C<tr///> contains nothing, but
-the C<c> option complements that so it contains everything. The
-replacement list also contains nothing, so the transliteration is
-almost a no-op since it won't do any replacements (or more exactly,
-replace the character with itself). However, the C<s> option squashes
-duplicated and consecutive characters in the string so a character
-does not show up next to itself
+Wir können auch den Übersetzungs-Operator C<tr///> verwenden. In diesem Beispiel
+enthält der Suchaustruck unseres C<tr///> nichts, aber die C<c> Option dreht das
+um, so dass es alles enthält. Der Ersetzungsteil enthält ebenfalls nichts, so dass
+die Übersetzung fast ein no-op ist, da es keine Ersetzungen macht (oder genauer
+gesagt, ersetzt es jedes Zeichen durch sich selbst). Doch die C<s> Option vernichtet
+duplizierte und aufeinanderfolgende Zeichen im String, so dass ein Zeichen nicht
+mehrmals nebeneinander auftauchen kann
 
 	my $str = 'Haarlem';   # in the Netherlands
 	$str =~ tr///cs;       # Now Harlem, like in New York
