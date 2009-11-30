@@ -557,11 +557,13 @@ Beispiel C<$timestamp = gmtime(1005613200)> setzt C<$timestamp> auf
 
 Das bedeutet nicht, dass Perl nicht dazu verwendet werden kann nicht-Jahr-2000-fähige
 Programme zu schreiben. Es geht. Genause wie mit Deinem Bleistift. Es ist die
-Schuld des Anwenders, nicht der Sprache.
+Schuld des Anwenders, nicht der Sprache. Auf die Gefahr hin, die NRA auf den Plan
+zu rufen: "Perl macht nicht das Jahr 2000 kaputt, die Leute tun es" Siehe 
+L<http://www.perl.org/about/y2k.html> für eine längere Ausführung.
 
-=head1 Data: Strings
+=head1 Daten: Strings
 
-=head2 How do I validate input?
+=head2 Wie validiere ich How do I validate input?
 
 (contributed by brian d foy)
 
