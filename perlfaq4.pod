@@ -454,12 +454,12 @@ Das Leben ist aber nicht immer so einfach. Wenn Du mit formatierten Daten
 arbeiten möchtest, können Dir das C<Date::Manip>, C<Date::Calc> oder das C<DateTime>
 Modul helfen.
 
-=head2 How can I take a string and turn it into epoch seconds?
+=head2 Wie kann ich einen String nehmen und in Epochensekunden umwandeln?
 
-If it's a regular enough string that it always has the same format,
-you can split it up and pass the parts to C<timelocal> in the standard
-C<Time::Local> module.  Otherwise, you should look into the C<Date::Calc>
-and C<Date::Manip> modules from CPAN.
+Wenn es ein String ist, der regulär genug ist und immer das selbe Format hat, kannst
+Du ihn teilen und die Teile an C<timelocal> aus dem Standardmodul C<Time::Local>
+übergeben. Ansonsten solltest Du Dir das C<Date::Calc> und das C<Date::Manip> Modul
+vom CPAN anschauen.
 
 =head2 How can I find the Julian Day?
 

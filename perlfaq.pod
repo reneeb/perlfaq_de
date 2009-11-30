@@ -465,7 +465,7 @@ Wie kann ich zwei Daten vergleichen und die Differenz bekommen?
 
 =item *
 
-How can I take a string and turn it into epoch seconds?
+Wie kann ich einen String nehmen und in Epochensekunden umwandeln?
 
 =item *
 
