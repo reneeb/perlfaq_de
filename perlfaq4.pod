@@ -292,10 +292,10 @@ Aber ein String bestehend aus zwei Null Bytes (das Ergebnis von C<"\020\020" &
 		# ...
 		}
 
-=head2 How do I multiply matrices?
+=head2 Wie kann ich Matrizen mulitplizieren?
 
-Use the Math::Matrix or Math::MatrixReal modules (available from CPAN)
-or the PDL extension (also available from CPAN).
+Benutze das C<Math::Matrix> oder das C<Math::MatrixReal> Modul (auf CPAN verfügbar)
+oder die C<PDL>-Erweiterung (auch auf CPAN verfügbar).
 
 =head2 How do I perform an operation on a series of integers?
 

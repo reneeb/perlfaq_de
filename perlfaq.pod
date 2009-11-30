@@ -433,7 +433,7 @@ Warum funktioniert & nicht so wie ich es will?
 
 =item *
 
-How do I multiply matrices?
+Wie kann ich Matrizen mulitplizieren?
 
 =item *
 
